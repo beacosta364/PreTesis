@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ url('/css/estilos-formularios.css') }}">
 
     <!-- Scripts -->
-    <!-- @vite(['resources/css/app.css', 'resources/js/app.js']) -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     
 </head>
