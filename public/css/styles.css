@@ -189,3 +189,24 @@ body{
         transition: transform 0.3s ease;
     }
 }
+
+.logooo {
+    display: inline-block; /* Asegura que esté en línea */
+    width: 150px; /* Ajusta el tamaño según tus necesidades */
+    height: 150px; /* Mantén las proporciones */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+.logooo img {
+    width: 100%; /* Ajusta la imagen al tamaño del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina espacio extra alrededor de la imagen */
+    border-radius: 1px; /* Opcional: redondea las esquinas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra */
+}
+
+
+/* slow motion */
+html {
+    scroll-behavior: smooth;
+}
