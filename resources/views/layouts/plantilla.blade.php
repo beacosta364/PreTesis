@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="{{ url('/css/styles.css') }}">
     <link rel="stylesheet" href="{{ url('/css/estilos-tablas.css') }}">
+    <link rel="stylesheet" href="{{ url('/css/estilos-formularios.css') }}">
     
 </head>
 <body>
@@ -34,7 +35,8 @@
         <div class="element-slidebar">
             <div class="element-slidebar-btn">
                 <!-- <span><img src="img/rokrt.png" alt="Product"></span> -->
-                <span><img src="{{asset('img/rokrt.jpg')}}" alt="Product"></span>
+                <span><img src="{{asset('img/rokrt.png')}}" alt="Product"></span>
+                <!-- <span><img src="{{ asset('storage/rokrt.jpg') }}" alt="Product"></span> -->
                 <p>Productos</p>
             </div>
             <div class="element-slidebar-content">
@@ -44,11 +46,26 @@
             </div>
             </div>
         </div>
+
+        <!-- Categorias -->
+        <div class="element-slidebar">
+            <div class="element-slidebar-btn">
+                <span><img src="{{asset('img/icono1.png')}}" alt="Product"></span>
+                <p>Categorias</p>
+            </div>
+            <div class="element-slidebar-content">
+            <div class="element-slidebar-content">
+            <a href="{{ route('categoria.index') }}">Todos</a>
+                <a href="{{ route('categoria.create') }}">Agregar</a>
+            </div>
+            </div>
+        </div>
+
         <!-- Provedores -->
         <div class="element-slidebar">
             <div class="element-slidebar-btn">
                 <!-- <span><img src="img/provedores.png" alt="provedor"></span> -->
-                <span><img src="{{asset('img/provedores.jpg')}}" alt="provedor"></span>
+                <span><img src="{{asset('img/provedores.png')}}" alt="provedor"></span>
                 
                 <p>Provedores</p>
             </div>
@@ -57,11 +74,12 @@
                 <a href="">Agregar</a>
             </div>
         </div>
+
         <!-- Comptras -->
         <div class="element-slidebar">
             <div class="element-slidebar-btn">
                 <!-- <span><img src="img/compras.png" alt="compras"></span> -->
-                <span><img src="{{asset('img/compras.jpg')}}" alt="compras"></span>
+                <span><img src="{{asset('img/compras.png')}}" alt="compras"></span>
                 <p>Comptras</p>
             </div>
             <div class="element-slidebar-content">
@@ -75,7 +93,7 @@
         <div class="element-slidebar">
             <div class="element-slidebar-btn">
                 <!-- <span><img src="img/ventas.png" alt="ventas"></span> -->
-                <span><img src="{{asset('img/ventas.jpg')}}" alt="ventas"></span>
+                <span><img src="{{asset('img/ventas copy.png')}}" alt="ventas"></span>
                 <p>Ventas</p>
             </div>
             <div class="element-slidebar-content">
