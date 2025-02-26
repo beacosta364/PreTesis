@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="{{ url('/css/styles.css') }}">
     <link rel="stylesheet" href="{{ url('/css/estilos-tablas.css') }}">
     <link rel="stylesheet" href="{{ url('/css/estilos-formularios.css') }}">
+
+    <!-- Scripts -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     
 </head>
 <body>
@@ -24,11 +28,15 @@
             <div class="element-slidebar-btn profile">
                 <!-- <span><img src="img/face1.png" alt="avatar"></span> -->
                 <span><img src="{{asset('img/face1.jpg')}}" alt="avatar"></span>
-                <p>Admin</p>
+                <p>{{Auth::user()->name}}</p>
             </div>
             <div class="element-slidebar-content">
-                <a href="">Perfil</a>
-                <a href="">Logout</a>
+                <a href="{{'profile.edit'}}">Perfil</a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <input type="submit" value="Salir"class="logout-link">
+                </form>
             </div>
         </div>
         <!-- Productos -->
@@ -41,8 +49,9 @@
             </div>
             <div class="element-slidebar-content">
             <div class="element-slidebar-content">
-                <a href="{{ route('productos') }}">Todos</a>
-                <a href="{{ route('productos.agregar') }}">Agregar</a>
+                
+                 <a href="">Todos</a>
+                 <a href="">Agregar</a>
             </div>
             </div>
         </div>
