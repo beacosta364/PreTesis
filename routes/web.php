@@ -17,6 +17,6 @@ Route::get('/home', function () {
 Route::get('/productos', [ProductController::class, 'index'])->name('productos');
 Route::get('/productos/agregar', [ProductController::class, 'agregar'])->name('productos.agregar');
 
-    // Ruta de tipo resource para la gestión de categorías
-    Route::resource('categoria', CategoriaController::class);
+// Ruta de tipo resource para la gestión de categorías
+Route::resource('categoria', CategoriaController::class);
 

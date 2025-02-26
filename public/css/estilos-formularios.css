@@ -1,0 +1,117 @@
+/* Tarjeta con clase 'card formulario' */
+.card.formulario {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Título de la tarjeta */
+.card.formulario h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos del formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Estilos específicos para los campos cantidad y precio */
+#cantidad,
+#precio {
+    width: 100%;
+    font-size: 1.2em;  /* Aumenta el tamaño de la fuente */
+    padding: 12px;     /* Aumenta el padding para que el campo sea más grande */
+    box-sizing: border-box;
+}
+
+/* Estilo del botón */
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color:rgba(2, 53, 95, 0.842); /* Color azul */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-group button:hover {
+    background-color:rgba(50, 102, 145, 0.842);
+}
+
+/* Botón Volver */
+.btn-volver {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: var(--color-thead); /* Usa el mismo azul de la tabla */
+    color: var(--color-texto-thead);
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px; /* Separación del contenido */
+}
+
+.btn-volver:hover {
+    background-color: rgba(50, 102, 145, 0.9);
+}
+
+/* Centrar el botón dentro de su div */
+.form-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .card.formulario {
+        padding: 15px;
+    }
+
+    .form-group input[type="text"],
+    .form-group textarea,
+    .form-group select {
+        padding: 6px;
+    }
+    
+    #cantidad,
+    #precio {
+        font-size: 1.1em;
+        padding: 10px;
+    }
+    .form-group button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
