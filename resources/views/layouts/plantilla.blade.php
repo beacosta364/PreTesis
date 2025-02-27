@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ url('/css/styles.css') }}">
     <link rel="stylesheet" href="{{ url('/css/estilos-tablas.css') }}">
     <link rel="stylesheet" href="{{ url('/css/estilos-formularios.css') }}">
+    <link rel="stylesheet" href="{{url('/css/estilos-movimientos-productos.css')}}">
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -57,7 +58,7 @@
                 <p>Gestion del sistema</p>
             </div>
             <div class="element-slidebar-content">
-                <a href="">Gestion de inventarios</a>
+                <a href="{{ route('producto.movimiento') }}">Gestion de inventarios</a>
                 <a href="{{ route('configuracion.control') }}">Ir a la gestión de alarma y acceso</a>
                 <a href="{{ route('users.index') }}">Lista de usuarios registrados</a>
                 <a href="{{ route('producto.agotados') }}" class="btn btn-warning">Ver Productos Agotados o Por Agotarse</a>

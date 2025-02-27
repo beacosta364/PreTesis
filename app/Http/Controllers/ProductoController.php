@@ -152,4 +152,36 @@ class ProductoController extends Controller
     // Retornar la vista con los productos filtrados
     return view('producto.agotados', compact('productosAgotados'));
 }
+
+public function movimiento()
+{
+    $productos = Producto::orderBy('nombre')->get();
+    return view('producto.movimiento', compact('productos'));
+}
+
+public function procesarMovimiento(Request $request)
+{
+    $request->validate([
+        'producto_id' => 'required|exists:productos,id',
+        'tipo_movimiento' => 'required|in:ingresar,extraer',
+        'cantidad' => 'required|integer|min:1'
+    ]);
+
+    $producto = Producto::findOrFail($request->producto_id);
+
+    if ($request->tipo_movimiento == 'ingresar') {
+        $producto->cantidad += $request->cantidad;
+    } elseif ($request->tipo_movimiento == 'extraer') {
+        if ($producto->cantidad < $request->cantidad) {
+            return redirect()->back()->with('error', 'No hay suficiente stock para extraer.');
+        }
+        $producto->cantidad -= $request->cantidad;
+    }
+
+    $producto->save();
+
+    return redirect()->route('producto.movimiento')->with('success', 'Movimiento registrado con éxito.');
+}
+
+
 }

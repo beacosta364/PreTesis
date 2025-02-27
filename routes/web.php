@@ -25,6 +25,10 @@ Route::middleware('auth')->group(function () {
     //ruta productos
     Route::resource('/producto',ProductoController::class);
 
+    //ruta Movimiento para ingreso o extraccion de productos.
+    Route::get('/movimiento-productos', [ProductoController::class, 'movimiento'])->name('producto.movimiento');
+    Route::post('/movimiento-productos', [ProductoController::class, 'procesarMovimiento'])->name('producto.procesarMovimiento');
+
 
     Route::get('/configuracion/create', [ConfiguracionController::class, 'create'])->name('configuracion.create');
     Route::post('/configuracion', [ConfiguracionController::class, 'store'])->name('configuracion.store');
