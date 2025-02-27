@@ -74,8 +74,8 @@
                 </div>
                 <div class="element-slidebar-content">
                     
-                    <a href="">Todos</a>
-                    <a href="">Agregar</a>
+                    <a href="{{ route('producto.index') }}">Todos</a>
+                    <a href="{{ route('producto.create') }}">Agregar</a>
                 </div>
             </div>
 

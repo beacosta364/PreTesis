@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +21,7 @@ Route::middleware('auth')->group(function () {
     //ruta categorias
     Route::resource('/categoria',CategoriaController::class);
     //ruta productos
-    // Route::resource('/producto',ProductoController::class);
+    Route::resource('/producto',ProductoController::class);
 });
 
 require __DIR__.'/auth.php';
