@@ -138,4 +138,18 @@ class ProductoController extends Controller
 
         return redirect()->route('producto.index')->with('success', 'Producto eliminado con éxito.');
     }
+    public function agotados()
+{
+    // Obtener productos agotados (cantidad == 0) o por agotarse (cantidad < min_stock)
+    $productosAgotados = Producto::where('cantidad', 0)
+                        ->orWhere(function($query) {
+                            $query->whereColumn('cantidad', '<=', 'min_stock')
+                                  ->whereNotNull('min_stock'); // Evitar comparar con NULL
+                        })
+                        ->orderBy('cantidad', 'asc')
+                        ->get();
+
+    // Retornar la vista con los productos filtrados
+    return view('producto.agotados', compact('productosAgotados'));
+}
 }

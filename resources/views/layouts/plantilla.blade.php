@@ -58,9 +58,9 @@
             </div>
             <div class="element-slidebar-content">
                 <a href="">Gestion de inventarios</a>
-                <a href="">Ir a la gestión de alarma y acceso</a>
-                <a href="">Lista de usuarios registrados</a>
-                <a href="" class="btn btn-warning">Ver Productos Agotados o Por Agotarse</a>
+                <a href="{{ route('configuracion.control') }}">Ir a la gestión de alarma y acceso</a>
+                <a href="{{ route('users.index') }}">Lista de usuarios registrados</a>
+                <a href="{{ route('producto.agotados') }}" class="btn btn-warning">Ver Productos Agotados o Por Agotarse</a>
             </div>
         </div>
 
@@ -111,7 +111,7 @@
                     <p>Configuración y soporte</p>
                 </div>
                 <div class="element-slidebar-content">
-                    <a href="">Configuración</a>
+                    <a href="{{ route('configuracion.create') }}">Configuración</a>
                     <a href="">Soporte y documentación</a>
                 </div>
             </div>
