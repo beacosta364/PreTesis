@@ -183,5 +183,10 @@ public function procesarMovimiento(Request $request)
     return redirect()->route('producto.movimiento')->with('success', 'Movimiento registrado con éxito.');
 }
 
+public function registroProductos()
+{
+    $productos = Producto::orderBy('nombre')->get();
+    return view('producto.registroMovimientos', compact('productos'));
+}
 
 }

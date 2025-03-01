@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ url('/css/styles.css') }}">
     <link rel="stylesheet" href="{{ url('/css/estilos-tablas.css') }}">
     <link rel="stylesheet" href="{{ url('/css/estilos-formularios.css') }}">
-    <link rel="stylesheet" href="{{url('/css/estilos-movimientos-productos.css')}}">
+    <link rel="stylesheet" href="{{url('/css/estilos-movimiento-productos.css')}}">
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
