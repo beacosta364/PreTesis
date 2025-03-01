@@ -34,4 +34,10 @@ class Producto extends Model
             'name' => 'Usuario eliminado' // Para evitar errores si el usuario se borra
         ]);
     }
+
+    public function movimientos()
+    {
+        return $this->hasMany(Movimiento::class, 'producto_id');
+    }
+
 }

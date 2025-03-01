@@ -126,7 +126,8 @@
             </div>
             <div class="element-slidebar-content">         
                 <a href="">Reportes de inventarios</a>
-                <a href="">Reportes de movimientos</a>
+                <!-- <a href="">Reportes de movimientos</a> -->
+                <a href="{{ route('movimientos.index') }}">Reportes de movimientos</a>
             </div>     
         </div>
     </aside>

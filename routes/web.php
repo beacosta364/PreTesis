@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ConfiguracionController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MovimientoController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -37,6 +38,12 @@ Route::middleware('auth')->group(function () {
     // Ruta para mostrar el índice 
     Route::get('/configuracion', [ConfiguracionController::class, 'index'])->name('configuracion.index');
 
+    
+    //Ruta para mostrar el registro de movimientos realizados a los productos
+    Route::get('/movimientos', [MovimientoController::class, 'index'])->name('movimientos.index');
+    // Route::get('/movimientos', [MovimientoController::class, 'index'])->name('movimientos.index');
+    Route::post('/procesar-movimiento', [MovimientoController::class, 'procesarMovimiento'])->name('producto.procesarMovimiento');
+
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     Route::get('/configuracion/control', [ConfiguracionController::class, 'control'])->name('configuracion.control');////////
@@ -47,6 +54,9 @@ Route::middleware('auth')->group(function () {
 
     //Ruta para mostrar productos por agotarse
     Route::get('/productos/agotados', [ProductoController::class, 'agotados'])->name('producto.agotados');
+    
+    
+
 
 });
 
