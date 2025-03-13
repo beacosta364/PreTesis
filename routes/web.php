@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ConfiguracionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovimientoController;
+use App\Http\Controllers\NotificacionController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -55,7 +56,8 @@ Route::middleware('auth')->group(function () {
     //Ruta para mostrar productos por agotarse
     Route::get('/productos/agotados', [ProductoController::class, 'agotados'])->name('producto.agotados');
     
-    
+    //Ruta para notificaciones
+    Route::resource('notificaciones', NotificacionController::class);
 
 
 });

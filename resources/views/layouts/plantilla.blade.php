@@ -14,9 +14,11 @@
     <link rel="stylesheet" href="{{ url('/css/estilos-tablas.css') }}">
     <link rel="stylesheet" href="{{ url('/css/estilos-formularios.css') }}">
     <link rel="stylesheet" href="{{url('/css/estilos-movimiento-productos.css')}}">
+    <link rel="stylesheet" href="{{url('/css/styles-perfil.css')}}">
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- @vite(['resources/css/app.css', 'resources/js/app.js']) -->
+    @vite(['resources/js/app.js'])
 
     
 </head>
@@ -59,9 +61,10 @@
             </div>
             <div class="element-slidebar-content">
                 <a href="{{ route('producto.movimiento') }}">Gestion de inventarios</a>
-                <a href="{{ route('configuracion.control') }}">Ir a la gestión de alarma y acceso</a>
+                <a href="{{ route('configuracion.control') }}">Gestión de acceso a bodega</a>
                 <a href="{{ route('users.index') }}">Lista de usuarios registrados</a>
                 <a href="{{ route('producto.agotados') }}" class="btn btn-warning">Ver Productos Agotados o Por Agotarse</a>
+                <a href="">Registrar nuevo usuario</a>
             </div>
         </div>
 
@@ -93,15 +96,15 @@
                 </div>
             </div>
 
-        <!-- Monitoreo y seguridad -->
+        <!-- notificaciones y seguridad -->
             <div class="element-slidebar">
                 <div class="element-slidebar-btn">
                     <span><img src="{{asset('img/MonitoreodeSeguridad.png')}}" alt="Monitoreo y seguridad"></span>
-                    <p>Monitoreo y seguridad</p>
+                    <p>Notificaciones y registro ingresos a bodega</p>
                 </div>
                 <div class="element-slidebar-content">    
-                    <a href="">Auditoria</a>
-                    <a href="">Notificaciones</a>
+                    <a href="">Registro ingreso a bodega</a>
+                    <a href="{{ route('notificaciones.index') }}">Notificaciones</a>
                 </div>
             </div>
 

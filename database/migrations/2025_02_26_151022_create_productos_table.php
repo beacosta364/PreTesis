@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id(); // Identificador único del producto
             $table->string('nombre', 100)->unique(); // Nombre del producto (debe ser único)
-            $table->text('descripcion'); // Descripción del producto
+            $table->text('descripcion')->nullable(); // Descripción del producto
             $table->unsignedInteger('cantidad'); // Cantidad disponible
             $table->unsignedInteger('min_stock')->nullable(); // Nuevo campo 'min_stock'
             $table->string('imagen')->nullable(); // Campo para la imagen del producto
