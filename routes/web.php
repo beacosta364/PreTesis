@@ -8,6 +8,7 @@ use App\Http\Controllers\ConfiguracionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovimientoController;
 use App\Http\Controllers\NotificacionController;
+use App\Http\Controllers\PerfilUsuarioController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -59,6 +60,8 @@ Route::middleware('auth')->group(function () {
     //Ruta para notificaciones
     Route::resource('notificaciones', NotificacionController::class);
 
+    //Ruta actualizar foto perfil usuario
+    Route::post('/perfil/actualizar-foto', [PerfilUsuarioController::class, 'actualizarFotoPerfil'])->name('perfil.actualizar-foto');
 
 });
 

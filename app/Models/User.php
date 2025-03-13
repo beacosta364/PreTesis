@@ -47,4 +47,9 @@ class User extends Authenticatable
         return $this->hasMany(Movimiento::class, 'usuario_id');
     }
 
+    public function perfil()
+    {
+        return $this->hasOne(PerfilUsuario::class, 'usuario_id');
+    }
+
 }

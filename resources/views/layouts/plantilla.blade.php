@@ -39,7 +39,10 @@
          <div class="element-slidebar">
             <div class="element-slidebar-btn profile">
                 <!-- <span><img src="img/face1.png" alt="avatar"></span> -->
-                <span><img src="{{asset('img/face1.jpg')}}" alt="avatar"></span>
+                <!-- <span><img src="{{asset('img/face1.jpg')}}" alt="avatar"></span> -->
+                <span>
+                    <img src="{{ Auth::user()->perfil && Auth::user()->perfil->foto_perfil ? asset('storage/img-perfil/' . Auth::user()->perfil->foto_perfil) : asset('img/face1.jpg') }}" alt="avatar">
+                </span>
                 <p>{{Auth::user()->name}}</p>
             </div>
             <div class="element-slidebar-content">

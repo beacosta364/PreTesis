@@ -17,12 +17,22 @@
                 @include('profile.partials.update-password-form')
             </div>
         </div>
+        
+        <form action="{{ route('perfil.actualizar-foto') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <label for="foto_perfil">Actualizar foto de perfil:</label>
+            <input type="file" name="foto_perfil" accept="image/*" required>
+            <button type="submit">Actualizar</button>
+        </form>
 
         <div class="p-6 sm:p-12 bg-gray-400 dark:bg-gray-500 shadow-lg sm:rounded-xl">
             <div class="max-w-xl">
                 @include('profile.partials.delete-user-form')
             </div>
         </div>
+
+
+
 
     </div>
 </div>
