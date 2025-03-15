@@ -10,6 +10,8 @@ use App\Http\Controllers\MovimientoController;
 use App\Http\Controllers\NotificacionController;
 use App\Http\Controllers\PerfilUsuarioController;
 
+use App\Http\Controllers\UsuarioRolController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -62,6 +64,9 @@ Route::middleware('auth')->group(function () {
 
     //Ruta actualizar foto perfil usuario
     Route::post('/perfil/actualizar-foto', [PerfilUsuarioController::class, 'actualizarFotoPerfil'])->name('perfil.actualizar-foto');
+
+    Route::get('/usuarios-roles', [UsuarioRolController::class, 'index']);
+    Route::post('/usuarios-actualizar-rol', [UsuarioRolController::class, 'actualizarRol'])->name('usuarios.actualizarRol');
 
 });
 

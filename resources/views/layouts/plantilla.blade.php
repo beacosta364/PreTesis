@@ -68,6 +68,7 @@
                 <a href="{{ route('users.index') }}">Lista de usuarios registrados</a>
                 <a href="{{ route('producto.agotados') }}" class="btn btn-warning">Ver Productos Agotados o Por Agotarse</a>
                 <a href="">Registrar nuevo usuario</a>
+                <a href="{{ url('/usuarios-roles') }}">gestionar rol de usuarios</a>
             </div>
         </div>
 
