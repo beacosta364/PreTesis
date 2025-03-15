@@ -5,8 +5,22 @@ namespace App\Http\Controllers;
 use App\Models\Categoria;
 use Illuminate\Http\Request;
 
+// se debe incluir esta clase para que funcione $this->middleware
+use Illuminate\Routing\Controller;
+
 class CategoriaController extends Controller
 {
+    public function __construct()
+    {
+        // Asegura que el usuario esté autenticado para cualquier método del controlador
+        // $this->middleware('auth');
+        // Middleware para verificar los permisos específicos
+        $this->middleware('can:categoria.create')->only(['create', 'store']);
+        // $this->middleware('can:categoria.edit')->only(['edit']);
+        // $this->middleware('can:categoria.index')->only('index');
+        // $this->middleware('can:categoria.destroy')->only('destroy');
+    }
+
     public function index()
     {
         $categorias=Categoria::orderBy('id','ASC')->paginate(20);

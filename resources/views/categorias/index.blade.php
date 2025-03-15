@@ -28,13 +28,18 @@
                     <!-- <img src="img/Vista.png" alt=""> -->
                     <img src="{{ asset('img/Vista.png') }}" alt="">
                  </a>
+
+                 @can('categoria.update')
                  <a href="{{route('categoria.edit',[$categoria->id])}}">
                     <!-- <img src="img/Editar.png" alt=""> -->
                     <img src="{{ asset('img/Editar.png') }}" alt="">
                  </a>
-                 <a href="{{route('categoria.destroy',[$categoria->id])}}">
-                   
+                 @endcan
+
+                 <a href="{{route('categoria.destroy',[$categoria->id])}}">               
                  </a>
+
+                 @can('categoria.destroy')
                  <form action="{{route('categoria.destroy',[$categoria->id])}}" method="POST" onsubmit="return confimarEliminacion()">
                  
                     {{-- permite gemrar el token para enviar por post --}}
@@ -45,7 +50,7 @@
                     <input type="image" src="{{ asset('img/Eliminar.png') }}">
 
                  </form>
-                 
+                 @endcan
                  <script>
                     function confimarEliminacion() {
                         return confirm('¿Seguro deseas eliminar?'); // Muestra el mensaje de confirmación
