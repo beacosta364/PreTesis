@@ -71,6 +71,12 @@ Route::middleware('auth')->group(function () {
 
     //ruta para mostrar listado de productos
     Route::get('/productos-listado', [ProductoController::class, 'listado'])->name('producto.listado');
+
+    //Ruta para registrar usuarios
+    Route::get('/usuarios', [UserController::class, 'index'])->name('users.index');
+    Route::get('/usuarios/crear', [UserController::class, 'create'])->name('users.create');
+    Route::post('/usuarios', [UserController::class, 'store'])->name('users.store');
+
 });
 
 require __DIR__.'/auth.php';
