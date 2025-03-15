@@ -139,54 +139,59 @@ class ProductoController extends Controller
         return redirect()->route('producto.index')->with('success', 'Producto eliminado con éxito.');
     }
     public function agotados()
-{
-    // Obtener productos agotados (cantidad == 0) o por agotarse (cantidad < min_stock)
-    $productosAgotados = Producto::where('cantidad', 0)
-                        ->orWhere(function($query) {
-                            $query->whereColumn('cantidad', '<=', 'min_stock')
-                                  ->whereNotNull('min_stock'); // Evitar comparar con NULL
-                        })
-                        ->orderBy('cantidad', 'asc')
-                        ->get();
+    {
+        // Obtener productos agotados (cantidad == 0) o por agotarse (cantidad < min_stock)
+        $productosAgotados = Producto::where('cantidad', 0)
+                            ->orWhere(function($query) {
+                                $query->whereColumn('cantidad', '<=', 'min_stock')
+                                    ->whereNotNull('min_stock'); // Evitar comparar con NULL
+                            })
+                            ->orderBy('cantidad', 'asc')
+                            ->get();
 
-    // Retornar la vista con los productos filtrados
-    return view('producto.agotados', compact('productosAgotados'));
-}
-
-public function movimiento()
-{
-    $productos = Producto::orderBy('nombre')->get();
-    return view('producto.movimiento', compact('productos'));
-}
-
-public function procesarMovimiento(Request $request)
-{
-    $request->validate([
-        'producto_id' => 'required|exists:productos,id',
-        'tipo_movimiento' => 'required|in:ingresar,extraer',
-        'cantidad' => 'required|integer|min:1'
-    ]);
-
-    $producto = Producto::findOrFail($request->producto_id);
-
-    if ($request->tipo_movimiento == 'ingresar') {
-        $producto->cantidad += $request->cantidad;
-    } elseif ($request->tipo_movimiento == 'extraer') {
-        if ($producto->cantidad < $request->cantidad) {
-            return redirect()->back()->with('error', 'No hay suficiente stock para extraer.');
-        }
-        $producto->cantidad -= $request->cantidad;
+        // Retornar la vista con los productos filtrados
+        return view('producto.agotados', compact('productosAgotados'));
     }
 
-    $producto->save();
+    public function movimiento()
+    {
+        $productos = Producto::orderBy('nombre')->get();
+        return view('producto.movimiento', compact('productos'));
+    }
 
-    return redirect()->route('producto.movimiento')->with('success', 'Movimiento registrado con éxito.');
-}
+    public function procesarMovimiento(Request $request)
+    {
+        $request->validate([
+            'producto_id' => 'required|exists:productos,id',
+            'tipo_movimiento' => 'required|in:ingresar,extraer',
+            'cantidad' => 'required|integer|min:1'
+        ]);
 
-public function registroProductos()
-{
-    $productos = Producto::orderBy('nombre')->get();
-    return view('producto.registroMovimientos', compact('productos'));
-}
+        $producto = Producto::findOrFail($request->producto_id);
 
+        if ($request->tipo_movimiento == 'ingresar') {
+            $producto->cantidad += $request->cantidad;
+        } elseif ($request->tipo_movimiento == 'extraer') {
+            if ($producto->cantidad < $request->cantidad) {
+                return redirect()->back()->with('error', 'No hay suficiente stock para extraer.');
+            }
+            $producto->cantidad -= $request->cantidad;
+        }
+
+        $producto->save();
+
+        return redirect()->route('producto.movimiento')->with('success', 'Movimiento registrado con éxito.');
+    }
+
+    public function registroProductos()
+    {
+        $productos = Producto::orderBy('nombre')->get();
+        return view('producto.registroMovimientos', compact('productos'));
+    }
+
+    public function listado()
+    {
+        $productos = Producto::orderBy('nombre')->get();
+        return view('producto.listado', compact('productos'));
+    }
 }

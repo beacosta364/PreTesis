@@ -65,9 +65,12 @@ Route::middleware('auth')->group(function () {
     //Ruta actualizar foto perfil usuario
     Route::post('/perfil/actualizar-foto', [PerfilUsuarioController::class, 'actualizarFotoPerfil'])->name('perfil.actualizar-foto');
 
+    //Rutas para mostrar y actualizar rol de los usuarios
     Route::get('/usuarios-roles', [UsuarioRolController::class, 'index']);
     Route::post('/usuarios-actualizar-rol', [UsuarioRolController::class, 'actualizarRol'])->name('usuarios.actualizarRol');
 
+    //ruta para mostrar listado de productos
+    Route::get('/productos-listado', [ProductoController::class, 'listado'])->name('producto.listado');
 });
 
 require __DIR__.'/auth.php';
