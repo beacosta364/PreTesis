@@ -2,7 +2,18 @@
 
 @section('contenido')
 <div class="container mt-4">
-    <h2 class="mb-4">Listado de Productos</h2>
+
+    <nav class="nav-botones">
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <h2 class="mb-4">Listado de Productos</h2>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('productos.pdf') }}" target="_blank" class="nav-link btn-generar-pdf">Generar PDF</a>
+            </li>
+        </ul>
+    </nav>
+ 
     <table class="table table-bordered">
         <thead class="table-dark">
             <tr>

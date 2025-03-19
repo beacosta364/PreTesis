@@ -10,7 +10,23 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}"> 
 </head>
 <body>
-    <h2>Lista de Usuarios Registrados</h2>
+    <!-- <h2>Lista de Usuarios Registrados</h2>
+
+    <a href="{{ route('usuarios.pdf') }}" target="_blank" class="btn btn-primary">
+    Generar PDF de Usuarios
+    </a> -->
+
+    <nav class="nav-botones">
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <h2>Lista de Usuarios Registrados</h2>
+        </li>
+        <li class="nav-item">
+            <a href="{{ route('usuarios.pdf') }}" target="_blank" class="btn btn-primary">Generar PDF de Usuarios</a>
+        </li>
+    </ul>
+    </nav>
+
     <table border="1">
         <thead>
             <tr>

@@ -1,7 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
-<h2 class="titulo-productos-por-agotarse">Lista de productos por agotarse o agotados</h2>
+<h2 class="titulo-productos-por-agotarse">Lista de productos por agotarse o agotados...</h2>
 
     <section class="container-cards">
 

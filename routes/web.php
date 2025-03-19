@@ -78,8 +78,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/usuarios/crear', [UserController::class, 'create'])->name('users.create');
     Route::post('/usuarios', [UserController::class, 'store'])->name('users.store');
 
-    //Ruta pdf reporte productos
+    //Ruta pdf reporte pdf productos
     Route::get('/productos/pdf', [PdfController::class, 'pdfProductos'])->name('productos.pdf');
+    //Ruta pdf reporte pdf usuarios registrados
+    Route::get('/usuarios/pdf', [PdfController::class, 'pdfUsuarios'])->name('usuarios.pdf');
 
 });
 

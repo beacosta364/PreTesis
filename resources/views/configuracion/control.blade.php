@@ -2,7 +2,7 @@
 
 @section('contenido')
 
-<h3>Gestión de Alarma y Acceso</h3>
+<h3>Gestión de Acceso</h3>
 
 <!-- Controles electrónica -->
 <section class="Controles">

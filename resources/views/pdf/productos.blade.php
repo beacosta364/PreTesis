@@ -12,7 +12,7 @@
         <img src="{{ base_path('public/img/LogoABY.jpeg') }}" alt="Logo" class="logo">
     </div>
     <div class="header-right">
-        <h1>Reporte de Productos</h1>
+        <h1>Reporte de Productos Existentes</h1>
     </div>
 </div>
     <!-- <div class="header">

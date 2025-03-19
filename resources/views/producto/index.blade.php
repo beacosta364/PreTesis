@@ -5,13 +5,23 @@
 <section class="container-tabla">
    <h2 class="titulo-tabla"> Listado de productos</h2>
  
-   <nav class="nav-botones">
+   <!-- <nav class="nav-botones">
       <ul class="nav-menu">
           <li class="nav-item">
               <a href="{{ route('producto.create') }}" class="nav-link btn-agregar-producto">Agregar Producto</a>
           </li>
       </ul>
-   </nav>
+   </nav> -->
+   <nav class="nav-botones">
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="{{ route('productos.pdf') }}" target="_blank" class="nav-link btn-generar-pdf">Generar PDF</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ route('producto.create') }}" class="nav-link btn-agregar-producto">Agregar Producto</a>
+        </li>
+    </ul>
+    </nav>
 
    <table>
        <thead>

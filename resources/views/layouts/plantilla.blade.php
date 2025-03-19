@@ -64,7 +64,7 @@
             </div>
             <div class="element-slidebar-content">
                 <a href="{{ route('producto.movimiento') }}">Gestion de inventarios</a>
-                <a href="{{ route('configuracion.control') }}">Gestión de acceso a bodega</a>
+                <a href="{{ route('configuracion.control') }}">Ingresar a bodega</a>
                 <a href="{{ route('users.index') }}">Lista de usuarios registrados</a>
                 <a href="{{ route('producto.agotados') }}" class="btn btn-warning">Ver Productos Agotados o Por Agotarse</a>
                 <a href="{{ url('/usuarios/crear') }}">Registrar nuevo usuario</a>   
