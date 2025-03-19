@@ -14,13 +14,13 @@
     </div> 
 
     <!-- Control de estado de alarma -->
-    @can('control.alarma')
+    <!-- @can('control.alarma')
     <div class="control-alarma">
         <h2>Control de estado de alarma</h2>
         <button id="activarAlarmaBtn">Activar Alarma</button>
         <p id="statusAlarma">Estado de alarma: Desconocido</p>
     </div>
-    @endcan
+    @endcan -->
 </section>
 
 @if ($configuracion)
@@ -50,18 +50,18 @@
     });
 
     // Función para activar la alarma
-    document.getElementById("activarAlarmaBtn").addEventListener("click", function() {
-        fetch(`http://${ipAddress}/activar2`)
-            .then(response => response.text())
-            .then(data => {
-                if (data === "Puerta 2 activada") {
-                    document.getElementById("statusAlarma").textContent = "Estado de la alarma: Activada";
-                } else {
-                    document.getElementById("statusAlarma").textContent = "Estado de la alarma: Desconocido";
-                }
-            })
-            .catch(error => console.error('Error:', error));
-    });
+    // document.getElementById("activarAlarmaBtn").addEventListener("click", function() {
+    //     fetch(`http://${ipAddress}/activar2`)
+    //         .then(response => response.text())
+    //         .then(data => {
+    //             if (data === "Puerta 2 activada") {
+    //                 document.getElementById("statusAlarma").textContent = "Estado de la alarma: Activada";
+    //             } else {
+    //                 document.getElementById("statusAlarma").textContent = "Estado de la alarma: Desconocido";
+    //             }
+    //         })
+    //         .catch(error => console.error('Error:', error));
+    // });
 </script>
 
 @endsection

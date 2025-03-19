@@ -54,15 +54,15 @@
              </td>
              <td>
               <a href="{{ route('producto.show', $producto->id) }}">
-                 <img src="{{ asset('img/view.png') }}" alt="Ver">
+                 <img src="{{ asset('img/Vista.png') }}" alt="Ver" width="35"height="40">
               </a>
               <a href="{{ route('producto.edit', $producto->id) }}">
-                 <img src="{{ asset('img/edit.png') }}" alt="Editar">
+                 <img src="{{ asset('img/Editar.png') }}" alt="Editar" width="35"height="40">
               </a>
-              <form action="{{ route('producto.destroy', $producto->id) }}" method="POST" onsubmit="return confirmarEliminacion()">
+              <form action="{{ route('producto.destroy', $producto->id) }}" method="POST" onsubmit="return confirmarEliminacion()" >
                  @csrf
                  @method('DELETE')
-                 <input type="image" src="{{ asset('img/delete.png') }}" alt="Eliminar">
+                 <input type="image" src="{{ asset('img/Eliminar.png') }}" alt="Eliminar" width="35"height="40">
               </form>
              </td>                                
          </tr>

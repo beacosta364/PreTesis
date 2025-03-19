@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovimientoController;
 use App\Http\Controllers\NotificacionController;
 use App\Http\Controllers\PerfilUsuarioController;
+use App\Http\Controllers\PdfController;
 
 use App\Http\Controllers\UsuarioRolController;
 
@@ -76,6 +77,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/usuarios', [UserController::class, 'index'])->name('users.index');
     Route::get('/usuarios/crear', [UserController::class, 'create'])->name('users.create');
     Route::post('/usuarios', [UserController::class, 'store'])->name('users.store');
+
+    //Ruta pdf reporte productos
+    Route::get('/productos/pdf', [PdfController::class, 'pdfProductos'])->name('productos.pdf');
 
 });
 
