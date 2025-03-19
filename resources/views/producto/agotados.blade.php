@@ -1,7 +1,16 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
-<h2 class="titulo-productos-por-agotarse">Lista de productos por agotarse o agotados...</h2>
+<nav class="nav-botones">
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="{{ route('productos.agotados.pdf') }}" target="_blank" class="nav-link btn-generar-pdf">Generar PDF</a>
+        </li>
+        <li class="nav-item">
+        <h2 class="titulo-productos-por-agotarse">Lista de productos por agotarse o agotados...</h2>
+        </li>
+    </ul>
+    </nav>
 
     <section class="container-cards">
 
