@@ -2,7 +2,18 @@
 
 @section('contenido')
 
-<h2>Registro de movimientos realizados</h2>
+
+<nav class="nav-botones">
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="{{ route('movimientos.pdf') }}" target="_blank" class="nav-link btn-generar-pdf">Generar PDF</a>
+        </li>
+        <li class="nav-item">
+            <h2>Registro de movimientos realizados</h2>
+        </li>
+    </ul>
+    </nav>
+
 <table class="table">
     <thead>
         <tr>

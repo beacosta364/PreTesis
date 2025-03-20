@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Producto;
 use App\Models\User;
+use App\Models\Movimiento;
 
 use Illuminate\Http\Request;
 
@@ -48,4 +49,18 @@ class PdfController extends Controller
         // return $pdf->download('productos_agotados.pdf'); //para descargar el pdf
         return $pdf->stream('productos_agotados.pdf');
     }
+
+    public function generarMovimientosPDF(){
+        $movimientos = Movimiento::all();
+        $pdf = Pdf::loadView('pdf.movimientos', compact('movimientos'));
+        $pdf->setPaper('letter', 'portrait');
+        return $pdf->stream('movimientos.pdf');
+    }
+    // public function generarMovimientosPDF()
+    // {
+    //     $movimientos = Movimiento::select('nombre_producto', 'nombre_usuario', 'tipo_movimiento', 'cantidad', 'created_at')->get();
+    //     $pdf = Pdf::loadView('pdf.movimientos', compact('movimientos'));
+
+    //     return $pdf->download('movimientos.pdf');
+    // }
 }
