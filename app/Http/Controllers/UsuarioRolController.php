@@ -15,7 +15,7 @@ class UsuarioRolController extends Controller
     $usuarios = DB::table('users')
         ->join('model_has_roles', 'users.id', '=', 'model_has_roles.model_id')
         ->join('roles', 'model_has_roles.role_id', '=', 'roles.id')
-        ->select('users.id', 'users.name', 'roles.id AS role_id', 'roles.name AS role_name') // <---- Aquí está la solución
+        ->select('users.id', 'users.name', 'roles.id AS role_id', 'roles.name AS role_name')
         ->get();
 
     // Obtener todos los roles disponibles

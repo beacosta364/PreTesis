@@ -10,11 +10,6 @@ use Illuminate\Support\Facades\Auth;
 class MovimientoController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    /**
      * Muestra la vista de movimientos con la lista de productos.
      */
     
@@ -25,77 +20,6 @@ class MovimientoController extends Controller
         return view('movimientos.index', compact('movimientos'));
         // return view('movimientos', compact('productos'));
         
-    }
-
-    
-
-
-
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Movimiento  $movimiento
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Movimiento $movimiento)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Movimiento  $movimiento
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Movimiento $movimiento)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Movimiento  $movimiento
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Movimiento $movimiento)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Movimiento  $movimiento
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Movimiento $movimiento)
-    {
-        //
     }
 
     /**
@@ -144,4 +68,59 @@ class MovimientoController extends Controller
 
         return redirect()->back()->with('success', 'Movimiento registrado con éxito.');
     }
+
+
+
+    public function filtrar(Request $request)
+{
+    // Iniciamos la consulta sobre el modelo Movimiento
+    $query = Movimiento::query();
+    
+    // FILTRO POR FECHAS:
+    if ($request->filled('fecha_inicio') && $request->filled('fecha_fin')) {
+        $fechaInicio = $request->input('fecha_inicio');
+        $fechaFin    = $request->input('fecha_fin');
+        $query->whereBetween('created_at', [$fechaInicio, $fechaFin]);
+    } else {
+        // Por defecto, movimientos de los últimos 30 días
+        $fechaInicio = now()->subDays(30);
+        $query->where('created_at', '>=', $fechaInicio);
+    }
+    
+    // FILTRO POR NOMBRE DE PRODUCTO:
+    if ($request->filled('producto_id')) {
+        $productoNombre = $request->input('producto_id');
+        $query->where('nombre_producto', $productoNombre);
+    }
+    
+    // FILTRO POR NOMBRE DE USUARIO:
+    if ($request->filled('usuario_id')) {
+        $usuarioNombre = $request->input('usuario_id');
+        $query->where('nombre_usuario', $usuarioNombre);
+    }
+    
+    // FILTRO POR TIPO DE MOVIMIENTO:
+    if ($request->filled('tipo_movimiento')) {
+        $tipoMovimiento = $request->input('tipo_movimiento');
+        $query->where('tipo_movimiento', $tipoMovimiento);
+    }
+    
+    // Ordenar por fecha descendente y aplicar paginación
+    $movimientos = $query->orderBy('created_at', 'desc')->paginate(500);
+    $movimientos->appends($request->all());
+    
+    // Obtener listas únicas para poblar selectores en el formulario
+    $productos = Movimiento::select('nombre_producto')
+                    ->distinct()
+                    ->orderBy('nombre_producto')
+                    ->get();
+    $usuarios = Movimiento::select('nombre_usuario')
+                    ->distinct()
+                    ->orderBy('nombre_usuario')
+                    ->get();
+    
+    return view('movimientos.filtro', compact('movimientos', 'productos', 'usuarios'));
+}
+
+
 }

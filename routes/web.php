@@ -50,6 +50,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/procesar-movimiento', [MovimientoController::class, 'procesarMovimiento'])->name('producto.procesarMovimiento');
 
 
+    Route::get('/movimientos/filtrar', [MovimientoController::class, 'filtrar'])->name('movimientos.filtrar');
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     Route::get('/configuracion/control', [ConfiguracionController::class, 'control'])->name('configuracion.control');////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
