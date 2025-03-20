@@ -9,10 +9,21 @@ use Illuminate\Validation\Rules;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::all(); // Obtenemos todos los usuarios
-        return view('users.index', compact('users')); // Pasamos los usuarios a la vista
+        // $users = User::all(); // Obtenemos todos los usuarios
+        // return view('users.index', compact('users')); // Pasamos los usuarios a la vista
+        $query = User::query();
+
+        if ($request->has('search')) {
+            $search = $request->input('search');
+            $query->where('name', 'LIKE', "%$search%")
+                ->orWhere('email', 'LIKE', "%$search%");
+        }
+
+        $users = $query->paginate(500); // Paginación para mejorar rendimiento
+
+        return view('users.index', compact('users'));
     }
 
     public function create()
