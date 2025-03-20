@@ -50,12 +50,59 @@ class PdfController extends Controller
         return $pdf->stream('productos_agotados.pdf');
     }
 
-    public function generarMovimientosPDF(){
-        $movimientos = Movimiento::all();
+    //ANterios por si acaso
+    // public function generarMovimientosPDF(){
+    //     $movimientos = Movimiento::all();
+    //     $pdf = Pdf::loadView('pdf.movimientos', compact('movimientos'));
+    //     $pdf->setPaper('letter', 'portrait');
+    //     return $pdf->stream('movimientos.pdf');
+    // }
+
+
+
+    public function generarMovimientosPDF(Request $request)
+    {
+        // Aplicar filtros según los parámetros enviados en la solicitud
+
+        //habilitar esta linea para mostrar pdf con toda la info de la base de datos
+        // $movimientos = Movimiento::query();
+
+        $movimientos = Movimiento::where('created_at', '>=', now()->subDays(30));
+
+        
+    
+        if ($request->filled('fecha_inicio')) {
+            $movimientos->whereDate('created_at', '>=', $request->fecha_inicio);
+        }
+    
+        if ($request->filled('fecha_fin')) {
+            $movimientos->whereDate('created_at', '<=', $request->fecha_fin);
+        }
+    
+        if ($request->filled('producto_id')) {
+            $movimientos->where('nombre_producto', $request->producto_id);
+        }
+    
+        if ($request->filled('usuario_id')) {
+            $movimientos->where('nombre_usuario', $request->usuario_id);
+        }
+    
+        if ($request->filled('tipo_movimiento')) {
+            $movimientos->where('tipo_movimiento', $request->tipo_movimiento);
+        }
+    
+        $movimientos = $movimientos->get();
+    
+        // Generar el PDF con los movimientos filtrados
         $pdf = Pdf::loadView('pdf.movimientos', compact('movimientos'));
         $pdf->setPaper('letter', 'portrait');
+        
         return $pdf->stream('movimientos.pdf');
     }
+    
+
+
+
     // public function generarMovimientosPDF()
     // {
     //     $movimientos = Movimiento::select('nombre_producto', 'nombre_usuario', 'tipo_movimiento', 'cantidad', 'created_at')->get();

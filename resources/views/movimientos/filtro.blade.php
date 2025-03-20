@@ -3,6 +3,7 @@
 @section('contenido')
 <div class="container mt-5">
     <h2 class="mb-4">Registro de movimientos realizados</h2>
+    <a href="{{ route('movimientos.pdf', request()->all()) }}" class="btn btn-danger mt-3" target="_blank">Generar PDF</a>
     <form method="GET" action="{{ route('movimientos.filtrar') }}">
         <div class="row">
             <div class="col-md-2">
