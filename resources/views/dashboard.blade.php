@@ -19,13 +19,13 @@
             <div class="cabecera">
                 <img src="{{ asset('img/Productos.png') }}" alt="">
             <div class="cabecera-text">
-            <h3>* productos registrados</h3>
+            <h3>{{ $totalProductos }} productos registrados</h3>
             </div>
             </div>
             <a href="{{ route('producto.index') }}">Todos</a>
         </div>
         
-        
+    
     </div>
 
            <!-- Configuración y soporte -->
@@ -34,7 +34,7 @@
                 <img src="img/Admin.png" alt="">
                 <div class="cabecera-text">
                 </div>
-                <h3># de usuarios regitrados</h3>
+                <h3>{{ $totalUsuarios }} usuarios registrados</h3>
             </div>
             <a href="{{ route('users.index') }}">Usuarios registrados</a>
         </div>   
@@ -46,7 +46,7 @@
                 <img src="img/Reportes.png" alt="">
                 <div class="cabecera-text"> 
                 </div>  
-                <h3>se han realizado x movimientos este mes</h3>
+                <h3>Se han realizado {{ $movimientosMes }} movimientos este mes</h3>
             </div>
             <a href="{{ route('movimientos.filtrar') }}">Reportes de movimientos</a>
          </div>
