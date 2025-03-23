@@ -12,6 +12,8 @@ use App\Http\Controllers\PerfilUsuarioController;
 use App\Http\Controllers\PdfController;
 
 use App\Http\Controllers\UsuarioRolController;
+use App\Http\Controllers\DashboardController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -88,6 +90,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/productos-agotados/pdf', [PdfController::class, 'productosAgotadosPdf'])->name('productos.agotados.pdf');
     //Ruta pdf reporte pdf de movimiento de productos
     Route::get('/movimientos/pdf', [PdfController::class, 'generarMovimientosPDF'])->name('movimientos.pdf');
+
+    //# de productos para dashboard
+    Route::get('/dashboard', [ProductoController::class, 'dashboard'])->name('dashboard');
+    //# de usuarios registrados para dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 });
 

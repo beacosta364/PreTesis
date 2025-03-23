@@ -194,4 +194,12 @@ class ProductoController extends Controller
         $productos = Producto::orderBy('nombre')->get();
         return view('producto.listado', compact('productos'));
     }
+
+    public function dashboard()
+    {
+        $totalProductos = Producto::count(); // Cuenta todos los productos
+
+        return view('dashboard', compact('totalProductos'));
+    }
+
 }
