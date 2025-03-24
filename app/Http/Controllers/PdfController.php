@@ -5,6 +5,7 @@ use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Producto;
 use App\Models\User;
 use App\Models\Movimiento;
+use App\Models\Categoria;
 
 use Illuminate\Http\Request;
 
@@ -50,14 +51,6 @@ class PdfController extends Controller
         return $pdf->stream('productos_agotados.pdf');
     }
 
-    //ANterios por si acaso
-    // public function generarMovimientosPDF(){
-    //     $movimientos = Movimiento::all();
-    //     $pdf = Pdf::loadView('pdf.movimientos', compact('movimientos'));
-    //     $pdf->setPaper('letter', 'portrait');
-    //     return $pdf->stream('movimientos.pdf');
-    // }
-
 
 
     public function generarMovimientosPDF(Request $request)
@@ -101,13 +94,33 @@ class PdfController extends Controller
     }
     
 
+    public function productosAgotadosPorCategoriaPdf(Request $request)
+    {
+        $categoriaId = $request->get('categoria');
 
+        $query = Producto::with('categoria')
+            ->where(function ($q) {
+                $q->where('cantidad', 0)
+                ->orWhereColumn('cantidad', '<=', 'min_stock');
+            });
 
-    // public function generarMovimientosPDF()
-    // {
-    //     $movimientos = Movimiento::select('nombre_producto', 'nombre_usuario', 'tipo_movimiento', 'cantidad', 'created_at')->get();
-    //     $pdf = Pdf::loadView('pdf.movimientos', compact('movimientos'));
+        if ($categoriaId && $categoriaId !== 'todas') {
+            $query->where('categoria_id', $categoriaId);
+        }
 
-    //     return $pdf->download('movimientos.pdf');
-    // }
+        $productosAgotados = $query->get();
+
+        // Obtener el nombre de la categoría (si hay una)
+        $categoriaNombre = 'Todas las categorías';
+        if ($categoriaId && $categoriaId !== 'todas') {
+            $categoria = Categoria::find($categoriaId);
+            $categoriaNombre = $categoria ? $categoria->nombre : 'Categoría no encontrada';
+        }
+
+        $pdf = Pdf::loadView('pdf.productosAgotadosPorCategoria', compact('productosAgotados', 'categoriaNombre'));
+        $pdf->setPaper('letter', 'portrait');
+
+        return $pdf->stream('productos_agotados_' . now()->format('Ymd_His') . '.pdf');
+    }
+
 }
