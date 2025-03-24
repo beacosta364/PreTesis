@@ -69,6 +69,15 @@
         </select>
     </form>
 
+    <!-- Botón para generar el PDF -->
+     <!--target="_blank" para abrir el pdf en una pestaña nueva -->
+    <form method="GET" action="{{ route('pdf.productos.agotados.categoria') }}" target="_blank"> 
+    <input type="hidden" name="categoria" value="{{ $categoriaSeleccionada ?? 'todas' }}">
+    <button type="submit">Generar PDF</button>
+    </form>
+
+
+
     <div class="productos-resultado">
         @forelse($productosFiltrados as $producto)
             <div class="producto-card">

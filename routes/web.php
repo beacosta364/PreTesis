@@ -90,6 +90,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/productos-agotados/pdf', [PdfController::class, 'productosAgotadosPdf'])->name('productos.agotados.pdf');
     //Ruta pdf reporte pdf de movimiento de productos
     Route::get('/movimientos/pdf', [PdfController::class, 'generarMovimientosPDF'])->name('movimientos.pdf');
+    //Ruta pdf reporte pdf de productos agotados o por agotarse en dashboard
+    Route::get('/pdf/productos-agotados-categoria', [PdfController::class, 'productosAgotadosPorCategoriaPdf'])->name('pdf.productos.agotados.categoria');
+
 
     //# de productos para dashboard
     Route::get('/dashboard', [ProductoController::class, 'dashboard'])->name('dashboard');
