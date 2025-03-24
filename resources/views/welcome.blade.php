@@ -46,7 +46,7 @@
             <!-- Texto  -->
             <section class="contenedor-texto-header">
                 <h1>ABY technological solutions</h1>
-                <h2>Gestión eficiente, resultados visibles</h2>
+                <h2>Gestión eficiente, resultados visibles.</h2>
                 <a href="#servicios"> Nuestros servicios</a>
             </section>
         </section>
