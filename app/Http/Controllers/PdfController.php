@@ -50,14 +50,6 @@ class PdfController extends Controller
         return $pdf->stream('productos_agotados.pdf');
     }
 
-    //ANterios por si acaso
-    // public function generarMovimientosPDF(){
-    //     $movimientos = Movimiento::all();
-    //     $pdf = Pdf::loadView('pdf.movimientos', compact('movimientos'));
-    //     $pdf->setPaper('letter', 'portrait');
-    //     return $pdf->stream('movimientos.pdf');
-    // }
-
 
 
     public function generarMovimientosPDF(Request $request)
@@ -100,14 +92,4 @@ class PdfController extends Controller
         return $pdf->stream('movimientos.pdf');
     }
     
-
-
-
-    // public function generarMovimientosPDF()
-    // {
-    //     $movimientos = Movimiento::select('nombre_producto', 'nombre_usuario', 'tipo_movimiento', 'cantidad', 'created_at')->get();
-    //     $pdf = Pdf::loadView('pdf.movimientos', compact('movimientos'));
-
-    //     return $pdf->download('movimientos.pdf');
-    // }
 }

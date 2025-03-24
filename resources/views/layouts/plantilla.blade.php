@@ -148,7 +148,7 @@
         <!-- header -->
 
         <header class="header">
-            <h2>dasboard</h2>
+            <!-- <h2>dasboard</h2> -->
             <button id="menu-toggle" class="menu-hamburger">☰</button>
         </header>
 

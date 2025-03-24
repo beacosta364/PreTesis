@@ -1,16 +1,16 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
-<h3>Dashboard</h3>
 
 <section class="container-cards">
     <div class="card">
         <div class="cabecera">
             <img src="img/GestionDelSistema.png" alt=" ">
         <div class="cabecera-text">
+        <a href="{{ route('producto.movimiento') }}">Gestion de inventarios</a>
     </div> 
     </div>
-        <a href="{{ route('producto.movimiento') }}">Gestion de inventarios</a>
+        
     </div>
     
             
@@ -54,9 +54,35 @@
     </section >
 
     <section class="container-cards">
-        <section>
-        <h2>lista de productos agotados por categorias</h2>
-        </section>
+    <section>
+    <h2>Productos agotados o por agotarse por categoría</h2>
+
+    <form method="GET" action="{{ route('dashboard') }}">
+        <label for="categoria">Selecciona una categoría:</label>
+        <select name="categoria" id="categoria" onchange="this.form.submit()">
+            <option value="todas" {{ ($categoriaSeleccionada == 'todas' || !$categoriaSeleccionada) ? 'selected' : '' }}>Todas</option>
+            @foreach ($categorias as $categoria)
+                <option value="{{ $categoria->id }}" {{ $categoriaSeleccionada == $categoria->id ? 'selected' : '' }}>
+                    {{ $categoria->nombre }}
+                </option>
+            @endforeach
+        </select>
+    </form>
+
+    <div class="productos-resultado">
+        @forelse($productosFiltrados as $producto)
+            <div class="producto-card">
+                <strong>{{ $producto->nombre }}</strong> - 
+                {{ $producto->categoria->nombre ?? 'Sin categoría' }} |
+                Cantidad: {{ $producto->cantidad }} |
+                Stock mínimo: {{ $producto->min_stock ?? 'No definido' }}
+            </div>
+        @empty
+            <p>No hay productos agotados o por agotarse en esta categoría.</p>
+        @endforelse
+    </div>
+</section>
+
         
         <section>
         <h2>Gráfica de productos más usados en el mes (Unidades retiradas)</h2>
