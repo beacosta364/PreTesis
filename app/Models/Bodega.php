@@ -9,7 +9,9 @@ class Bodega extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'user_id', 'accion',
+        'user_id',
+        'nombre_usuario',
+        'accion',
     ];
 }
 

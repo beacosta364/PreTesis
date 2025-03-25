@@ -1,24 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Bodega;
-
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BodegaController extends Controller
 {
     public function registrarIntento()
-{
-    // Crear nuevo intento con user_id null y acción por defecto
-    Bodega::create([
-        'user_id' => null, // Si tuvieras auth, aquí pondrías auth()->id()
-    ]);
+    {
+        $user = Auth::user(); // Verificamos si hay usuario autenticado
 
-    return response()->json(['success' => true]);
+        Bodega::create([
+            'user_id' => $user?->id, // Usamos null si no hay usuario
+            'nombre_usuario' => $user?->name ?? 'Invitado', // Guardamos nombre o "Invitado"
+            'accion' => 'Ingreso a bodega',
+        ]);
+
+        return response()->json(['success' => true]);
+    }
 }
-}
-
-
-
-
