@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Bodega;
 use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class BodegaController extends Controller
@@ -21,12 +22,31 @@ class BodegaController extends Controller
         return response()->json(['success' => true]);
     }
 
-    public function verHistorial()
-    {
-        $registros = Bodega::latest()->get(); 
 
-        return view('bodega.historial', compact('registros'));
+public function verHistorial(Request $request)
+{
+    $query = Bodega::query();
+
+    // Filtrar por usuario si viene en la solicitud
+    if ($request->filled('usuario')) {
+        $query->where('user_id', $request->usuario);
     }
+
+    // Filtrar por fecha desde
+    if ($request->filled('desde')) {
+        $query->whereDate('created_at', '>=', $request->desde);
+    }
+
+    // Filtrar por fecha hasta
+    if ($request->filled('hasta')) {
+        $query->whereDate('created_at', '<=', $request->hasta);
+    }
+
+    $registros = $query->latest()->get();
+    $usuarios = User::all(); // Para el selector
+
+    return view('bodega.historial', compact('registros', 'usuarios'));
+}
 
 
 }
