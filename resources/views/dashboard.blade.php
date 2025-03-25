@@ -93,9 +93,41 @@
 </section>
 
         
-        <section>
-        <h2>Gráfica de productos más usados en el mes (Unidades retiradas)</h2>
-        </section>
-    </section>
+<section>
+    <h2>Notificaciones</h2>
+
+    <!-- Formulario para agregar una nueva notificación -->
+    <form action="{{ route('notificaciones.store') }}" method="POST">
+        @csrf
+        <label>Título:</label>
+        <input type="text" name="titulo" required>
+        <label>Mensaje:</label>
+        <textarea name="mensaje" required></textarea>
+        <button type="submit">Crear Notificación</button>
+    </form>
+
+    <!-- Mensajes de éxito -->
+    @if (session('success'))
+        <p style="color: green;">{{ session('success') }}</p>
+    @endif
+
+    <!-- Listado de notificaciones -->
+    <h3>Lista de Notificaciones</h3>
+    <ul>
+        @foreach($notificaciones as $notificacion)
+            <li>
+                <strong>{{ $notificacion->titulo }}</strong>: {{ $notificacion->mensaje }}  
+                <small>{{ $notificacion->created_at }}</small>
+                <a href="{{ route('notificaciones.edit', $notificacion->id) }}">Editar</a>
+                <form action="{{ route('notificaciones.destroy', $notificacion->id) }}" method="POST" style="display: inline;">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" onclick="return confirm('¿Estás seguro?')">Eliminar</button>
+                </form>
+            </li>
+        @endforeach
+    </ul>
+</section>
+
 
 @endsection

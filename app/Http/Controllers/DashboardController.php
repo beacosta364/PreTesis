@@ -7,6 +7,8 @@ use App\Models\User;
 use App\Models\Producto;
 use App\Models\Movimiento;
 use App\Models\Categoria;
+use App\Models\Notificacion;
+
 use Carbon\Carbon; //para trabajar con fechas, usado en este caso para mostrar los movimientos
                    //del ultimo mes de productos
 
@@ -38,6 +40,7 @@ class DashboardController extends Controller
     }
 
     $productosFiltrados = $query->get();
+    $notificaciones = Notificacion::latest()->get();
 
     return view('dashboard', compact(
         'totalUsuarios',
@@ -45,7 +48,8 @@ class DashboardController extends Controller
         'movimientosMes',
         'productosFiltrados',
         'categorias',
-        'categoriaSeleccionada'
+        'categoriaSeleccionada',
+        'notificaciones'
     ));
 }
 }
