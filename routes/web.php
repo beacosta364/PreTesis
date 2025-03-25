@@ -104,6 +104,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/registro-intento', [BodegaController::class, 'registrarIntento'])->name('bodega.registrar');
     Route::get('/historial-bodega', [BodegaController::class, 'verHistorial'])->name('bodega.historial');
 
+    Route::get('/historial-bodega/pdf', [PdfController::class, 'exportarHistorialBodega'])->name('bodega.historial.pdf');
+
 
 
 });
