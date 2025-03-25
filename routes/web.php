@@ -102,6 +102,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::post('/registro-intento', [BodegaController::class, 'registrarIntento'])->name('bodega.registrar');
+    Route::get('/historial-bodega', [BodegaController::class, 'verHistorial'])->name('bodega.historial');
+
 
 
 });

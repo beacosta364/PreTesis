@@ -20,4 +20,13 @@ class BodegaController extends Controller
 
         return response()->json(['success' => true]);
     }
+
+    public function verHistorial()
+    {
+        $registros = Bodega::latest()->get(); 
+
+        return view('bodega.historial', compact('registros'));
+    }
+
+
 }

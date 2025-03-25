@@ -113,7 +113,7 @@
                     <p>Notificaciones y registro ingresos a bodega</p>
                 </div>
                 <div class="element-slidebar-content">    
-                    <a href="{{ route('bodega.registrar') }}">Registro ingreso a bodega</a>
+                    <a href="{{ route('bodega.historial') }}">Registro ingreso a bodega</a>
                     <a href="{{ route('notificaciones.index') }}">Notificaciones</a>
                 </div>
             </div>

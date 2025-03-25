@@ -12,6 +12,8 @@
     </div> 
 </section>
 
+
+
 @if ($configuracion)
     <script>
         const ipAddress = "{{ $configuracion->ip }}"; // Asigna la IP desde la base de datos
@@ -56,22 +58,5 @@
     });
 </script>
 
-
-<!-- <script>
-    
-    document.getElementById("ingresarBodegaBtn").addEventListener("click", function() {
-        fetch(`http://${ipAddress}/activar1`)
-            .then(response => response.text())
-            .then(data => {
-                if (data === "Puerta 1 activada") {
-                    document.getElementById("statusAcceso").textContent = "Estado de la puerta: Abierta (Se cerrará automáticamente)";
-                } else {
-                    document.getElementById("statusAcceso").textContent = "Estado de la puerta: Desconocido";
-                }
-            })
-            .catch(error => console.error('Error:', error));
-    });
-
-</script> -->
 
 @endsection
