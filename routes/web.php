@@ -13,6 +13,8 @@ use App\Http\Controllers\PdfController;
 
 use App\Http\Controllers\UsuarioRolController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\BodegaController;
+
 
 
 Route::get('/', function () {
@@ -98,6 +100,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [ProductoController::class, 'dashboard'])->name('dashboard');
     //# de usuarios registrados para dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::post('/registro-intento', [BodegaController::class, 'registrarIntento'])->name('bodega.registrar');
+
 
 });
 

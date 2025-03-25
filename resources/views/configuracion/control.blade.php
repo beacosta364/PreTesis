@@ -2,8 +2,6 @@
 
 @section('contenido')
 
-<h3>Gestión de Acceso</h3>
-
 <!-- Controles electrónica -->
 <section class="Controles">
     <!-- Control de acceso a bodega -->
@@ -12,15 +10,6 @@
         <button id="ingresarBodegaBtn">Ingresar a bodega</button>
         <p id="statusAcceso">Estado de la puerta: Desconocido</p>
     </div> 
-
-    <!-- Control de estado de alarma -->
-    <!-- @can('control.alarma')
-    <div class="control-alarma">
-        <h2>Control de estado de alarma</h2>
-        <button id="activarAlarmaBtn">Activar Alarma</button>
-        <p id="statusAlarma">Estado de alarma: Desconocido</p>
-    </div>
-    @endcan -->
 </section>
 
 @if ($configuracion)
@@ -34,8 +23,42 @@
     </script>
 @endif
 
+
+
 <script>
-    // Función para ingresar a la bodega (Activar electroimán 1 por 1 segundo)
+    document.getElementById("ingresarBodegaBtn").addEventListener("click", function() {
+        // Primero, registrar intento en Laravel
+        fetch("{{ route('bodega.registrar') }}", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRF-TOKEN": "{{ csrf_token() }}"
+            },
+            body: JSON.stringify({})
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log("Intento registrado en BD:", data);
+        })
+        .catch(error => console.error("Error al registrar intento:", error));
+
+        // Segundo, hacer la solicitud al ESP
+        fetch(`http://${ipAddress}/activar1`)
+            .then(response => response.text())
+            .then(data => {
+                if (data === "Puerta 1 activada") {
+                    document.getElementById("statusAcceso").textContent = "Estado de la puerta: Abierta (Se cerrará automáticamente)";
+                } else {
+                    document.getElementById("statusAcceso").textContent = "Estado de la puerta: Desconocido";
+                }
+            })
+            .catch(error => console.error('Error ESP:', error));
+    });
+</script>
+
+
+<!-- <script>
+    
     document.getElementById("ingresarBodegaBtn").addEventListener("click", function() {
         fetch(`http://${ipAddress}/activar1`)
             .then(response => response.text())
@@ -49,19 +72,6 @@
             .catch(error => console.error('Error:', error));
     });
 
-    // Función para activar la alarma
-    // document.getElementById("activarAlarmaBtn").addEventListener("click", function() {
-    //     fetch(`http://${ipAddress}/activar2`)
-    //         .then(response => response.text())
-    //         .then(data => {
-    //             if (data === "Puerta 2 activada") {
-    //                 document.getElementById("statusAlarma").textContent = "Estado de la alarma: Activada";
-    //             } else {
-    //                 document.getElementById("statusAlarma").textContent = "Estado de la alarma: Desconocido";
-    //             }
-    //         })
-    //         .catch(error => console.error('Error:', error));
-    // });
-</script>
+</script> -->
 
 @endsection
