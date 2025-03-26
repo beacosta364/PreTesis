@@ -1,6 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
+@can('configuracion.update')
 <div>
     <h2>Editar IP</h2>
 
@@ -19,4 +20,5 @@
         <a href="{{ route('configuracion.create') }}">Configurar IP</a>
     @endif
 </div>
+@endcan
 @endsection

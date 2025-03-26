@@ -1,6 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
+@can('reporteinventarios.show')
 <div class="container mt-4">
 
     <nav class="nav-botones">
@@ -33,4 +34,5 @@
         </tbody>
     </table>
 </div>
+@endcan
 @endsection

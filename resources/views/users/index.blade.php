@@ -1,6 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
+@can('vistausuarios.show')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +20,7 @@
     <nav class="nav-botones">
     <ul class="nav-menu">
         <li class="nav-item">
-            <h2>Lista de Usuarios Registrados...</h2>
+            <h2>Lista de Usuarios Registrados</h2>
         </li>
         <li class="nav-item">
             <a href="{{ route('usuarios.pdf') }}" target="_blank" class="btn btn-primary">Generar PDF de Usuarios</a>
@@ -54,4 +55,5 @@
     </table>
 </body>
 </html>
+@endcan
 @endsection

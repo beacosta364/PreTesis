@@ -1,6 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
+@can('registrarusuarios.show')
 <div class="container">
     <h2>Registrar Nuevo Usuario</h2>
     <form action="{{ route('users.store') }}" method="POST">
@@ -28,4 +29,5 @@
         <button type="submit" class="btn btn-primary">Registrar Usuario</button>
     </form>
 </div>
+@endcan
 @endsection

@@ -1,6 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
+@can('configuracion.index')
     <h1>Configuración de IP</h1>
     
     @if ($configuracion)
@@ -12,4 +13,5 @@
         <p>No hay configuración de IP registrada.</p>
         <a href="{{ route('configuracion.create') }}">Agregar IP</a>
     @endif
+@endcan
 @endsection

@@ -1,7 +1,8 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
-    <h2>Historial de Accesos a la Bodega</h2>
+@can('ingreso.index')
+    <h2>Historial de Accesos a la Bodega.</h2>
 
     <a href="{{ route('bodega.historial.pdf', request()->all()) }}" target="_blank" style="margin-left: 10px;">
     <button type="button">Exportar PDF</button>
@@ -51,4 +52,6 @@
     @else
         <p>No hay registros que coincidan con los filtros seleccionados.</p>
     @endif
+
+    @endcan
 @endsection

@@ -1,7 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
-
+@can('categoria.update')
 <div class="container-formulario">
     <div class="card formulario">
         <h2>Editar Categoría</h2>
@@ -30,4 +30,5 @@
         </form>
     </div>
 </div>
+@endcan
 @endsection

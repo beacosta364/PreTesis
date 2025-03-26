@@ -2,7 +2,7 @@
 <!-- <link rel="stylesheet" href="{{ asset('css/styles-perfil.css') }}"> -->
 
 
-
+@can('eliminarcuenta.show')
 <section class="space-y-6 bg-gray-200 dark:bg-gray-800 p-6 rounded-lg shadow">
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-200">
@@ -64,3 +64,4 @@
         </form>
     </x-modal>
 </section>
+@endcan

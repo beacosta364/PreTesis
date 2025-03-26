@@ -1,6 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
+@can('productos.create')
 <div class="container-formulario">
     <div class="card formulario">
         <h2>Crear Nuevo Producto</h2>
@@ -60,4 +61,5 @@
         </form>
     </div>
 </div>
+@endcan
 @endsection

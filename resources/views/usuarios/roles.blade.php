@@ -1,6 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
+@can('rolusuarios.show')
 <div class="container mt-5">
     <h2 class="mb-4">Lista de Usuarios y sus Roles</h2>
     <table class="table table-striped">
@@ -44,7 +45,7 @@
 
     
 
-
+@endcan
 @endsection
 
 

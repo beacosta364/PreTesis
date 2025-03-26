@@ -17,9 +17,11 @@
         <li class="nav-item">
             <a href="{{ route('productos.pdf') }}" target="_blank" class="nav-link btn-generar-pdf">Generar PDF</a>
         </li>
+        @can('productos.create')
         <li class="nav-item">
             <a href="{{ route('producto.create') }}" class="nav-link btn-agregar-producto">Agregar Producto</a>
         </li>
+        @endcan
     </ul>
     </nav>
 
@@ -66,14 +68,18 @@
               <a href="{{ route('producto.show', $producto->id) }}">
                  <img src="{{ asset('img/Vista.png') }}" alt="Ver" width="35"height="40">
               </a>
+              @can('productos.update')
               <a href="{{ route('producto.edit', $producto->id) }}">
                  <img src="{{ asset('img/Editar.png') }}" alt="Editar" width="35"height="40">
               </a>
+              @endcan
+              @can('productos.destroy')
               <form action="{{ route('producto.destroy', $producto->id) }}" method="POST" onsubmit="return confirmarEliminacion()" >
                  @csrf
                  @method('DELETE')
                  <input type="image" src="{{ asset('img/Eliminar.png') }}" alt="Eliminar" width="35"height="40">
               </form>
+              @endcan
              </td>                                
          </tr>
          @endforeach  
