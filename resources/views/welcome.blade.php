@@ -72,9 +72,9 @@
                     <div class="banner-static">
                         <div class="banner-text">
                             <div class="banner-cell">
-                                <h1>Ofreciendo el Mejor <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="Sabor:Servicio:Ambiente" data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
+                                <h1>Ofreciendo el Mejor <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="Sabor" data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
                                 <h2>44 Años en Cali</h2>
-                                <p>Date el Gusto de conocernos</p>
+                                <p>Date el gusto de conocernos</p>
                                 <div class="book-btn">
                                     <a href="#reserva" class="table-btn hvr-underline-from-center">Reservar mi mesa</a>
                                 </div>
@@ -101,7 +101,7 @@
                         <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                             <h2 class="block-title"> Sobre Nosotros </h2>
                             <h3>Restaurante La Papa</h3>
-                            <p> Mision </p>
+                            <p> Misión </p>
                             <p>En el restaurante La Papa, estamos comprometidos a ofrecer una experiencia culinaria excepcional
                                 que celebra la diversidad de la cocina internacional. 
                                 Nos esforzamos por utilizar ingredientes de la más alta calidad y brindar un servicio amable y eficiente, 
@@ -159,63 +159,63 @@
                                         </div>
                                     </a>
                                     <div class="item-img">
-                                        <img src="{{ asset('homeimg/Platos/16002501.jpg') }}" alt="sp-menu">
+                                        <img src="{{ asset('homeimg\Costilla BBQ.jpg') }}" alt="sp-menu">
                                     </div>
                                 </div>
                                 <div class="item item-type-zoom">
                                     <a href="#" class="item-hover">
                                         <div class="item-info">
                                             <div class="headline">
-                                                PASTA ITALIANA 
+                                                PLATO MIXTO
                                                 <div class="line"></div>
-                                                <div class="dit-line"> Sumérgete en el auténtico sabor de Italia con nuestra pasta al dente, bañada en una rica y cremosa salsa de tomate .</div>
+                                                <div class="dit-line"> Res, Pollo, Costilla, Chorizo.</div>
                                             </div>
                                         </div>
                                     </a>
                                     <div class="item-img">
-                                        <img src="{{ asset('homeimg/Platos/16002505.jpg') }}" alt="sp-menu">
+                                        <img src="{{ asset('homeimg\Plato mixto..jpg') }}" alt="sp-menu">
                                     </div>
                                 </div>
                                 <div class="item item-type-zoom">
                                     <a href="#" class="item-hover">
                                         <div class="item-info">
                                             <div class="headline">
-                                                FILETE CON CHAMPIÑONES 
+                                                SALMON  
                                                 <div class="line"></div>
-                                                <div class="dit-line">filete de res, cocinado a la perfección y acompañado de una cremosa salsa de champiñones.</div>
+                                                <div class="dit-line">Acompañado de pure de papa y verduras frescas.</div>
                                             </div>
                                         </div>
                                     </a>
                                     <div class="item-img">
-                                        <img src="{{ asset('homeimg/Platos/16002510.jpg') }}" alt="sp-menu">
+                                        <img src="{{ asset('homeimg\Salmon.jpg') }}" alt="sp-menu">
                                     </div>
                                 </div>
                                 <div class="item item-type-zoom">
                                     <a href="#" class="item-hover">
                                         <div class="item-info">
                                             <div class="headline">
-                                                SALMON 
+                                                TACOS DE CARNE  
                                                 <div class="line"></div>
-                                                <div class="dit-line">Salmon al ajillo.</div>
+                                                <div class="dit-line">Tacos con carne molida y pico de gallo.</div>
                                             </div>
                                         </div>
                                     </a>
                                     <div class="item-img">
-                                        <img src="{{ asset('homeimg/Platos/16002513.jpg') }}" alt="sp-menu">
+                                        <img src="{{ asset('homeimg\Tacos de carne.jpg') }}" alt="sp-menu">
                                     </div>
                                 </div>
                                 <div class="item item-type-zoom">
                                     <a href="#" class="item-hover">
                                         <div class="item-info">
                                             <div class="headline">
-                                                ROLLO DE CARNE
+                                                kIBBES
                                                 <div class="line"></div>
-                                                <div class="dit-line">Delicioso rollo de carne relleno de verduras salteadas y salsa carbonara</div>
+                                                <div class="dit-line">Bolitas de carne y verduras</div>
                                             </div>
                                         </div>
                                     </a>
                                     <div class="item-img">
-                                        <img src="{{ asset('homeimg/Platos/2991.jpg') }}" alt="sp-menu">
+                                        <img src="{{ asset('homeimg\Kibbes.jpg') }}" alt="sp-menu">
                                     </div>
                                 </div>
                             </div>
@@ -236,9 +236,9 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                             <h2 class="block-title text-center">
-                            Nuestro Menu 	
+                            Nuestro menu	
                         </h2>
-                            <p class="title-caption text-center">Descripcion de nuestro menu. </p>
+                            <p class="title-caption text-center">En nuestro restaurante, nos enorgullecemos de ofrecer una experiencia culinaria única con una variedad de platos que deleitarán tu paladar.</p>
                         </div>
                         <div class="tab-menu">
                             <div class="slider slider-nav">
@@ -247,15 +247,15 @@
                                     <p> <i class="flaticon-canape"></i> </p>
                                 </div>
                                 <div class="tab-title-menu">
-                                    <h2>POSTRES</h2>
+                                    <h2>PLATO FUERTE</h2>
                                     <p> <i class="flaticon-dinner"></i> </p>
                                 </div>
                                 <div class="tab-title-menu">
-                                    <h2>CARNES</h2>
+                                    <h2>POSTRES</h2>
                                     <p> <i class="flaticon-desert"></i> </p>
                                 </div>
                                 <div class="tab-title-menu">
-                                    <h2>PASTA</h2>
+                                    <h2>BEBIDAS</h2>
                                     <p> <i class="flaticon-coffee"></i> </p>
                                 </div>
                             </div>
@@ -263,88 +263,127 @@
                                 <div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg/Platos/2992.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Empanaditas Arabes.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>ENTRADAS</h3>
+                                                <h3>Empanadas Arabes</h3>
                                                 <p>
-                                                    Lorem ipsum dolor sit ametr  mollis eleifend dapibus.
+                                                    Con salsa y guacamole.
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$8.5</span>
+                                            <span class="offer-price">$12Mil<l/span>
                                         </div>
-                                    </div>                                    <!-- filepath: /D:/laragon/www/PreTesis/resources/views/welcome.blade.php -->
-                                    <div class="tab-title-menu">
-                                        <h2 class="text-2xl font-bold">CARNES</h2>
-                                        <p><i class="flaticon-desert"></i></p>
-                                    </div>
-                                    <div class="tab-title-menu">
-                                        <h2 class="text-2xl font-bold">PASTA</h2>
-                                        <p><i class="flaticon-coffee"></i></p>
-                                    </div>
+                                    </div>                                    
+                                    
+                                   
                                     <div class="slider slider-single">
                                         <div>
                                             <div class="lg:w-1/2 md:w-1/2 sm:w-full px-4">
                                                 <div class="offer-item bg-white shadow-lg rounded-lg p-4">
-                                                    <img src="{{ asset('homeimg/Platos/2992.jpg') }}" alt="" class="w-full h-auto rounded-md">
+                                                    <img src="{{ asset('homeimg\Empanaditas vallunas.jpg') }}" alt="" class="w-full h-auto rounded-md">
                                                     <div>
-                                                        <h3 class="text-xl font-semibold mt-4">ENTRADAS</h3>
+                                                        <h3 class="text-xl font-semibold mt-4">Empanadas vallunas</h3>
                                                         <p class="text-gray-600">
-                                                            Lorem ipsum dolor sit ametr mollis eleifend dapibus.
+                                                            Con Salsa y aji
                                                         </p>
                                                     </div>
-                                                    <span class="offer-price text-lg font-bold text-green-600">$8.5</span>
+                                                    <span class="offer-price text-lg font-bold text-green-600">$12Mil</span>
                                                 </div>
                                             </div>
                                             <!-- end col -->
                                             <div class="lg:w-1/2 md:w-1/2 sm:w-full px-4">
                                                 <div class="offer-item bg-white shadow-lg rounded-lg p-4">
-                                                    <img src="{{ asset('homeimg/menu-item-thumbnail-02.jpg') }}" alt="" class="w-full h-auto rounded-md">
+                                                    <img src="{{ asset('homeimg\Ensalada Griega.jpg') }}" alt="" class="w-full h-auto rounded-md">
                                                     <div>
-                                                        <h3 class="text-xl font-semibold mt-4">MIXED SALAD</h3>
+                                                        <h3 class="text-xl font-semibold mt-4">Ensalada Griega</h3>
                                                         <p class="text-gray-600">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                             Mix de ensalada.
                                                         </p>
                                                     </div>
-                                                    <span class="offer-price text-lg font-bold text-green-600">$25</span>
+                                                    <span class="offer-price text-lg font-bold text-green-600">$17Mil</span>
                                                 </div>
                                             </div>
-                                            <!-- end col -->
-                                            <div class="lg:w-1/2 md:w-1/2 sm:w-full px-4">
-                                                <div class="offer-item bg-white shadow-lg rounded-lg p-4">
-                                                    <img src="{{ asset('homeimg/menu-item-thumbnail-03.jpg') }}" alt="" class="w-full h-auto rounded-md">
-                                                    <div>
-                                                        <h3 class="text-xl font-semibold mt-4">BBQ</h3>
-                                                        <p class="text-gray-600">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                                        </p>
-                                                    </div>
-                                                    <span class="offer-price text-lg font-bold text-green-600">$10</span>
-                                                </div>
-                                            </div>
-                                            <!-- end col -->
+                                           
                                         </div>
                                     </div>
                                     <!-- end col -->
+                                   
+                                   
+                                </div>
+                                <div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg/menu-item-thumbnail-02.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>MIXED SALAD</h3>
+                                                <h3>Baby Beef</h3>
                                                 <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    Carne asada con el termino de tu preferencia.
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$25</span>
+                                            <span class="offer-price">$65Mil</span>
                                         </div>
                                     </div>
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg/menu-item-thumbnail-03.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>BBQ </h3>
+                                                <h3>Pollo Galeto</h3>
                                                 <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    Pollo asado con papas a la francesa.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$60Mil</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Ajiaco,.  ..jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Ajiaco</h3>
+                                                <p>
+                                                    Tradicional ajiaco acompañado con arroz, aguacate y papas a la francesa.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$35Mil</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                </div>
+                                <div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pie de manzana..jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Pie de manzana</h3>
+                                                <p>
+                                                     Postre para deleitar el paladar. 
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$15Mil</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Postre de deditos.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Deditos de chocolate</h3>
+                                                <p>
+                                                    Relleno de chocolate blanco.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$10Mil</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pie de manzana.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Copa de helado</h3>
+                                                <p>
+                                                    Tu sabor preferido (Vainilla, Fresa, Caramelo)
                                                 </p>
                                             </div>
                                             <span class="offer-price">$10</span>
@@ -355,122 +394,40 @@
                                 <div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg/menu-item-thumbnail-04.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\746d73efbc393b143870b08523e841b2.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>PIZZA</h3>
+                                                <h3> Limonada</h3>
                                                 <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    De Coco, Cerezada o de mango.
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$5</span>
+                                            <span class="offer-price">$12Mil</span>
                                         </div>
                                     </div>
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg/menu-item-thumbnail-05.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>POLLO</h3>
+                                                <h3>Jugos naturales</h3>
                                                 <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    En agua, en leche o frappe. (Mango, Maracuya, Mora, Lulo)
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$15</span>
+                                            <span class="offer-price">$10Mil</span>
                                         </div>
                                     </div>
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg/menu-item-thumbnail-06.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>PASTA</h3>
+                                                <h3>Michelada</h3>
                                                 <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    Cerveza de tu preferencia con maracuya y  mango. 
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$6</span>
-                                        </div>
-                                    </div>
-                                    <!-- end col -->
-                                </div>
-                                <div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                        <div class="offer-item">
-                                            <img src="{{ asset('homeimg/menu-item-thumbnail-07.jpg') }}" alt="" class="img-responsive">
-                                            <div>
-                                                <h3>CHOCOLATE</h3>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                                </p>
-                                            </div>
-                                            <span class="offer-price">$4</span>
-                                        </div>
-                                    </div>
-                                    <!-- end col -->
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                        <div class="offer-item">
-                                            <img src="{{ asset('homeimg/menu-item-thumbnail-08.jpg') }}" alt="" class="img-responsive">
-                                            <div>
-                                                <h3>RES</h3>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                                </p>
-                                            </div>
-                                            <span class="offer-price">$9</span>
-                                        </div>
-                                    </div>
-                                    <!-- end col -->
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                        <div class="offer-item">
-                                            <img src="{{ asset('homeimg/menu-item-thumbnail-09.jpg') }}" alt="" class="img-responsive">
-                                            <div>
-                                                <h3>COSTILLAS</h3>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                                </p>
-                                            </div>
-                                            <span class="offer-price">$10</span>
-                                        </div>
-                                    </div>
-                                    <!-- end col -->
-                                </div>
-                                <div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                        <div class="offer-item">
-                                            <img src="{{ asset('homeimg/menu-item-thumbnail-10.jpg') }}" alt="" class="img-responsive">
-                                            <div>
-                                                <h3> PIZZA</h3>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                                </p>
-                                            </div>
-                                            <span class="offer-price">$12</span>
-                                        </div>
-                                    </div>
-                                    <!-- end col -->
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                        <div class="offer-item">
-                                            <img src="{{ asset('homeimg/menu-item-thumbnail-09.jpg') }}" alt="" class="img-responsive">
-                                            <div>
-                                                <h3>PASTA</h3>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                                </p>
-                                            </div>
-                                            <span class="offer-price">$9</span>
-                                        </div>
-                                    </div>
-                                    <!-- end col -->
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                        <div class="offer-item">
-                                            <img src="{{ asset('homeimg/menu-item-thumbnail-08.jpg') }}" alt="" class="img-responsive">
-                                            <div>
-                                                <h3>POSTRE</h3>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                                </p>
-                                            </div>
-                                            <span class="offer-price">$5</span>
+                                            <span class="offer-price">$15Mil</span>
                                         </div>
                                     </div>
                                     
@@ -486,7 +443,227 @@
             
         </div>
         <!-- end menu -->
-
+        <div id="gallery" class="gallery-main pad-top-100 pad-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                        <h2 class="block-title text-center">
+                        Nuestra Galeria
+                    </h2>
+                        <p class="title-caption text-center">Conoce un poco mas nuestros platos </p>
+                    </div>
+                    <div class="gal-container clearfix">
+                        <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
+                            <div class="box">
+                                <a href="#" data-toggle="modal" data-target="#1">
+                                    <img src="{{ asset('homeimg\Baby beef.jpg') }}"alt="" />
+                                </a>
+                                <div class="modal fade" id="1" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            <div class="modal-body">
+                                                <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" />
+                                            </div>
+                                            <div class="col-md-12 description">
+                                                <h4>Baby Beef</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+                            <div class="box">
+                                <a href="#" data-toggle="modal" data-target="#2">
+                                    <img src="{{ asset('homeimg\Papa Champiñon.jpg') }}" alt="" />
+                                </a>
+                                <div class="modal fade" id="2" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            <div class="modal-body">
+                                                <img src="{{ asset('homeimg\Papa Champiñon.jpg') }}" alt="" />
+                                            </div>
+                                            <div class="col-md-12 description">
+                                                <h4>Papa con Champiñones</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+                            <div class="box">
+                                <a href="#" data-toggle="modal" data-target="#3">
+                                    <img src="{{ asset('homeimg\Pechuga al carbon...jpg') }}" alt="" />
+                                </a>
+                                <div class="modal fade" id="3" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            <div class="modal-body">
+                                                <img src="{{ asset('homeimg\Pechuga al carbon...jpg') }}" alt="" />
+                                            </div>
+                                            <div class="col-md-12 description">
+                                                <h4>Pechuga al carbon</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+                            <div class="box">
+                                <a href="#" data-toggle="modal" data-target="#4">
+                                    <img src="{{ asset('homeimg\Pincho res...jpg') }}"  alt="" />
+                                </a>
+                                <div class="modal fade" id="4" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            <div class="modal-body">
+                                                <img src="{{ asset('homeimg\Pincho res...jpg') }}"  alt="" />
+                                            </div>
+                                            <div class="col-md-12 description">
+                                                <h4>Pincho de res</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+                            <div class="box">
+                                <a href="#" data-toggle="modal" data-target="#5">
+                                    <img src="{{ asset('homeimg\Pasta primavera.jpg') }}"  alt="" />
+                                </a>
+                                <div class="modal fade" id="5" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            <div class="modal-body">
+                                                <img src="{{ asset('homeimg\Pasta primavera.jpg') }}"  alt="" />
+                                            </div>
+                                            <div class="col-md-12 description">
+                                                <h4>Pasta primavera</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+                            <div class="box">
+                                <a href="#" data-toggle="modal" data-target="#9">
+                                    <img src="{{ asset('homeimg\Tacos de carne.jpg') }}" alt="" />
+                                </a>
+                                <div class="modal fade" id="9" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            <div class="modal-body">
+                                                <img src="{{ asset('homeimg\Tacos de carne.jpg') }}"  alt="" />
+                                            </div>
+                                            <div class="col-md-12 description">
+                                                <h4>Tacos de carne</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
+                            <div class="box">
+                                <a href="#" data-toggle="modal" data-target="#10">
+                                    <img src="{{ asset('homeimg\Salmon....jpg') }}"  alt="" />
+                                </a>
+                                <div class="modal fade" id="10" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            <div class="modal-body">
+                                                <img src="{{ asset('homeimg\Salmon....jpg') }}"  alt="" />
+                                            </div>
+                                            <div class="col-md-12 description">
+                                                <h4>Salmon</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+                            <div class="box">
+                                <a href="#" data-toggle="modal" data-target="#11">
+                                    <img src="{{ asset('homeimg\Plato mixto.jpg') }}" alt="" />
+                                </a>
+                                <div class="modal fade" id="11" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            <div class="modal-body">
+                                                <img src="{{ asset('homeimg\Plato mixto.jpg') }}" alt="" />
+                                            </div>
+                                            <div class="col-md-12 description">
+                                                <h4>Plato mixto</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+                            <div class="box">
+                                <a href="#" data-toggle="modal" data-target="#12">
+                                    <img src="{{ asset('homeimg\Pollo Galeto.jpg') }}" alt="" />
+                                </a>
+                                <div class="modal fade" id="12" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            <div class="modal-body">
+                                                <img src="{{ asset('homeimg\Pollo Galeto.jpg') }}" alt="" />
+                                            </div>
+                                            <div class="col-md-12 description">
+                                                <h4>Pollo galeto</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+                            <div class="box">
+                                <a href="#" data-toggle="modal" data-target="#13">
+                                    <img src="{{ asset('homeimg\Pechuga al carbon.jpg') }}" alt="" />
+                                </a>
+                                <div class="modal fade" id="13" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            <div class="modal-body">
+                                                <img src="{{ asset('homeimg\Pechuga al carbon.jpg') }}" alt="" />
+                                            </div>
+                                            <div class="col-md-12 description">
+                                                <h4>Pechuga </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end gal-container -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end gallery-main -->
         
         <div id="reservation" class="reservations-main pad-top-100 pad-bottom-100">
             <div class="container">
@@ -534,35 +711,24 @@
                                 <!-- end col -->
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-box">
-                                        <input type="text" name="date-picker" id="date-picker" placeholder="Descripcion" required="required" data-error="Date is required." />
+                                        <input type="text" name="date-picker" id="date-picker" placeholder="Fecha de reserva" required="required" data-error="Date is required." />
                                     </div>
                                 </div>
                                 <!-- end col -->
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-box">
-                                        <input type="text" name="time-picker" id="time-picker" placeholder="Tiempo Aproximado" required="required" data-error="Time is required." />
+                                        <input type="text" name="time-picker" id="time-picker" placeholder="Hora de reserva" required="required" data-error="Time is required." />
                                     </div>
                                 </div>
                                 <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <div class="form-box">
-                                        <select name="preferred_food" id="preferred_food" class="selectpicker">
-                                            <option selected disabled>Detalle</option>
-                                            <option>Cena</option>
-                                            <option>Postre</option>
-                                            <option>Entradas</option>
-                                        </select>
-                                    </div>
-                                </div>
                                 <!-- end col -->
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-box">
                                         <select name="occasion" id="occasion" class="selectpicker">
-                                            <option selected disabled>Ocacion</option>
-                                            <option>Boda</option>
+                                            <option selected disabled>Decoracion</option>
                                             <option>Cumpleaños</option>
                                             <option>Aniversario</option>
-                                            <option>Otro</option>
+                                            <option>Sin Decoracion</option>
                                         </select>
                                     </div>
                                 </div>
@@ -594,10 +760,10 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                                 <h2 class="ft-title color-white text-center"> Deja Tus Datos </h2>
-                                <p> Envianos tu E-mail nos pondremos en contacto contigo.</p>
+                                <p> Envianos tu Numero de WhatsApp nos pondremos en contacto contigo.</p>
                             </div>
                             <form>
-                                <input type="email" placeholder="E-mail">
+                                <input type="email" placeholder="Numero de WhatsApp">
                                 <a href="#" class="orange-btn"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
                             </form>
                         </div>
@@ -655,7 +821,7 @@
                                     <p>
                                         <i class="fa fa-mobile" aria-hidden="true"></i>
                                         <span>
-                                        +57 
+                                        +57 3167245788
                                     </span>
                                     </p>
                                     <p>

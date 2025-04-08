@@ -61,11 +61,11 @@
         
         <div class="element-slidebar">
             <div class="element-slidebar-btn">
-                <span><img src="{{asset('img/GestionDelSistema.png')}}" alt="Gestion del sistema"></span>
+                <span><img src="{{asset('img2\GestionIcono1.png')}}" alt="Gestion del sistema"></span>
                 <p>Gestion del sistema</p>
             </div>
             <div class="element-slidebar-content">
-                <a href="{{ route('producto.movimiento') }}">Gestion de inventarios</a>
+                <a href="{{ route('producto.movimiento') }}">Gestion de inventario</a>
                 <a href="{{ route('configuracion.control') }}">Ingresar a bodega</a>
                 <a href="{{ route('users.index') }}">Lista de usuarios registrados</a>
                 <a href="{{ route('producto.agotados') }}" class="btn btn-warning">Ver Productos Agotados o Por Agotarse</a>
@@ -79,7 +79,7 @@
             <div class="element-slidebar">
                 <div class="element-slidebar-btn">
                     <!-- <span><img src="{{asset('img/rokrt.png')}}" alt="Product"></span> -->
-                    <span><img src="{{ asset('img/Productos.png') }}" alt="Gestion de productos"></span>
+                    <span><img src="{{ asset('img2\ProductossIcono1.png') }}" alt="Gestion de productos"></span>
                     <p>Productos</p>
                 </div>
                 <div class="element-slidebar-content">
@@ -93,7 +93,7 @@
             <div class="element-slidebar">
                 <div class="element-slidebar-btn">
                     <!-- <span><img src="{{asset('img/icono1.png')}}" alt="Product"></span> -->
-                    <span><img src="{{asset('img/Categoria.png')}}" alt="Gestion del categorias"></span>
+                    <span><img src="{{asset('img2\CategoriaIcono1.png')}}" alt="Gestion del categorias"></span>
                     <p>Categorias</p>
                 </div>
                 <div class="element-slidebar-content">
@@ -109,8 +109,8 @@
         <!-- notificaciones y seguridad -->
             <div class="element-slidebar">
                 <div class="element-slidebar-btn">
-                    <span><img src="{{asset('img/MonitoreodeSeguridad.png')}}" alt="Monitoreo y seguridad"></span>
-                    <p>Notificaciones y registro ingresos a bodega</p>
+                    <span><img src="{{asset('img2\AccesoIcono1.png')}}" alt="Monitoreo y seguridad"></span>
+                    <p>Ingresos a bodega</p>
                 </div>
                 <div class="element-slidebar-content">    
                     <a href="{{ route('bodega.historial') }}">Registro ingreso a bodega</a>
@@ -118,23 +118,12 @@
                 </div>
             </div>
 
-            <!-- Configuración y soporte -->
-            <div class="element-slidebar">
-                <div class="element-slidebar-btn">
-                    <span><img src="{{asset('img/ConfiguracionyReportes.png')}}" alt="Configuración y soporte"></span>
-                    <p>Configuración y soporte</p>
-                </div>
-                <div class="element-slidebar-content">
-                    <a href="{{ route('configuracion.create') }}">Configuración</a>
-                    <a href="">Soporte y documentación</a>
-                </div>
-            </div>
-
+          
 
             <!-- Reportes -->  
         <div class="element-slidebar">
             <div class="element-slidebar-btn">
-                <span><img src="{{asset('img/Reportes.png')}}" alt="Reportes"></span>
+                <span><img src="{{asset('img2\ReportesIcono1.png')}}" alt="Reportes"></span>
                 <p>Reportes</p>
             </div>
             <div class="element-slidebar-content">         
@@ -144,7 +133,23 @@
                  <a href="{{ route('movimientos.filtrar') }}">Reportes de movimientos</a>
             </div>     
         </div>
+
+
+          <!-- Configuración y soporte -->
+          <div class="element-slidebar">
+                <div class="element-slidebar-btn">
+                    <span><img src="{{asset('img2\ConfiguracionLogo1.png')}}" alt="Configuración y soporte"></span>
+                    <p>Configuración y soporte</p>
+                </div>
+                <div class="element-slidebar-content">
+                    <a href="{{ route('configuracion.create') }}">Configuración</a>
+                    <a href="">Soporte y documentación</a>
+                </div>
+            </div>
+
     </aside>
+
+
     <!-- main -->
      <main class="main">
         <!-- header -->

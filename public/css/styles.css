@@ -1,5 +1,5 @@
 :root{
-    --color-slidebar: rgba(40, 87, 126);    
+    --color-slidebar: rgb(228, 146, 54);    
     --color-main: rgb(211, 211, 211);
     --color-texto: rgba(49, 47, 47, 0.836);
 }
@@ -20,7 +20,7 @@ body{
 /* slidebar */
 .slidebar{
     position: fixed;
-    background-color: var(--color-slidebar);
+    background-color:rgba(228, 146, 54);
     color: beige;
     top: 0;
     left: 0;
@@ -131,7 +131,7 @@ body{
     align-items: center;
     padding: 20px;
 }  
-/* cards */
+/* cards 
 .container-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -146,7 +146,7 @@ body{
     border-radius: 10px;
     text-align: center;
 }
-
+*/
 .cabecera {
     display: flex;
     align-items: center; 

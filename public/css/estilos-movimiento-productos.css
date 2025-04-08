@@ -38,7 +38,7 @@ textarea {
     padding: 10px;
     font-size: 16px;
     font-weight: bold;
-    background: #1f4a6b;
+    background: #ee7008;
     border: none;
     border-radius: 5px;
     color: white;
@@ -46,5 +46,5 @@ textarea {
 }
 
 .btn-primary:hover {
-    background: #163753;
+    background: #ee7008;
 }

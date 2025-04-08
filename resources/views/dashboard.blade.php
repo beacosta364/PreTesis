@@ -5,9 +5,9 @@
 <section class="container-cards">
     <div class="card">
         <div class="cabecera">
-            <img src="img/GestionDelSistema.png" alt=" ">
+            <img src="img2\Naraja.png" alt=" ">
         <div class="cabecera-text">
-        <a href="{{ route('producto.movimiento') }}">Gestion de inventarios</a>
+        <a href="{{ route('producto.movimiento') }}">Gestion de inventario</a>
     </div> 
     </div>
         
@@ -17,7 +17,7 @@
     </div>
         <div class="card">
             <div class="cabecera">
-                <img src="{{ asset('img/Productos.png') }}" alt="">
+                <img src="{{ asset('img2\ProductossIcono1Naranja.png') }}" alt="">
             <div class="cabecera-text">
             <h3>{{ $totalProductos }} productos registrados</h3>
             </div>
@@ -31,7 +31,7 @@
            <!-- Configuración y soporte -->
            <div class="card">
             <div class="cabecera">
-                <img src="img/Admin.png" alt="">
+                <img src="img2\UsuariosIcono.Naranja.png" alt="">
                 <div class="cabecera-text">
                 </div>
                 <h3>{{ $totalUsuarios }} usuarios registrados</h3>
@@ -43,7 +43,7 @@
         <!-- Reportes -->
         <div class="card">
             <div class="cabecera">
-                <img src="img/Reportes.png" alt="">
+                <img src="img2\ReportesIcono1Naranjas.png" alt="">
                 <div class="cabecera-text"> 
                 </div>  
                 <h3>Se han realizado {{ $movimientosMes }} movimientos este mes</h3>
