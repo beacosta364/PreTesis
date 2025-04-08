@@ -1,6 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
+@can('configuracion.create')
 <div>
     <h2>Registrar IP</h2>
     <form action="{{ route('configuracion.store') }}" method="POST">
@@ -10,4 +11,5 @@
         <button type="submit">Guardar</button>
     </form>
 </div>
+@endcan
 @endsection

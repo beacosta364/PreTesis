@@ -1,7 +1,34 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
-    <h2>Historial de Accesos a la Bodega</h2>
+@can('ingreso.index')
+    <h2>Historial de Accesos a la Bodega.</h2>
+
+    <a href="{{ route('bodega.historial.pdf', request()->all()) }}" target="_blank" style="margin-left: 10px;">
+    <button type="button">Exportar PDF</button>
+    </a>
+
+
+    <!-- Formulario de filtro -->
+    <form method="GET" action="{{ route('bodega.historial') }}" style="margin-bottom: 20px;">
+        <label for="usuario">Usuario:</label>
+        <select name="usuario" id="usuario">
+            <option value="">-- Todos --</option>
+            @foreach ($usuarios as $user)
+                <option value="{{ $user->id }}" {{ request('usuario') == $user->id ? 'selected' : '' }}>
+                    {{ $user->name }}
+                </option>
+            @endforeach
+        </select>
+
+        <label for="desde">Desde:</label>
+        <input type="date" name="desde" value="{{ request('desde') }}">
+
+        <label for="hasta">Hasta:</label>
+        <input type="date" name="hasta" value="{{ request('hasta') }}">
+
+        <button type="submit">Filtrar</button>
+    </form>
 
     @if ($registros->count())
         <table border="1" cellpadding="5" cellspacing="0">
@@ -23,6 +50,8 @@
             </tbody>
         </table>
     @else
-        <p>No hay registros en la base de datos.</p>
+        <p>No hay registros que coincidan con los filtros seleccionados.</p>
     @endif
+
+    @endcan
 @endsection

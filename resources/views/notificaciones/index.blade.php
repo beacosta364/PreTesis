@@ -1,10 +1,10 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
-
-<h1>Notificaciones</h1>
+@can('notificaciones.index')
 
 <!-- Formulario para agregar una nueva notificación -->
+@can('notificaciones.create')
 <form action="{{ route('notificaciones.store') }}" method="POST">
     @csrf
     <label>Título:</label>
@@ -13,7 +13,7 @@
     <textarea name="mensaje" required></textarea>
     <button type="submit">Crear Notificación</button>
 </form>
-
+@endcan
 <!-- Mensajes de éxito -->
 @if (session('success'))
     <p style="color: green;">{{ session('success') }}</p>
@@ -26,14 +26,18 @@
         <li>
             <strong>{{ $notificacion->titulo }}</strong>: {{ $notificacion->mensaje }}  
             <small>{{ $notificacion->created_at }}</small>
+            @can('notificaciones.update')
             <a href="{{ route('notificaciones.edit', $notificacion->id) }}">Editar</a>
+            @endcan
+            @can('notificaciones.destroy')
             <form action="{{ route('notificaciones.destroy', $notificacion->id) }}" method="POST" style="display: inline;">
                 @csrf
                 @method('DELETE')
                 <button type="submit" onclick="return confirm('¿Estás seguro?')">Eliminar</button>
             </form>
+            @endcan
         </li>
     @endforeach
 </ul>
-
+@endcan
 @endsection

@@ -6,6 +6,7 @@ use App\Models\Producto;
 use App\Models\User;
 use App\Models\Movimiento;
 use App\Models\Categoria;
+use App\Models\Bodega;
 
 use Illuminate\Http\Request;
 
@@ -122,5 +123,29 @@ class PdfController extends Controller
 
         return $pdf->stream('productos_agotados_' . now()->format('Ymd_His') . '.pdf');
     }
+
+    
+    public function exportarHistorialBodega(Request $request)
+    {
+        $query = Bodega::query();
+
+        if ($request->filled('usuario')) {
+            $query->where('user_id', $request->usuario);
+        }
+
+        if ($request->filled('desde')) {
+            $query->whereDate('created_at', '>=', $request->desde);
+        }
+
+        if ($request->filled('hasta')) {
+            $query->whereDate('created_at', '<=', $request->hasta);
+        }
+
+        $registros = $query->latest()->get();
+
+        $pdf = Pdf::loadView('pdf.historial_bodega', compact('registros'));
+        return $pdf->stream('historial_bodega.pdf');
+    }
+
 
 }

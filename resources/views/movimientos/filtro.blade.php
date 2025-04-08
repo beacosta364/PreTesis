@@ -1,6 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
+@can('reportemovimientos.show')
 <div class="container mt-5">
     <h2 class="mb-4">Registro de movimientos realizados</h2>
     <a href="{{ route('movimientos.pdf', request()->all()) }}" class="btn btn-danger mt-3" target="_blank">Generar PDF</a>
@@ -100,4 +101,5 @@
     filtrarOpciones('buscar_producto', 'producto_id');
     filtrarOpciones('buscar_usuario', 'usuario_id');
 </script>
+@endcan
 @endsection

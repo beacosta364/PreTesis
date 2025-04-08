@@ -1,7 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
-
+@can('notificaciones.update')
 <h1>Editar Notificación</h1>
 
 <form action="{{ route('notificaciones.update', $notificacion->id) }}" method="POST">
@@ -18,6 +18,6 @@
 </form>
 
 <a href="{{ route('notificaciones.index') }}">Volver</a>
-
+@endcan
 
 @endsection

@@ -67,10 +67,16 @@
             <div class="element-slidebar-content">
                 <a href="{{ route('producto.movimiento') }}">Gestion de inventario</a>
                 <a href="{{ route('configuracion.control') }}">Ingresar a bodega</a>
+                @can('vistausuarios.show')
                 <a href="{{ route('users.index') }}">Lista de usuarios registrados</a>
+                @endcan
                 <a href="{{ route('producto.agotados') }}" class="btn btn-warning">Ver Productos Agotados o Por Agotarse</a>
-                <a href="{{ url('/usuarios/crear') }}">Registrar nuevo usuario</a>   
+                @can('registrarusuarios.show')
+                <a href="{{ url('/usuarios/crear') }}">Registrar nuevo usuario</a>  
+                @endcan
+                @can('rolusuarios.show')
                 <a href="{{ url('/usuarios-roles') }}">gestionar rol de usuarios</a>
+                @endcan
             </div>
         </div>
 
@@ -83,9 +89,12 @@
                     <p>Productos</p>
                 </div>
                 <div class="element-slidebar-content">
-                    
+                    @can('productos.index')
                     <a href="{{ route('producto.index') }}">Todos</a>
+                    @endcan
+                    @can('productos.create')
                     <a href="{{ route('producto.create') }}">Agregar</a>
+                    @endcan
                 </div>
             </div>
 
@@ -112,41 +121,48 @@
                     <span><img src="{{asset('img2\AccesoIcono1.png')}}" alt="Monitoreo y seguridad"></span>
                     <p>Ingresos a bodega</p>
                 </div>
-                <div class="element-slidebar-content">    
+                <div class="element-slidebar-content">  
+                    @can('ingreso.index')  
                     <a href="{{ route('bodega.historial') }}">Registro ingreso a bodega</a>
+                    @endcan
                     <a href="{{ route('notificaciones.index') }}">Notificaciones</a>
                 </div>
             </div>
 
-          
+            <!-- Configuración-->
+            @can('configuracion.show')  
+            <div class="element-slidebar">
+                <div class="element-slidebar-btn">
+                    <span><img src="{{asset('img2\ConfiguracionLogo1.png')}}" alt="Configuración"></span>
+                    <p>Configuración</p>
+                </div>
+                @can('configuracion.show')  
+                <div class="element-slidebar-content">
+                    <a href="{{ route('configuracion.create') }}">Configuración</a>
+                </div>
+                @endcan
+            </div>
+            @endcan
 
             <!-- Reportes -->  
+            @can('reportes.show')  
         <div class="element-slidebar">
             <div class="element-slidebar-btn">
                 <span><img src="{{asset('img2\ReportesIcono1.png')}}" alt="Reportes"></span>
                 <p>Reportes</p>
             </div>
-            <div class="element-slidebar-content">         
+            
+            <div class="element-slidebar-content"> 
+                @can('reporteinventarios.show')        
                 <a href="{{ url('/productos-listado') }}">Reportes de inventarios</a>
-                <!-- <a href="">Reportes de movimientos</a> -->
-                <!-- <a href="{{ route('movimientos.index') }}">Reportes de movimientos</a> -->
+                @endcan
+                @can('reportemovimientos.show')
                  <a href="{{ route('movimientos.filtrar') }}">Reportes de movimientos</a>
-            </div>     
+                @endcan
+            </div> 
+              
         </div>
-
-
-          <!-- Configuración y soporte -->
-          <div class="element-slidebar">
-                <div class="element-slidebar-btn">
-                    <span><img src="{{asset('img2\ConfiguracionLogo1.png')}}" alt="Configuración y soporte"></span>
-                    <p>Configuración y soporte</p>
-                </div>
-                <div class="element-slidebar-content">
-                    <a href="{{ route('configuracion.create') }}">Configuración</a>
-                    <a href="">Soporte y documentación</a>
-                </div>
-            </div>
-
+        @endcan 
     </aside>
 
 

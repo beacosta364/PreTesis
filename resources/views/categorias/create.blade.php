@@ -2,7 +2,7 @@
 
 @section('contenido')
 <!-- mostrar formulario para crear nueva categoria -->
-
+@can('categoria.create')
 <div class= "container-formulario">
 <div class="card formulario">
     <h2>Crear Nueva Categoría</h2>
@@ -40,5 +40,5 @@
     </form>
 </div>
 </div>
-
+@endcan
 @endsection

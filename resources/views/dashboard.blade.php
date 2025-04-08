@@ -25,10 +25,10 @@
             <a href="{{ route('producto.index') }}">Todos</a>
         </div>
         
-    
-    </div>
-
+        @can('vistausuarios.show')
+        </div>
            <!-- Configuración y soporte -->
+           
            <div class="card">
             <div class="cabecera">
                 <img src="img2\UsuariosIcono.Naranja.png" alt="">
@@ -38,7 +38,7 @@
             </div>
             <a href="{{ route('users.index') }}">Usuarios registrados</a>
         </div>   
-
+        @endcan
 
         <!-- Reportes -->
         <div class="card">
@@ -48,7 +48,9 @@
                 </div>  
                 <h3>Se han realizado {{ $movimientosMes }} movimientos este mes</h3>
             </div>
+            @can('reportemovimientos.show')
             <a href="{{ route('movimientos.filtrar') }}">Reportes de movimientos</a>
+            @endcan
          </div>
 
     </section >
@@ -96,6 +98,7 @@
 <section>
     <h2>Notificaciones</h2>
 
+    @can('notificaciones.create')
     <!-- Formulario para agregar una nueva notificación -->
     <form action="{{ route('notificaciones.store') }}" method="POST">
         @csrf
@@ -110,7 +113,7 @@
     @if (session('success'))
         <p style="color: green;">{{ session('success') }}</p>
     @endif
-
+    @endcan
     <!-- Listado de notificaciones -->
     <h3>Lista de Notificaciones</h3>
     <ul>
@@ -118,12 +121,16 @@
             <li>
                 <strong>{{ $notificacion->titulo }}</strong>: {{ $notificacion->mensaje }}  
                 <small>{{ $notificacion->created_at }}</small>
+                @can('notificaciones.update')
                 <a href="{{ route('notificaciones.edit', $notificacion->id) }}">Editar</a>
+                @endcan
+                @can('notificaciones.destroy')
                 <form action="{{ route('notificaciones.destroy', $notificacion->id) }}" method="POST" style="display: inline;">
                     @csrf
                     @method('DELETE')
                     <button type="submit" onclick="return confirm('¿Estás seguro?')">Eliminar</button>
                 </form>
+                @endcan
             </li>
         @endforeach
     </ul>
