@@ -1,5 +1,5 @@
 :root{
-    --color-thead: rgba(2, 53, 95, 0.842);
+    --color-thead: rgb(228, 146, 54);
     --color-texto-thead:white;
     --color-texto-tbody:rgba(94, 92, 92, 0.884);
     --columna-botones:5;

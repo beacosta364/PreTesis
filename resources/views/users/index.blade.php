@@ -11,12 +11,6 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}"> 
 </head>
 <body>
-    <!-- <h2>Lista de Usuarios Registrados</h2>
-
-    <a href="{{ route('usuarios.pdf') }}" target="_blank" class="btn btn-primary">
-    Generar PDF de Usuarios
-    </a> -->
-
     <nav class="nav-botones">
     <ul class="nav-menu">
         <li class="nav-item">
@@ -40,6 +34,7 @@
                 <th>Nombre</th>
                 <th>Email</th>
                 <th>Fecha de Creación</th>
+                <th>Eliminar Usuario</th>
             </tr>
         </thead>
         <tbody>
@@ -49,9 +44,17 @@
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->created_at }}</td>
+                    <td>
+                        <form action="{{ route('users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('¿Estás seguro de eliminar este usuario?');">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
+
     </table>
 </body>
 </html>

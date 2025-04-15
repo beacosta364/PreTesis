@@ -49,6 +49,22 @@ class UserController extends Controller
 
         return redirect()->route('users.index')->with('success', 'Usuario registrado exitosamente.');
     }
+
+    //eliminar usuario por id
+    public function destroy($id)
+    {
+        $user = User::findOrFail($id);
+
+        // Evita que un usuario se elimine a sí mismo si estás autenticado
+        if (auth()->user()->id == $user->id) {
+            return redirect()->route('users.index')->with('error', 'No puedes eliminar tu propio usuario.');
+        }
+
+        $user->delete();
+
+        return redirect()->route('users.index')->with('success', 'Usuario eliminado exitosamente.');
+    }
+
 }
 
 

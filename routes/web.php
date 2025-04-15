@@ -83,6 +83,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/usuarios', [UserController::class, 'index'])->name('users.index');
     Route::get('/usuarios/crear', [UserController::class, 'create'])->name('users.create');
     Route::post('/usuarios', [UserController::class, 'store'])->name('users.store');
+    //eliminar usuario por id
+    Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 
     //Ruta pdf reporte pdf productos
     Route::get('/productos/pdf', [PdfController::class, 'pdfProductos'])->name('productos.pdf');
