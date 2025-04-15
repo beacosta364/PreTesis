@@ -1,24 +1,24 @@
 Requisitos Previos
 	Para poder instalar correctamente este proyecto es necesario hacer la instalación de los siguientes programas
--XAMPP          https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/ 
--Composer       https://getcomposer.org 
--Git            https://git-scm.com 
--Nodejs         https://nodejs.org/en
+- XAMPP          https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/ 
+- Composer       https://getcomposer.org 
+- Git            https://git-scm.com 
+- Nodejs         https://nodejs.org/en
 
 Recomendación: Para ejecutar comandos npm, es mejor usar Git Bash en lugar de CMD, ya que ofrece mayor compatibilidad.
 
 Proceso de instalación
--Abre la carpeta donde está instalado XAMPP.
--Navega hasta la carpeta htdocs.
--Haz clic derecho y selecciona "Git Bash Here".
--Ejecuta el siguiente comando:  git clone https://github.com/beacosta364/PreTesis.git 
+- Abre la carpeta donde está instalado XAMPP.
+- Navega hasta la carpeta htdocs.
+- Haz clic derecho y selecciona "Git Bash Here".
+- Ejecuta el siguiente comando:  git clone https://github.com/beacosta364/PreTesis.git 
 - Accede al directorio del proyecto: cd PreTesis
 Instalar Dependencias PHP
--Ejecuta el siguiente comando:  composer install
+- Ejecuta el siguiente comando:  composer install
 Configurar base de datos en .env
--Copia el archivo .env.example y renómbralo como .env.
--Ábrelo con el Bloc de Notas.
--Busca el bloque:
+- Copia el archivo .env.example y renómbralo como .env.
+- Ábrelo con el Bloc de Notas.
+- Busca el bloque:
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -27,16 +27,16 @@ DB_DATABASE=pretesis
 DB_USERNAME=root
 DB_PASSWORD=
  
--Cambia el valor de DB_DATABASE por el nombre que usarás para tu base de datos. 
+- Cambia el valor de DB_DATABASE por el nombre que usarás para tu base de datos. 
  
 Crear la Base de Datos
--Abre el panel de XAMPP.
+- Abre el panel de XAMPP.
  
--Inicia Apache y MySQL.
+- Inicia Apache y MySQL.
  
--Haz clic en Admin de MySQL (abre phpMyAdmin).
+- Haz clic en Admin de MySQL (abre phpMyAdmin).
  
--Crea una nueva base de datos con el nombre que configuraste en el archivo .env.
+- Crea una nueva base de datos con el nombre que configuraste en el archivo .env.
  
 Ejecutar Comandos de Laravel
 Desde Git Bash y estando en la carpeta PreTesis, ejecuta los siguientes comandos uno a uno:
