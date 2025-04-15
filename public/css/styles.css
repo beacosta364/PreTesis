@@ -131,7 +131,7 @@ body{
     align-items: center;
     padding: 20px;
 }  
-/* cards 
+/* cards*/ 
 .container-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -146,7 +146,7 @@ body{
     border-radius: 10px;
     text-align: center;
 }
-*/
+
 .cabecera {
     display: flex;
     align-items: center; 
@@ -191,18 +191,18 @@ body{
 }
 
 .logooo {
-    display: inline-block; /* Asegura que esté en línea */
-    width: 150px; /* Ajusta el tamaño según tus necesidades */
-    height: 150px; /* Mantén las proporciones */
-    overflow: hidden; /* Oculta cualquier desbordamiento */
+    display: inline-block; 
+    width: 150px; 
+    height: 150px; 
+    overflow: hidden; 
 }
 
 .logooo img {
-    width: 100%; /* Ajusta la imagen al tamaño del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    display: block; /* Elimina espacio extra alrededor de la imagen */
-    border-radius: 1px; /* Opcional: redondea las esquinas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra */
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    border-radius: 1px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 

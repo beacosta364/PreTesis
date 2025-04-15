@@ -1,47 +1,60 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+</head>
+<body>
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Correo')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+    <div class="login-container">
+        <!-- Logo -->
+        <!-- <div class="logo">
+            <img src="{{ asset('homeimg\LogoLaPapa.png') }}" alt="Logo">
+        </div> -->
+        <!-- Logo -->
+        <div class="logo">
+            <a href="{{ url('/') }}">
+                <img src="{{ asset('homeimg/LogoLaPapa.png') }}" alt="Logo">
+            </a>
         </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Contraseña')" />
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
+        <!-- Formulario de inicio de sesión -->
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
+            <!-- Dirección de correo -->
+            <label for="email">Correo</label>
+            <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus autocomplete="username">
+            @error('email')
+                <div>{{ $message }}</div>
+            @enderror
 
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Recoradar Contraseña') }}</span>
+            <!-- Contraseña -->
+            <label for="password">Contraseña</label>
+            <input id="password" type="password" name="password" required autocomplete="current-password">
+            @error('password')
+                <div>{{ $message }}</div>
+            @enderror
+
+            <!-- Recordar contraseña -->
+            <label for="remember_me">
+                <input id="remember_me" type="checkbox" name="remember">
+                Recordar Contraseña
             </label>
-        </div>
 
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                    {{ __('Olvidaste tu contraseña?') }}
-                </a>
-            @endif
+            <!-- Botones -->
+            <div style="margin-top: 20px; text-align: right;">
+                @if (Route::has('password.request'))
+                    <a href="{{ route('password.request') }}" style="color: #ccc; font-size: 12px;">¿Olvidaste tu contraseña?</a>
+                @endif
+            </div>
 
-            <x-primary-button class="ml-3">
-                {{ __('Ingresar') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+
+</body>
+</html>

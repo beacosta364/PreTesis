@@ -65,6 +65,7 @@
                 <p>Gestion del sistema</p>
             </div>
             <div class="element-slidebar-content">
+                <a href="{{ route('dashboard') }}">Dashboard</a>  
                 <a href="{{ route('producto.movimiento') }}">Gestion de inventario</a>
                 <a href="{{ route('configuracion.control') }}">Ingresar a bodega</a>
                 @can('vistausuarios.show')
