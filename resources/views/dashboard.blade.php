@@ -2,6 +2,18 @@
 
 @section('contenido')
 
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="{{ asset('css/home/bootstrap.min.css') }}">
+        <!-- Site CSS -->
+        <link rel="stylesheet" href="{{ asset('css/home/style.css') }}">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="{{ asset('css/home/responsive.css') }}">
+        <!-- color -->
+        <link id="changeable-colors" rel="stylesheet" href="{{ asset('css/home/colors/orange.css') }}" />
+
+        <!-- Modernizer -->
+        <script src="{{ asset('js/home/modernizer.js') }}"></script>
+
 <section class="container-cards">
     <div class="card">
         <div class="cabecera">
@@ -10,10 +22,10 @@
         <a href="{{ route('producto.movimiento') }}">Gestion de inventario</a>
     </div> 
     </div>
-        
+
     </div>
-    
-            
+
+
     </div>
         <div class="card">
             <div class="cabecera">
@@ -24,11 +36,11 @@
             </div>
             <a href="{{ route('producto.index') }}">Todos</a>
         </div>
-        
+
         @can('vistausuarios.show')
         </div>
            <!-- Configuración y soporte -->
-           
+
            <div class="card">
             <div class="cabecera">
                 <img src="img2\UsuariosIcono.Naranja.png" alt="">
@@ -94,19 +106,23 @@
     </div>
 </section>
 
-        
+
 <section>
     <h2>Notificaciones</h2>
 
     @can('notificaciones.create')
     <!-- Formulario para agregar una nueva notificación -->
     <form action="{{ route('notificaciones.store') }}" method="POST">
+    <div class="form-box">
+        <h4>
         @csrf
-        <label>Título:</label>
-        <input type="text" name="titulo" required>
-        <label>Mensaje:</label>
-        <textarea name="mensaje" required></textarea>
-        <button type="submit">Crear Notificación</button>
+        <input type="text" name="titulo" placeholder="Título" required>
+        <input style="height: 100px;" type="text" name="mensaje" placeholder="Mensaje" required></textarea>
+        <div style="text-align: center; margin-top: 10px;">
+        <button class="hvr-underline-from-center" id="submit" type="submit">Crear Notificación</button>
+        </div>
+        </h4>
+    </div>
     </form>
 
     <!-- Mensajes de éxito -->
