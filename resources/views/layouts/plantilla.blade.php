@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ url('/css/estilos-formularios.css') }}">
     <link rel="stylesheet" href="{{url('/css/estilos-movimiento-productos.css')}}">
     <link rel="stylesheet" href="{{url('/css/styles-perfil.css')}}">
+    <link rel="stylesheet" href="{{url('/css/configuracion-acceso-bodega.css')}}">
 
 
     <!-- Scripts -->

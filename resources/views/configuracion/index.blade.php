@@ -2,16 +2,19 @@
 
 @section('contenido')
 @can('configuracion.index')
-    <h1>Configuración de IP</h1>
-    
-    @if ($configuracion)
-        <p>IP registrada: {{ $configuracion->ip }}</p>
-        <a href="{{ route('configuracion.edit') }}">Editar IP</a>
-        <br>
-        <a href="{{ route('configuracion.control') }}">Ir a la gestión de alarma y acceso</a> <!-- Nuevo enlace -->
-    @else
-        <p>No hay configuración de IP registrada.</p>
-        <a href="{{ route('configuracion.create') }}">Agregar IP</a>
-    @endif
+    <div class="config-card">
+        <h1 class="config-titulo">Configuración de IP</h1>
+        
+        @if ($configuracion)
+            <p class="config-info">IP registrada: <strong>{{ $configuracion->ip }}</strong></p>
+            <div class="config-links">
+                <a href="{{ route('configuracion.edit') }}" class="btn-link">Editar IP</a>
+                <a href="{{ route('configuracion.control') }}" class="btn-link">Ir a la gestión de acceso</a>
+            </div>
+        @else
+            <p class="config-info">No hay configuración de IP registrada.</p>
+            <a href="{{ route('configuracion.create') }}" class="btn-link">Agregar IP</a>
+        @endif
+    </div>
 @endcan
 @endsection

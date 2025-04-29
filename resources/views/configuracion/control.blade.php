@@ -2,14 +2,11 @@
 
 @section('contenido')
 
-<!-- Controles electrónica -->
-<section class="Controles">
-    <!-- Control de acceso a bodega -->
-    <div class="control-acceso">
-        <h2>Control de acceso a bodega</h2>
-        <button id="ingresarBodegaBtn">Ingresar a bodega</button>
-        <p id="statusAcceso">Estado de la puerta: Desconocido</p>
-    </div> 
+<section class="controles">
+    <div class="control-acceso-card">
+        <h2 class="titulo-acceso">Acceso a bodega</h2>
+        <button id="ingresarBodegaBtn" class="btn-acceso">Ingresar a bodega</button>
+    </div>
 </section>
 
 

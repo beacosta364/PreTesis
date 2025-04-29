@@ -82,3 +82,33 @@ tbody tr:nth-child(5) {
 tbody tr:hover {
     background-color: #eeeeee;
 }
+
+
+.productos-resultado {
+    width: 100%;
+    overflow-x: auto; 
+    padding: 1rem 0;
+}
+
+.tabla-productoss {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    min-width: 600px; 
+}
+
+.tabla-productoss th, .tabla-productoss td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.tabla-productoss th {
+    background-color: #e75b1e;
+    font-weight: 600;
+}
+
+.tabla-productoss tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+

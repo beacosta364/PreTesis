@@ -92,7 +92,7 @@
 
 
 
-    <div class="productos-resultado">
+    <!-- <div class="productos-resultado">
         @forelse($productosFiltrados as $producto)
             <div class="producto-card">
                 <strong>{{ $producto->nombre }}</strong> - 
@@ -103,7 +103,35 @@
         @empty
             <p>No hay productos agotados o por agotarse en esta categoría.</p>
         @endforelse
+    </div> -->
+    <div class="productos-resultado">
+        @if($productosFiltrados->count())
+            <table class="tabla-productoss">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Cantidad</th>
+                        <th>Stock mínimo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($productosFiltrados as $producto)
+                        <tr>
+                            <td><strong>{{ $producto->nombre }}</strong></td>
+                            <td>{{ $producto->categoria->nombre ?? 'Sin categoría' }}</td>
+                            <td>{{ $producto->cantidad }}</td>
+                            <td>{{ $producto->min_stock ?? 'No definido' }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        @else
+            <p>No hay productos agotados o por agotarse en esta categoría.</p>
+        @endif
     </div>
+
+
 </section>
 
 
