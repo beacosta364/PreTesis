@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdfdfd;
+    margin: 20px;
+  }
+
+  .productos-header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .productos-header h2 {
+    color: #e75b1e;
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .productos-actions {
+    display: flex;
+    justify-content: center; /* centrado */
+    margin-bottom: 20px;
+  }
+
+  .productos-pdf-link {
+    background-color: #e75b1e;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .productos-pdf-link:hover {
+    background-color: #e49236;
+  }
+
+  .productos-section {
+    margin-top: 10px;
+  }
+
+  .productos-table-container {
+    overflow-x: auto;
+  }
+
+  .productos-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+  }
+
+  .productos-table th,
+  .productos-table td {
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  .productos-table th {
+    background-color: #e75b1e;
+    color: white;
+  }
+
+  .productos-table td {
+    background-color: #fffdfb;
+  }
+
+  @media (max-width: 600px) {
+    .productos-table th,
+    .productos-table td {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }

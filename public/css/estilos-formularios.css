@@ -52,7 +52,7 @@
 .form-group button {
     width: 100%;
     padding: 10px;
-    background-color:rgba(2, 53, 95, 0.842); /* Color azul */
+    background-color:rgb(228, 146, 54); /* Color azul */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -61,7 +61,7 @@
 }
 
 .form-group button:hover {
-    background-color:rgba(50, 102, 145, 0.842);
+    background-color:#e75b1e;
 }
 
 /* Botón Volver */
@@ -80,7 +80,7 @@
 }
 
 .btn-volver:hover {
-    background-color: rgba(50, 102, 145, 0.9);
+    background-color: #e75b1e;
 }
 
 /* Centrar el botón dentro de su div */
