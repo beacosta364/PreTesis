@@ -3,31 +3,28 @@
 @section('contenido')
 @can('vistausuarios.show')
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Usuarios</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}"> 
+    <title>Lista de Usuarios</title> 
+    <link rel="stylesheet" href="{{ url('/css/indexUsers.css') }}">
 </head>
-<body>
-    <nav class="nav-botones">
-    <ul class="nav-menu">
-        <li class="nav-item">
-            <h2>Lista de Usuarios Registrados</h2>
-        </li>
-        <li class="nav-item">
-            <a href="{{ route('usuarios.pdf') }}" target="_blank" class="btn btn-primary">Generar PDF de Usuarios</a>
-        </li>
-    </ul>
+<body class="usuarios-body">
+    
+    <nav class="usuarios-nav">
+        <h2>Lista de Usuarios Registrados</h2>
     </nav>
-    <form method="GET" action="{{ route('users.index') }}">
-    <input type="text" name="search" placeholder="Buscar por Nombre o Email" class="form-control" value="{{ request('search') }}">
-    <button type="submit" class="btn btn-primary">Buscar</button>
+
+    <form method="GET" action="{{ route('users.index') }}" class="usuarios-form">
+        <div class="usuarios-form-row">
+            <input type="text" name="search" placeholder="Buscar por Nombre o Email" value="{{ request('search') }}">
+            <button type="submit">Buscar</button>
+        </div>
+        <a class="usuarios-pdf-link" href="{{ route('usuarios.pdf') }}" target="_blank">Generar PDF de Usuarios</a>
     </form>
 
-
-    <table border="1">
+    <table class="usuarios-table" >
         <thead>
             <tr>
                 <th>ID</th>
@@ -48,15 +45,16 @@
                         <form action="{{ route('users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('¿Estás seguro de eliminar este usuario?');">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                            <button type="submit" class="usuarios-btn-danger">Eliminar</button>
                         </form>
                     </td>
                 </tr>
             @endforeach
         </tbody>
-
     </table>
+
 </body>
 </html>
+
 @endcan
 @endsection

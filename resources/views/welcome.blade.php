@@ -47,10 +47,10 @@
                                 <div id="navbar" class="navbar-collapse collapse">
                                     <ul class="nav navbar-nav navbar-right">
                                         <li class="active"><a href="#banner">Inicio</a></li>
-                                        <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
+                                        <li><a href="#about">Sobre Nosotros</a></li>
                                         <li><a href="#menu">Menu</a></li>
-                                        <li><a href="#reserva">Reserva</a></li>
-                                        <li><a href="#contactenos">Contactanos</a></li>
+                                        <li><a href="#reservation">Reserva</a></li>
+                                        <li><a href="#footer">Contactanos</a></li>
                                         <li><a href="{{ route('login') }}">Administración</a></li>
                                     </ul>
                                 </div>

@@ -1,0 +1,94 @@
+.agotados-body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff8f2;
+    padding: 20px;
+    color: #333;
+  }
+
+  .agotados-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  }
+
+  .agotados-header {
+    background-color: rgb(228, 146, 54);
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .agotados-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+
+  .agotados-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+
+  .agotados-pdf-link {
+    display: inline-block;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #e75b1e, rgb(228, 146, 54));
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .agotados-pdf-link:hover {
+    background: linear-gradient(90deg, rgb(228, 146, 54), #e75b1e);
+  }
+
+  .agotados-table-container {
+  overflow-x: auto;
+  margin-top: 15px;
+  }
+
+  .agotados-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px; 
+  }
+
+  .agotados-table th,
+  .agotados-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  }
+
+  .agotados-table th {
+  background-color: #e75b1e;
+  color: white;
+  }
+
+  @media (max-width: 600px) {
+  .agotados-table th,
+  .agotados-table td {
+      font-size: 14px;
+      padding: 6px;
+  }
+  }
+
+  .agotados-table tbody tr:hover {
+    background-color: #fff1e6;
+  }
+
+  .agotados-message {
+    font-size: 1rem;
+    padding: 15px;
+    background-color: #fef3e6;
+    border: 1px solid #f0d9c2;
+    border-radius: 8px;
+    text-align: center;
+  }

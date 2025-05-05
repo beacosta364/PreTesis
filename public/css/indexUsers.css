@@ -1,0 +1,132 @@
+.usuarios-body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff8f2;
+    margin: 20px;
+    color: #333;
+}
+
+.usuarios-nav {
+    background-color: rgb(228, 146, 54);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.usuarios-nav h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.usuarios-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.usuarios-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.usuarios-form input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.usuarios-form input[type="text"]:focus {
+    border-color: #e75b1e;
+}
+
+.usuarios-form button {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #e75b1e, rgb(228, 146, 54));
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.usuarios-form button:hover {
+    background: linear-gradient(90deg, rgb(228, 146, 54), #e75b1e);
+}
+
+.usuarios-pdf-link {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #e75b1e;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.usuarios-pdf-link:hover {
+    color: rgb(228, 146, 54);
+    text-decoration: underline;
+}
+
+.usuarios-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 1px solid;
+}
+
+.usuarios-table th, .usuarios-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.usuarios-table thead {
+    background-color: #e75b1e;
+    color: white;
+}
+
+.usuarios-table tbody tr:hover {
+    background-color: #fff1e6;
+}
+
+.usuarios-btn-danger {
+    background-color: #d9534f;
+    border: none;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.usuarios-btn-danger:hover {
+    background-color: #c9302c;
+}
+
+@media (max-width: 768px) {
+    .usuarios-form-row {
+        flex-direction: column;
+    }
+
+    .usuarios-form button, 
+    .usuarios-form input[type="text"] {
+        width: 100%;
+    }
+
+    .usuarios-pdf-link {
+        margin-top: 20px;
+    }
+}

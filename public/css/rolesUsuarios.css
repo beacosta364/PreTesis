@@ -1,0 +1,82 @@
+.roles-body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff8f2;
+    margin: 20px;
+    color: #333;
+  }
+
+  .roles-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  }
+
+  .roles-header {
+    background-color: rgb(228, 146, 54);
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .roles-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+
+  .roles-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  .roles-table th, .roles-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+
+  .roles-table thead {
+    background-color: #e75b1e;
+    color: white;
+  }
+
+  .roles-table tbody tr:hover {
+    background-color: #fff1e6;
+  }
+
+  .roles-select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fefefe;
+  }
+
+  .roles-button {
+    padding: 8px 16px;
+    background: linear-gradient(90deg, #e75b1e, rgb(228, 146, 54));
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .roles-button:hover {
+    background: linear-gradient(90deg, rgb(228, 146, 54), #e75b1e);
+  }
+
+  @media (max-width: 768px) {
+    .roles-table th, .roles-table td {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+
+    .roles-select, .roles-button {
+      width: 100%;
+      margin-top: 5px;
+    }
+  }
