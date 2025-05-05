@@ -2,22 +2,41 @@
 
 @section('contenido')
 @can('notificaciones.update')
-<h1>Editar Notificación</h1>
 
-<form action="{{ route('notificaciones.update', $notificacion->id) }}" method="POST">
-    @csrf
-    @method('PUT')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editar Notificación</title>
+  <link rel="stylesheet" href="{{ url('/css/editNotificacion.css') }}">
+</head>
+<body>
 
-    <label>Título:</label>
-    <input type="text" name="titulo" value="{{ $notificacion->titulo }}" required>
+  <div class="card">
+    <h1>Editar Notificación</h1>
 
-    <label>Mensaje:</label>
-    <textarea name="mensaje" required>{{ $notificacion->mensaje }}</textarea>
+    <form action="{{ route('notificaciones.update', $notificacion->id) }}" method="POST">
+      @csrf
+      @method('PUT')
 
-    <button type="submit">Actualizar</button>
-</form>
+      <label for="titulo">Título:</label>
+      <input id="titulo" type="text" name="titulo" value="{{ $notificacion->titulo }}" required>
 
-<a href="{{ route('notificaciones.index') }}">Volver</a>
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required>{{ $notificacion->mensaje }}</textarea>
+
+      <div class="buttons">
+        <a href="{{ route('notificaciones.index') }}">Volver</a>
+        <button type="submit">Actualizar</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
+
+
 @endcan
 
 @endsection

@@ -1,0 +1,134 @@
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  color: #333;
+  padding: 20px;
+}
+
+.card {
+  background: #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #f57c00;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+form label {
+  color: #f57c00;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form textarea {
+  padding: 8px 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+form button {
+  align-self: flex-end;
+  background: #f57c00;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background .3s;
+}
+form button:hover {
+  background: #e65c00;
+}
+
+/* Mensaje éxito */
+.alert-success {
+  max-width: 500px;
+  margin: 0 auto 20px;
+  padding: 10px;
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+}
+
+/* Lista de notificaciones */
+.notifications {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.notifications li {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: 4px solid #f57c00;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.notifications li strong {
+  color: #333;
+}
+
+.notifications li small {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.notifications li .actions {
+  margin-top: 8px;
+}
+
+.notifications li .actions a,
+.notifications li .actions button {
+  background: #f57c00;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background .3s;
+  margin-right: 6px;
+}
+.notifications li .actions a:hover,
+.notifications li .actions button:hover {
+  background: #e65c00;
+}
+
+.notifications li .actions form {
+  display: inline;
+}
