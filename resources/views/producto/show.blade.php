@@ -1,25 +1,39 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
+<section class="card-show-producto">
+    <h1>Detalles del Producto</h1>
 
-<section class="card-show">
     <!-- Imagen del producto -->
     <img src="{{ asset('img/'.$producto->imagen) }}" alt="{{ $producto->nombre }}">
 
-    <!-- Nombre del producto -->
-    <h2>{{ $producto->nombre }}</h2>
+    <!-- Contenedor de tabla -->
+    <div class="tabla-container">
+        <table class="tabla-detalles">
+            <tr>
+                <th>Nombre:</th>
+                <td>{{ $producto->nombre }}</td>
+            </tr>
+            <tr>
+                <th>Descripción:</th>
+                <td>{{ $producto->descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Cantidad:</th>
+                <td>{{ $producto->cantidad }}</td>
+            </tr>
+            <tr>
+                <th>Stock mínimo:</th>
+                <td>{{ $producto->min_stock }}</td>
+            </tr>
+            <tr>
+                <th>Categoría:</th>
+                <td>{{ $producto->categoria ? $producto->categoria->nombre : 'Sin categoría' }}</td>
+            </tr>
+        </table>
+    </div>
 
-    <!-- Descripción -->
-    <p><strong>Descripción: </strong>{{ $producto->descripcion }}</p>
-
-    <!-- Cantidad -->
-    <p><strong>Cantidad: </strong>{{ $producto->cantidad }}</p>
-
-    <!-- Stock mínimo -->
-    <p><strong>Stock mínimo: </strong>{{ $producto->min_stock }}</p>
-
-    <!-- Categoría -->
-    <p><strong>Categoría: </strong>{{ $producto->categoria ? $producto->categoria->nombre : 'Sin categoría' }}</p>
+    <a href="{{ route('producto.index') }}" class="btn-volver">Volver a la lista de productos</a>
 </section>
 
 @endsection

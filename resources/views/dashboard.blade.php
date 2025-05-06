@@ -166,13 +166,13 @@
                 <strong>{{ $notificacion->titulo }}</strong>: {{ $notificacion->mensaje }}  
                 <small>{{ $notificacion->created_at }}</small>
                 @can('notificaciones.update')
-                <a href="{{ route('notificaciones.edit', $notificacion->id) }}">Editar</a>
+                <a href="{{ route('notificaciones.edit', $notificacion->id) }}" class="boton_notificacion">Editar</a>
                 @endcan
                 @can('notificaciones.destroy')
                 <form action="{{ route('notificaciones.destroy', $notificacion->id) }}" method="POST" style="display: inline;">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" onclick="return confirm('¿Estás seguro?')">Eliminar</button>
+                    <button type="submit" onclick="return confirm('¿Estás seguro?')" class="boton_notificacion" >Eliminar</button>
                 </form>
                 @endcan
             </li>

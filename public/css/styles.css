@@ -249,6 +249,137 @@ body{
 }
 
 
+/*botones notificacion*/
+ .boton_notificacion {
+    align-self: flex-end;
+    background: #f57c00;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background .3s;
+  }
+  .boton_notificacion:hover {
+    background: #e65c00;
+  } 
+
+
+
+/*estilos botones en lista de productos*/
+.nav-botones-productos {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.nav-menu-productos {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item-productos a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f57c00; /* Azul primario */
+    color: #fff;
+    text-decoration: none;   
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.nav-item-productos a:hover {
+    background-color: #e75b1e; /* Azul más oscuro */
+}
+
+@media (max-width: 600px) {
+    .nav-menu-productos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+/*estilos show productos*/
+.card-show-producto {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f2f6fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card-show-producto h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Imagen del producto */
+.card-show-producto img {
+    max-width: 200px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Contenedor tabla para overflow */
+.tabla-container {
+    overflow-x: auto;
+}
+
+/* Estilo de tabla */
+.tabla-detalles {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    table-layout: fixed;
+    word-wrap: break-word;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tabla-detalles th, .tabla-detalles td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+}
+
+.tabla-detalles th {
+    width: 30%;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Botón volver */
+.btn-volver {
+    display: inline-block;
+    background-color: #e38928;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #d1781f;
+}
+
 /* slow motion */
 html {
     scroll-behavior: smooth;

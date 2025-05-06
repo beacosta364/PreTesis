@@ -12,14 +12,14 @@
           </li>
       </ul>
    </nav> -->
-   <nav class="nav-botones">
-    <ul class="nav-menu">
-        <li class="nav-item">
-            <a href="{{ route('productos.pdf') }}" target="_blank" class="nav-link btn-generar-pdf">Generar PDF</a>
+   <nav class="nav-botones-productos">
+    <ul class="nav-menu-productos">
+        <li class="nav-item-productos">
+            <a href="{{ route('productos.pdf') }}" target="_blank" class="pdf-productos">Generar PDF</a>
         </li>
         @can('productos.create')
-        <li class="nav-item">
-            <a href="{{ route('producto.create') }}" class="nav-link btn-agregar-producto">Agregar Producto</a>
+        <li class="nav-item-productos">
+            <a href="{{ route('producto.create') }}" class="agregar-producto">Agregar Producto</a>
         </li>
         @endcan
     </ul>
