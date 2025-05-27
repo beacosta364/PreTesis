@@ -27,7 +27,7 @@
     </head>
     <body class="antialiased">
        
-    <div id="loader">
+        <div id="loader">
             <div id="status"></div>
         </div>
         <div id="site-header">
@@ -100,24 +100,55 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                             <h2 class="block-title"> Sobre Nosotros </h2>
-                            <h3>Restaurante La Papa</h3>
-                            <p> Misión </p>
-                            <p>En el restaurante La Papa, estamos comprometidos a ofrecer una experiencia culinaria excepcional
+                            <h3>BIENVENIDOS A LA PAPA</h3>
+                            <!-- <p> Misión </p> -->
+                            <!-- <p>En el restaurante La Papa, estamos comprometidos a ofrecer una experiencia culinaria excepcional
                                 que celebra la diversidad de la cocina internacional. 
                                 Nos esforzamos por utilizar ingredientes de la más alta calidad y brindar un servicio amable y eficiente, 
                                 creando un ambiente acogedor donde cada cliente se sienta especial. 
                                 Nuestro objetivo es deleitar a nuestros comensales con platos innovadores y tradicionales, 
                                 destacando especialmente nuestras especialidades en papas y carnes, y ofreciendo opciones para todos los gustos, 
                                 incluyendo vegetarianos y amantes de la comida árabe.
+                            </p> -->
+                            <p>El 1 de diciembre del año 1980 abrimos nuestro restaurante en la ciudad de Cali, 
+                                La Estacion De La papa <br>
+                                El nombre fue escogido como tributo al alimento más noble de la cocina universal.
+                                <br>
+                                La magia de nuestras cocineras, la calidad de nuestros ingredientes, 
+                                y el amable servicio de nuestro personal son los valores que hacen de nuestro 
+                                restaurante "La Papa", algo inolvidable. 
+                                <br>
+                                Siéntase cómodo, tómese una copa de vino y disfrute de nuestra gastronomía.
+                                <br>
+                                Estaremos siempre comprometidos a hacer Lo que sea por el sabor.
                             </p>
-                                
-                                <p>Visión </p>
+
+
+                            <H3>ADVERTENCIA PROPINA:</H3>
+                            <p>
+                                Se informa a los consumidores que este establecimiento de comercio sugiere a sus 
+                                consumidores una propina correspondiente al 10% del valor de la cuenta, el cual 
+                                podrá ser aceptado, rechazado o modificado por usted, de acuerdo con su valoración 
+                                del servicio prestado. Al momento de solicitar la cuenta, indíquele a la persona que 
+                                lo atiende si quiere que dicho valor sea o no incluido en la factura o indíquele el 
+                                valor que quiere dar como propina.
+                                <br>
+                                En este establecimiento de comercio los dineros recogidos por concepto de propina se 
+                                reparten al 100% entre los trabajadores del área de servicios.
+                                <br>
+                                En caso de que tenga algún inconveniente con el cobro de la propina, comuníquese con 
+                                la Línea exclusiva dispuesta en Bogotá para atender las inquietudes sobre el tema: 6513240, 
+                                o a la Línea de Atención al Ciudadano de la Superintendencia de Industria y Comercio: 5920400, 
+                                en Bogotá o para el resto del país Línea Gratuita Nacional: 018000-910165, para que radique su queja.
+                            </p>
+                                <!-- <p>Visión </p>
 
                                 <p>Ser reconocidos como el restaurante líder en Cali por nuestra dedicación a la excelencia culinaria y el servicio al cliente.
                                     Aspiramos a expandir nuestra presencia y ser un referente en la gastronomía internacional, 
                                     manteniendo siempre nuestro compromiso con la calidad y la satisfacción del cliente. 
                                     Queremos que cada visita a La Estación De La Papa sea una experiencia memorable, donde la tradición y la innovación se encuentren en cada plato, 
-                                    y donde cada cliente se sienta parte de nuestra familia. </p>
+                                    y donde cada cliente se sienta parte de nuestra familia. 
+                                </p> -->
                                 
                         </div>
                     </div>
@@ -662,8 +693,8 @@
             <!-- end row -->
         </div>
         <!-- end container -->
-    </div>
-    <!-- end gallery-main -->
+        </div>
+        <!-- end gallery-main -->
         
         <div id="reservation" class="reservations-main pad-top-100 pad-bottom-100">
             <div class="container">
@@ -821,7 +852,8 @@
                                     <p>
                                         <i class="fa fa-mobile" aria-hidden="true"></i>
                                         <span>
-                                        +57 3167245788
+                                        +57 3168468130
+                                        +57 3154561081
                                     </span>
                                     </p>
                                     <p>

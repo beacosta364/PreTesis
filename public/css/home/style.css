@@ -225,10 +225,12 @@ html, body{ height: 100%; }
     HEADER AREA
 -------------------------------------------------------------------*/
 
-#site-header{
+/* #site-header{
 	
-}
-#header{}
+} */
+/* #header{
+
+} */
 .logo{
 	float:left;
 }
@@ -239,8 +241,9 @@ html, body{ height: 100%; }
     top: 0;
     left: 0;
 }
+/* .main-menu{
 
-.main-menu{}
+} */
 .header-block-top .navbar-brand {
     margin: 0 !important;
     padding: 15px 0 15px;
@@ -500,7 +503,10 @@ html, body{ height: 100%; }
     transform: translate3d(-50%, 20px, 0);
     opacity: 0;
   }
-  @media (min-width: 768px) {
+
+
+  /***************************************************/
+  /* @media (min-width: 768px) {
     from {
       -webkit-transform: translate(-50%, 0);
       -webkit-transform: translate3d(-50%, 0, 0);
@@ -515,8 +521,12 @@ html, body{ height: 100%; }
       transform: translate3d(-50%, 40px, 0);
       opacity: 0;
     }
-  }
+  } */
+
+  
+/***************************************************/
 }
+
 
 @keyframes scrollWheel {
   from {
@@ -533,7 +543,7 @@ html, body{ height: 100%; }
     transform: translate3d(-50%, 20px, 0);
     opacity: 0;
   }
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     from {
       -webkit-transform: translate(-50%, 0);
       -webkit-transform: translate3d(-50%, 0, 0);
@@ -548,7 +558,7 @@ html, body{ height: 100%; }
       transform: translate3d(-50%, 40px, 0);
       opacity: 0;
     }
-  }
+  } */
 }
 	
 /*------------------------------------------------------------------
@@ -771,9 +781,9 @@ html, body{ height: 100%; }
 -------------------------------------------------------------------*/
 
 
-.menu-main{
+/* .menu-main{
 	
-}
+} */
 
 .menu-main .title-caption{
 	color:#666;
@@ -1012,9 +1022,9 @@ html, body{ height: 100%; }
     GALLERY AREA
 -------------------------------------------------------------------*/
 
-.gallery-main{
+/* .gallery-main{
 	
-}
+} */
 
 .gallery-main .title-caption{
 	color: #666;
@@ -1264,9 +1274,9 @@ html, body{ height: 100%; }
     RESERVATIONS AREA
 -------------------------------------------------------------------*/
 
-.reservations-main{
+/* .reservations-main{
 	
-}
+} */
 
 .form-reservations-box{
 	width:70%;
@@ -1399,7 +1409,9 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
     FOOTER AREA
 -------------------------------------------------------------------*/
 
-.footer-main{}
+/* .footer-main{
+
+} */
 .footer-news{
 	background:url(../../homeimg/newsletter-bg.jpg) no-repeat center;
 	background-attachment:fixed;
