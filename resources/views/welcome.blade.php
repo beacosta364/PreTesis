@@ -366,6 +366,54 @@
                                             <span class="offer-price">$60Mil</span>
                                         </div>
                                     </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Pollo Galeto</h3>
+                                                <p>
+                                                    Pollo asado con papas a la francesa.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$60Mil</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Pollo Galeto</h3>
+                                                <p>
+                                                    Pollo asado con papas a la francesa.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$60Mil</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Pollo Galeto</h3>
+                                                <p>
+                                                    Pollo asado con papas a la francesa.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$60Mil</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Pollo Galeto</h3>
+                                                <p>
+                                                    Pollo asado con papas a la francesa.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$60Mil</span>
+                                        </div>
+                                    </div>
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
