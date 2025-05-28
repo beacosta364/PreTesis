@@ -2,7 +2,7 @@
 
 @section('contenido')
 
-<!-- Bootstrap CSS -->
+<!-- Bootstrap CSS "modificar para el boton slidebar"-->
 <link rel="stylesheet" href="{{ asset('css/home/bootstrap.min.css') }}">
         <!-- Site CSS -->
         <link rel="stylesheet" href="{{ asset('css/home/style.css') }}">
