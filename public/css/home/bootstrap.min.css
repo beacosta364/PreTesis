@@ -92,7 +92,7 @@ button,select{
     text-transform:none
 }
 button,html input[type="button"],input[type="reset"],input[type="submit"]{
-    -webkit-appearance:button;
+    /* -webkit-appearance:button; */
     cursor:pointer
 }
 button[disabled],html input[disabled]{
@@ -115,7 +115,7 @@ input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-ou
     height:auto
 }
 input[type="search"]{
-    -webkit-appearance:textfield;
+    /* -webkit-appearance:textfield; */
     -webkit-box-sizing:content-box;
     -moz-box-sizing:content-box;
     box-sizing:content-box
@@ -2296,9 +2296,9 @@ output{
 textarea.form-control{
     height:auto
 }
-input[type="search"]{
+/* input[type="search"]{
     -webkit-appearance:none
-}
+} */
 @media screen and (-webkit-min-device-pixel-ratio:0){
     input[type="date"].form-control,input[type="time"].form-control,input[type="datetime-local"].form-control,input[type="month"].form-control{
         line-height:34px
@@ -3880,9 +3880,9 @@ textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon
 .navbar-default .navbar-toggle .icon-bar{
     background-color:#888
 }
-.navbar-default .navbar-collapse,.navbar-default .navbar-form{
-    /*border-color:#e7e7e7*/
-}
+/* .navbar-default .navbar-collapse,.navbar-default .navbar-form{
+    border-color:#e7e7e7
+} */
 .navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:hover,.navbar-default .navbar-nav>.open>a:focus{
     background-color:#e7e7e7;
     color:#555
@@ -4959,7 +4959,7 @@ button.close{
     cursor:pointer;
     background:transparent;
     border:0;
-    -webkit-appearance:none
+    /* -webkit-appearance:none */
 }
 .modal-open{
     overflow:hidden
