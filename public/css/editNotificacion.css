@@ -21,7 +21,16 @@ h1 {
   margin-bottom: 20px;
 }
 
-form {
+/* form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+} */
+.theform{
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -30,7 +39,6 @@ form {
   border: 1px solid #aaa;
   border-radius: 6px;
 }
-
 form label {
   color: #f57c00;
   font-weight: bold;

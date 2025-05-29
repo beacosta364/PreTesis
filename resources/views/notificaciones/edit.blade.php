@@ -16,7 +16,7 @@
   <div class="card">
     <h1>Editar Notificación</h1>
 
-    <form action="{{ route('notificaciones.update', $notificacion->id) }}" method="POST">
+    <form class="theform" action="{{ route('notificaciones.update', $notificacion->id) }}" method="POST">
       @csrf
       @method('PUT')
 

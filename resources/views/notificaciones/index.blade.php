@@ -18,7 +18,7 @@
     <h2>Crear Nueva Notificación</h2>
 
     @can('notificaciones.create')
-    <form action="{{ route('notificaciones.store') }}" method="POST">
+    <form class="theform" action="{{ route('notificaciones.store') }}" method="POST">
       @csrf
       <label for="titulo">Título:</label>
       <input id="titulo" type="text" name="titulo" required>
@@ -48,7 +48,7 @@
               <a href="{{ route('notificaciones.edit', $notificacion->id) }}">Editar</a>
             @endcan
             @can('notificaciones.destroy')
-              <form action="{{ route('notificaciones.destroy', $notificacion->id) }}" method="POST" onsubmit="return confirm('¿Estás seguro?')">
+              <form class="theform" action="{{ route('notificaciones.destroy', $notificacion->id) }}" method="POST" onsubmit="return confirm('¿Estás seguro?')">
                 @csrf
                 @method('DELETE')
                 <button type="submit">Eliminar</button>

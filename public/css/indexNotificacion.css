@@ -22,7 +22,19 @@ h2 {
 }
 
 /* Formulario */
-form {
+/* form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  max-width: 500px;
+  margin: 0 auto 20px;
+} */
+
+.theform{
   display: flex;
   flex-direction: column;
   gap: 12px;
