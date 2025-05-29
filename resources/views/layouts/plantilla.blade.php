@@ -49,7 +49,8 @@
                 <p>{{Auth::user()->name}}</p>
             </div>
             <div class="element-slidebar-content">
-                <a href="{{'profile'}}">Perfil</a>
+                <!-- <a href="{{'profile'}}">Perfil</a> -->
+                 <a href="/profile">Perfil</a>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
 
