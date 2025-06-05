@@ -260,7 +260,7 @@
             
         </div>
         <!-- end special-menu -->
-
+<!-- /****************************************************************************************************************************** */ -->
         <div id="menu" class="menu-main pad-top-100 pad-bottom-100">
             <div class="container">
                 <div class="row">
@@ -429,17 +429,18 @@
                                     </div>
                                     <!-- end col -->
                                 </div>
+                                <!-- POSTRES -->
                                 <div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pie de manzana..jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Postre de deditos.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>Pie de manzana</h3>
-                                                <p>
-                                                     Postre para deleitar el paladar. 
-                                                </p>
+                                                <h3>Helado de caramelo</h3>
+                                                <!--<p>
+                                                    Tu sabor preferido (Vainilla, Fresa, Caramelo)
+                                                </p> -->
                                             </div>
-                                            <span class="offer-price">$15Mil</span>
+                                            <span class="offer-price">$22.7k</span>
                                         </div>
                                     </div>
                                     <!-- end col -->
@@ -447,29 +448,82 @@
                                         <div class="offer-item">
                                             <img src="{{ asset('homeimg\Postre de deditos.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>Deditos de chocolate</h3>
-                                                <p>
-                                                    Relleno de chocolate blanco.
-                                                </p>
+                                                <h3>Flan</h3>
+                                                <!-- <p>
+                                                    Tu sabor preferido (Vainilla, Fresa, Caramelo)
+                                                </p> -->
                                             </div>
-                                            <span class="offer-price">$10Mil</span>
+                                            <span class="offer-price">$22.7k</span>
                                         </div>
                                     </div>
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pie de manzana.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Pie de manzana..jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Brownie con helado</h3>
+                                                <!-- <p>
+                                                    Postre para deleitar el paladar. 
+                                                </p> -->
+                                            </div>
+                                            <span class="offer-price">$22.7k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Postre de deditos.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Postre de deditos</h3>
+                                                <!-- <p>
+                                                    Relleno de chocolate blanco.
+                                                </p> -->
+                                            </div>
+                                            <span class="offer-price">$22.7k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Postre de deditos.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Pastel de manzana</h3>
+                                                <!-- <p>
+                                                    Relleno de chocolate blanco.
+                                                </p> -->
+                                            </div>
+                                            <span class="offer-price">$22.7k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Postre de deditos.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Merengón</h3>
+                                                <!-- <p>
+                                                    Relleno de chocolate blanco.
+                                                </p> -->
+                                            </div>
+                                            <span class="offer-price">$22.7k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pie de manzana..jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Copa de helado</h3>
-                                                <p>
+                                                <!-- <p>
                                                     Tu sabor preferido (Vainilla, Fresa, Caramelo)
-                                                </p>
+                                                </p> -->
                                             </div>
-                                            <span class="offer-price">$10</span>
+                                            <span class="offer-price">$18.1k</span>
                                         </div>
                                     </div>
                                     <!-- end col -->
                                 </div>
+                                <!-- BEBIDAS -->
                                 <div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
@@ -522,6 +576,8 @@
             
         </div>
         <!-- end menu -->
+<!-- /****************************************************************************************************************************** */ -->
+
         <div id="gallery" class="gallery-main pad-top-100 pad-bottom-100">
         <div class="container">
             <div class="row">
