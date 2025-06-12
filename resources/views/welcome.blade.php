@@ -26,7 +26,7 @@
 <!--  -->
     </head>
     <body class="antialiased">
-       
+    
         <div id="loader">
             <div id="status"></div>
         </div>
@@ -140,6 +140,10 @@
                                 la Línea exclusiva dispuesta en Bogotá para atender las inquietudes sobre el tema: 6513240, 
                                 o a la Línea de Atención al Ciudadano de la Superintendencia de Industria y Comercio: 5920400, 
                                 en Bogotá o para el resto del país Línea Gratuita Nacional: 018000-910165, para que radique su queja.
+                            </p>
+                            <H3>ADVERTENCIA INC:</H3>
+                            <p>
+                                TODOS NUESTROS PRECIOS INCLUYEN EL 8% DEL INC
                             </p>
                                 <!-- <p>Visión </p>
 
@@ -305,7 +309,6 @@
                                         </div>
                                     </div>                                    
                                     
-                                   
                                     <div class="slider slider-single">
                                         <div>
                                             <div class="lg:w-1/2 md:w-1/2 sm:w-full px-4">
@@ -320,14 +323,14 @@
                                                     <span class="offer-price text-lg font-bold text-green-600">$12Mil</span>
                                                 </div>
                                             </div>
-                                            <!-- end col -->
+                                            
                                             <div class="lg:w-1/2 md:w-1/2 sm:w-full px-4">
                                                 <div class="offer-item bg-white shadow-lg rounded-lg p-4">
                                                     <img src="{{ asset('homeimg\Ensalada Griega.jpg') }}" alt="" class="w-full h-auto rounded-md">
                                                     <div>
                                                         <h3 class="text-xl font-semibold mt-4">Ensalada Griega</h3>
                                                         <p class="text-gray-600">
-                                                             Mix de ensalada.
+                                                            Mix de ensalada.
                                                         </p>
                                                     </div>
                                                     <span class="offer-price text-lg font-bold text-green-600">$17Mil</span>
@@ -336,21 +339,502 @@
                                            
                                         </div>
                                     </div>
-                                    <!-- end col -->
-                                   
-                                   
+                                    
                                 </div>
+                                <!-- Entradas -->
+                                <!-- <div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Empanaditas Arabes.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3> Empanaditas arabes</h3>
+                                                <p>
+                                                    De Coco, Cerezada o de mango.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$12Mil</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Empanaditas vallunas.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Cebiche de Camaron</h3>
+                                                <p>
+                                                    En agua, en leche o frappe. (Mango, Maracuya, Mora, Lulo)
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$10Mil</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Ensalada Griega.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Cebiche Cartagenero</h3>
+                                                <p>
+                                                    Cerveza de tu preferencia con maracuya y  mango. 
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$15Mil</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Ensalada Griega.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Cascaritas</h3>
+                                                <p>
+                                                    Cerveza de tu preferencia con maracuya y  mango. 
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$15Mil</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Ensalada Griega.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Cascaritas sicilianas</h3>
+                                                <p>
+                                                    Cerveza de tu preferencia con maracuya y  mango. 
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$15Mil</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Ensalada Griega.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Cascaritas mediterraneas</h3>
+                                                <p>
+                                                    Cerveza de tu preferencia con maracuya y  mango. 
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$15Mil</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Ensalada Griega.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Frito mixto de mariscos</h3>
+                                                <p>
+                                                    Cerveza de tu preferencia con maracuya y  mango. 
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$15Mil</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Ensalada Griega.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Empanaditas arabes</h3>
+                                                <p>
+                                                    Cerveza de tu preferencia con maracuya y  mango. 
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$15Mil</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Ensalada Griega.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Kibbe</h3>
+                                                <p>
+                                                    Cerveza de tu preferencia con maracuya y  mango. 
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$15Mil</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Ensalada Griega.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Tahine con garbanzo</h3>
+                                                <p>
+                                                    Cerveza de tu preferencia con maracuya y  mango. 
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$15Mil</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Ensalada Griega.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Tahine con berenjena</h3>
+                                                <p>
+                                                    Cerveza de tu preferencia con maracuya y  mango. 
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$15Mil</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div> -->
+                                
+
+
+                                <!-- PLATOS FUERTES -->
                                 <div>
+                                    <p>-----------------------------Sopas----------------------------------</p>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Sopa de tomate</h3>
+                                                <p>
+                                                    Sopa de tomates frescos, aguacate, albahaca fresca y moneditas de plátano verde.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$30.7k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Sopa de pollo</h3>
+                                                <p>
+                                                    Con verduras frescas.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$30.7k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Cazuela de corvina</h3>
+                                                <p>
+                                                    Cazuela con trositos de corvina asados.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$65.6k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Cazuela de camarón</h3>
+                                                <p>
+                                                    Leche de coco y camarones salteados.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$70.3k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Frijolada</h3>
+                                                <p>
+                                                    Frijoles caseros, acompañados de arroz, carne o pollo o costilla, patacón, aguacate.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$65.8k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Ajiaco</h3>
+                                                <p>
+                                                    Tradicional sopa a base de variedad de papas, especiada con el sabor de la guasca. 
+                                                    Aguacate, mazorca y pollo acompañan.
+                                                    Crema y alcaparras opcionales
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$65.6k</span>
+                                        </div>
+                                    </div>
+                                    <p>-----------------------------Ensaladas----------------------------------</p>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Turca</h3>
+                                                <p>
+                                                    Lechuga, pepino, tomate, cebolla, aderezo.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$32.9k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Napolitana</h3>
+                                                <p>
+                                                    Motzzarella, tomate, aceitunas, albahaca, aceite de oliva, cebolla.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$43.1k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Sophia loren</h3>
+                                                <p>
+                                                    Rodajas de tomate, mozzarella, aceite de oliva, albahaca fresca.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$38.6k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Griega</h3>
+                                                <p>
+                                                    Lechuga, pepino, tomate, aceitunas negras, queso feta, pimentones, vinagreta.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$53.4k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Berenjenas italianasa</h3>
+                                                <p>
+                                                    Encurtidas con especias mediterraneas, acompañadas con pan arabe.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$39.3k</span>
+                                        </div>
+                                    </div>
+                                    <p>-----------------------------Papas----------------------------------</p>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Sour Cream</h3>
+                                                <p>
+                                                    Encurtidas con especias mediterraneas, acompañadas con pan arabe.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$46.4k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Cheddar</h3>
+                                                <p>
+                                                    Encurtidas con especias mediterraneas, acompañadas con pan arabe.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$49.9k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Gulash</h3>
+                                                <p>
+                                                    Encurtidas con especias mediterraneas, acompañadas con pan arabe.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$49.9k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Pollo oriental</h3>
+                                                <p>
+                                                    Encurtidas con especias mediterraneas, acompañadas con pan arabe.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$49.9k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Papa chile</h3>
+                                                <p>
+                                                    Encurtidas con especias mediterraneas, acompañadas con pan arabe.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$49.9k</span>
+                                        </div>
+                                    </div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Papa Champiñon</h3>
+                                                <p>
+                                                    Encurtidas con especias mediterraneas, acompañadas con pan arabe.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$49.9k</span>
+                                        </div>
+                                    </div>
+                                    <p>-----------------------------CARNES + AVES----------------------------------</p>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Las mejores costillas del mundo</h3>
+                                                <p>
+                                                    Tiernas costillas de cerdo, asadas al carbón.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$89.6k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>1/2 costilla</h3>
+                                                <p>
+                                                    Tiernas costillas de cerdo, asadas al carbón.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$61.2k</span>
+                                        </div>
+                                    </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
                                             <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Baby Beef</h3>
                                                 <p>
-                                                    Carne asada con el termino de tu preferencia.
+                                                    Centro de filete de res abierto, asado al carbón.
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$65Mil</span>
+                                            <span class="offer-price">$88.1k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>1/2 Baby Beef</h3>
+                                                <p>
+                                                    Centro de filete de res abierto, asado al carbón.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$61.9k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Baby Beef encebollado</h3>
+                                                <p>
+                                                    Centro de filete de res abierto, asado al carbón.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$91.7k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>1/2 Baby Beef encebollado</h3>
+                                                <p>
+                                                    Centro de filete de res abierto, asado al carbón.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$66.7k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Churrasco</h3>
+                                                <p>
+                                                    Asado al carbón.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$73.8k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Miti/miti</h3>
+                                                <p>
+                                                    Media costilla, medio baby beef.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$92.9k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Gran asado la papa</h3>
+                                                <p>
+                                                    Media costilla, medio baby beef, chorizo, medio pollo galeto.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$121.5k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Medallones a la pimienta</h3>
+                                                <p>
+                                                    Medallones de filete de res asados al carbón con salsa a la pimienta.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$85.8k</span>
                                         </div>
                                     </div>
                                     <!-- end col -->
@@ -360,71 +844,410 @@
                                             <div>
                                                 <h3>Pollo Galeto</h3>
                                                 <p>
-                                                    Pollo asado con papas a la francesa.
+                                                    Pollo tierno asado al carbón, marinado en salsa BBQ.
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$60Mil</span>
+                                            <span class="offer-price">$65.8k</span>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
                                             <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>Pollo Galeto</h3>
+                                                <h3>1/2 Pollo Galeto</h3>
                                                 <p>
-                                                    Pollo asado con papas a la francesa.
+                                                    Pollo tierno asado al carbón, marinado en salsa BBQ.
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$60Mil</span>
+                                            <span class="offer-price">$47.6k</span>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
                                             <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>Pollo Galeto</h3>
+                                                <h3>Pechuga al carbón</h3>
                                                 <p>
-                                                    Pollo asado con papas a la francesa.
+                                                    Pechuga de pollo con pimientos asados al carbón.
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$60Mil</span>
+                                            <span class="offer-price">$53.4k</span>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
                                             <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>Pollo Galeto</h3>
+                                                <h3>Pechuga al carbón con Champiñones</h3>
                                                 <p>
-                                                    Pollo asado con papas a la francesa.
+                                                    Pechuga de pollo con pimientos asados al carbón.
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$60Mil</span>
+                                            <span class="offer-price">$63.5k</span>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
                                             <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>Pollo Galeto</h3>
+                                                <h3>Plato mixto</h3>
                                                 <p>
-                                                    Pollo asado con papas a la francesa.
+                                                    Pincho de carne, pincho de pollo, costilla, chorizo ahumado, empanadas, arepa y ají.
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$60Mil</span>
+                                            <span class="offer-price">$63.5k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Picada de costilla</h3>
+                                                <p>
+                                                    Trosos de costilla en salsa BBQ.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$69.2k</span>
                                         </div>
                                     </div>
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Ajiaco,.  ..jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>Ajiaco</h3>
+                                                <h3>Pincho de carne</h3>
                                                 <p>
-                                                    Tradicional ajiaco acompañado con arroz, aguacate y papas a la francesa.
+                                                    Acompañado con arepa de maiz.
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$35Mil</span>
+                                            <span class="offer-price">$59K</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Pincho de Pollo</h3>
+                                                <p>
+                                                    Acompañado con papa cheddar+brócoli.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$48.8k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Beefy</h3>
+                                                <p>
+                                                    Lomo de res asado al carbón sobre arepa de maíz, tomate picado, lechuga, salsa garlic.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$61.9k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Beefy chili</h3>
+                                                <p>
+                                                    Nuestro famoso beefy, acompañados de un tazón de frijoles con carne al estilo mexicano.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$70.3k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Fajitas de carne</h3>
+                                                <p>
+                                                    Carne picada, frijol refrito, tomate, guacamole en tortilla mexicana.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$51.1k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Fajitas de pollo</h3>
+                                                <p>
+                                                    Pollo picado, frijol refrito, tomate, guacamole en tortilla mexicaba.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$48.8k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Taco de carne</h3>
+                                                <p>
+                                                    Tostadas mexicanas con carne molida, lechuga, tomate, cebolla y guacamole.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$53.4k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Pinchos kafta</h3>
+                                                <p>
+                                                    Carne molida con especias arabes, acompañadas con humus y ensalada turca.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$55.6k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Sahara</h3>
+                                                <p>
+                                                    Arroz con almendras tostadas y pollo, tahine con garbanzo, kibbes, pincho kafta y ensalada turca.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$70.3k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <p>-----------------------------PESCADOS + MARISCOS----------------------------------</p>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Corvina a la plancha</h3>
+                                                <p>
+                                                    Filete de corvina asado.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$102.4k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Corvina muenier</h3>
+                                                <p>
+                                                    Acite de oliva, mantequilla, vino blanco, limón y perejil.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$104.8kk</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Corvina con champiñones frescos</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$104.8k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Corvina a la pimienta</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$104.8k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Deditos de corvina</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$54.8k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Atún a la brasa</h3>
+                                                <p>
+                                                    Filete fresco de atún asado al carbón en aceite de oliva y pimienta en grano.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$89.3k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Salmón a la brasa</h3>
+                                                <p>
+                                                    Filete de salmón asado al carbón en salsa de eneldo.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$102.4k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Cazuela de langostinos</h3>
+                                                <p>
+                                                    Leche de coco y langostinos U12 salteados
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$97.5kk</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Pincho hawallano</h3>
+                                                <p>
+                                                    Langostinos U12 asados a la parrilla en pincho con trozos de piña y salsa de la casa. Acompaña arroz con coco.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$102.1k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Trucha almendrada</h3>
+                                                <p>
+                                                    Con ensalada turca + acompañamiento.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$63.5k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Langostinos a la muenier</h3>
+                                                <p>
+                                                    Langostinos U12 con ensalada turca + acompañamiento
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$104.8k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Langostinos mariposa</h3>
+                                                <p>
+                                                    Langostinos U12 apanados, acompañados de ensalada turca + acompañamiento.
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$104.8k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <p>-----------------------------SPAGHETTI----------------------------------</p>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Primavera</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$54.4k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Pesto</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$54.4k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Abril 23</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$54.4k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Pomodoro</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$54.4k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Napolitana</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$54.4k</span>
                                         </div>
                                     </div>
                                     <!-- end col -->
