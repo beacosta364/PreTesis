@@ -1494,16 +1494,17 @@
                                 </div>
                                 <!-- BEBIDAS -->
                                 <div>
+                                    <p>-----------------------------BEBIDAS----------------------------------</p>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
                                             <img src="{{ asset('homeimg\746d73efbc393b143870b08523e841b2.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3> Limonada</h3>
+                                                <h3> Gaseosa</h3>
                                                 <p>
-                                                    De Coco, Cerezada o de hierbabuena.
+                                                    
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$12Mil</span>
+                                            <span class="offer-price">$8.4k</span>
                                         </div>
                                     </div>
                                     <!-- end col -->
@@ -1511,12 +1512,12 @@
                                         <div class="offer-item">
                                             <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>Jugos naturales</h3>
+                                                <h3>Limonada</h3>
                                                 <p>
-                                                    En agua, en leche o frappe. (Mango, Maracuya, Mora, Lulo)
+                                                    
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$10Mil</span>
+                                            <span class="offer-price">$11.9k</span>
                                         </div>
                                     </div>
                                     <!-- end col -->
@@ -1524,15 +1525,136 @@
                                         <div class="offer-item">
                                             <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>Michelada</h3>
+                                                <h3>Limonada de coco</h3>
                                                 <p>
-                                                    Cerveza de tu preferencia con maracuya y  mango. 
+                                                    
                                                 </p>
                                             </div>
-                                            <span class="offer-price">$15Mil</span>
+                                            <span class="offer-price">$19k</span>
                                         </div>
                                     </div>
-                                    
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Jugos naturales agua</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$11.9k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Jugos naturales leche</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$14.3k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Malteada de vainilla</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$16.6k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Agua manantial</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$8.4k</span>
+                                        </div>
+                                    </div>
+                                    <p>-----------------------------BEBIDAS CALIENTES----------------------------------</p>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Café americano</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$7.3k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Espreso</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$7.3k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Capuccino</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$11.9k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Macchiato</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$9.5k</span>
+                                        </div>
+                                    </div>
+                                    <p>-----------------------------CERVESAS----------------------------------</p>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Nacional</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$13.2k</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Importada</h3>
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$15.6k</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
