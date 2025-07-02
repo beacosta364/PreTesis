@@ -19,7 +19,7 @@
         <div class="cabecera">
             <img src="img2\Naraja.png" alt=" ">
         <div class="cabecera-text">
-        <a href="{{ route('producto.movimiento') }}">Gestion de inventario</a>
+        <a href="{{ route('producto.movimiento') }}">Gestión de inventario</a>
     </div> 
     </div>
 
@@ -61,7 +61,7 @@
                 <h3>Se han realizado {{ $movimientosMes }} movimientos este mes</h3>
             </div>
             @can('reportemovimientos.show')
-            <a href="{{ route('movimientos.filtrar') }}">Reportes de movimientos</a>
+            <a href="{{ route('movimientos.filtrar') }}">Reportes de Movimientos</a>
             @endcan
          </div>
 

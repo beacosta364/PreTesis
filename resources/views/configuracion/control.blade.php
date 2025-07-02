@@ -4,8 +4,8 @@
 
 <section class="controles">
     <div class="control-acceso-card">
-        <h2 class="titulo-acceso">Acceso a bodega</h2>
-        <button id="ingresarBodegaBtn" class="btn-acceso">Ingresar a bodega</button>
+        <h2 class="titulo-acceso">Acceso a Bodega</h2>
+        <button id="ingresarBodegaBtn" class="btn-acceso">Ingresar a Bodega</button>
     </div>
 </section>
 

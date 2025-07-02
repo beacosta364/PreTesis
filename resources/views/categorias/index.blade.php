@@ -10,7 +10,7 @@
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Descripcion</th>
+                <th>Descripción</th>
                 <th>Status</th>              
                 <th>Opciones</th>
             </tr>
@@ -20,7 +20,7 @@
             <tr>                
                 <td>{{$categoria->id}}</td>
                 <td>{{$categoria->nombre}}</td>
-                <td> {{$categoria->descripcion}}</td>
+                <td> {{$categoria->descripción}}</td>
                 <td>{{$categoria->status}}</td>
                
                 <td >

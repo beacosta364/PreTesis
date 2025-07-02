@@ -9,7 +9,7 @@
             <a href="{{ route('movimientos.pdf') }}" target="_blank" class="nav-link btn-generar-pdf">Generar PDF</a>
         </li>
         <li class="nav-item">
-            <h2>Registro de movimientos realizados</h2>
+            <h2>Registro de Movimientos Realizados</h2>
         </li>
     </ul>
     </nav>

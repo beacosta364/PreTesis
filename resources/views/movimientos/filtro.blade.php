@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <h2>Registro de movimientos realizados</h2>
+  <h2>Registro de Movimientos Realizados</h2>
 
   <div class="pdf-link">
     <a href="{{ route('movimientos.pdf', request()->all()) }}" target="_blank">Generar PDF</a>
@@ -21,11 +21,11 @@
   <form method="GET" action="{{ route('movimientos.filtrar') }}">
     <div class="filtros-container">
       <div class="filtro">
-        <label for="fecha_inicio">Fecha Inicio</label>
+        <label for="fecha_inicio">Fecha de Inicio</label>
         <input type="date" name="fecha_inicio" value="{{ request('fecha_inicio') }}">
       </div>
       <div class="filtro">
-        <label for="fecha_fin">Fecha Fin</label>
+        <label for="fecha_fin">Fecha de Fin</label>
         <input type="date" name="fecha_fin" value="{{ request('fecha_fin') }}">
       </div>
       <div class="filtro">

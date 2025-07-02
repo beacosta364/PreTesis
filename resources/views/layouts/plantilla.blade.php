@@ -64,12 +64,12 @@
         <div class="element-slidebar">
             <div class="element-slidebar-btn">
                 <span><img src="{{asset('img2\GestionIcono1.png')}}" alt="Gestion del sistema"></span>
-                <p>Gestion del sistema</p>
+                <p>Gestión del sistema</p>
             </div>
             <div class="element-slidebar-content">
                 <a href="{{ route('dashboard') }}">Dashboard</a>  
-                <a href="{{ route('producto.movimiento') }}">Gestion de inventario</a>
-                <a href="{{ route('configuracion.control') }}">Ingresar a bodega</a>
+                <a href="{{ route('producto.movimiento') }}">Gestión de inventario</a>
+                <a href="{{ route('configuracion.control') }}">Ingresar a Bodega</a>
                 @can('vistausuarios.show')
                 <a href="{{ route('users.index') }}">Lista de usuarios registrados</a>
                 @endcan
@@ -78,7 +78,7 @@
                 <a href="{{ url('/usuarios/crear') }}">Registrar nuevo usuario</a>  
                 @endcan
                 @can('rolusuarios.show')
-                <a href="{{ url('/usuarios-roles') }}">gestionar rol de usuarios</a>
+                <a href="{{ url('/usuarios-roles') }}">Gestionar rol de usuarios</a>
                 @endcan
             </div>
         </div>
@@ -105,8 +105,8 @@
             <div class="element-slidebar">
                 <div class="element-slidebar-btn">
                     <!-- <span><img src="{{asset('img/icono1.png')}}" alt="Product"></span> -->
-                    <span><img src="{{asset('img2\CategoriaIcono1.png')}}" alt="Gestion del categorias"></span>
-                    <p>Categorias</p>
+                    <span><img src="{{asset('img2\CategoriaIcono1.png')}}" alt="Gestión de las categorías"></span>
+                    <p>Categorías</p>
                 </div>
                 <div class="element-slidebar-content">
                     @can('categoria.index')
@@ -122,11 +122,11 @@
             <div class="element-slidebar">
                 <div class="element-slidebar-btn">
                     <span><img src="{{asset('img2\AccesoIcono1.png')}}" alt="Monitoreo y seguridad"></span>
-                    <p>Ingresos a bodega</p>
+                    <p>Ingresos a Bodega</p>
                 </div>
                 <div class="element-slidebar-content">  
                     @can('ingreso.index')  
-                    <a href="{{ route('bodega.historial') }}">Registro ingreso a bodega</a>
+                    <a href="{{ route('bodega.historial') }}">Registro de ingreso a Bodega</a>
                     @endcan
                     <a href="{{ route('notificaciones.index') }}">Notificaciones</a>
                 </div>
@@ -141,7 +141,7 @@
                 </div>
                 @can('configuracion.show')  
                 <div class="element-slidebar-content">
-                    <a href="{{ route('configuracion.create') }}">Configuración</a>
+                    <a href="{{ route('configuracion.create') }}">Configuración IP</a>
                 </div>
                 @endcan
             </div>
@@ -157,10 +157,10 @@
             
             <div class="element-slidebar-content"> 
                 @can('reporteinventarios.show')        
-                <a href="{{ url('/productos-listado') }}">Reportes de inventarios</a>
+                <a href="{{ url('/productos-listado') }}">Reportes de inventario</a>
                 @endcan
                 @can('reportemovimientos.show')
-                 <a href="{{ route('movimientos.filtrar') }}">Reportes de movimientos</a>
+                 <a href="{{ route('movimientos.filtrar') }}">Reportes de movimiento</a>
                 @endcan
             </div> 
               
