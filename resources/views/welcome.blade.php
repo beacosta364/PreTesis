@@ -47,10 +47,10 @@
                                 <div id="navbar" class="navbar-collapse collapse">
                                     <ul class="nav navbar-nav navbar-right">
                                         <li class="active"><a href="#banner">Inicio</a></li>
-                                        <li><a href="#about">Sobre Nosotros</a></li>
-                                        <li><a href="#menu">Menu</a></li>
+                                        <li><a href="#about">Sobre nosotros</a></li>
+                                        <li><a href="#menu">Menú</a></li>
                                         <li><a href="#reservation">Reserva</a></li>
-                                        <li><a href="#footer">Contactanos</a></li>
+                                        <li><a href="#footer">Contáctanos</a></li>
                                         <li><a href="{{ route('login') }}">Administración</a></li>
                                     </ul>
                                 </div>
@@ -99,8 +99,8 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                            <h2 class="block-title"> Sobre Nosotros </h2>
-                            <h3>BIENVENIDOS A LA PAPA</h3>
+                            <h2 class="block-title"> Sobre nosotros </h2>
+                            <h3>Bienvenidos a LA PAPA</h3>
                             <!-- <p> Misión </p> -->
                             <!-- <p>En el restaurante La Papa, estamos comprometidos a ofrecer una experiencia culinaria excepcional
                                 que celebra la diversidad de la cocina internacional. 
@@ -1402,7 +1402,7 @@
                                 <div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Postre de deditos.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Postre de deditos.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Helado de caramelo</h3>
                                                 <!--<p>
@@ -1415,7 +1415,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Postre de deditos.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Postre de deditos.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Flan</h3>
                                                 <!-- <p>
@@ -1428,7 +1428,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pie de manzana..jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Pie de manzana..jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Brownie con helado</h3>
                                                 <!-- <p>
@@ -1454,7 +1454,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Postre de deditos.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Pie de manzana..jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Pastel de manzana</h3>
                                                 <!-- <p>
@@ -1467,7 +1467,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Postre de deditos.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Postre de deditos.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Merengón</h3>
                                                 <!-- <p>
@@ -1480,7 +1480,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pie de manzana..jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Pie de manzana..jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Copa de helado</h3>
                                                 <!-- <p>
@@ -1497,7 +1497,7 @@
                                     <p>-----------------------------BEBIDAS----------------------------------</p>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\746d73efbc393b143870b08523e841b2.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\746d73efbc393b143870b08523e841b2.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3> Gaseosa</h3>
                                                 <p>
@@ -1510,7 +1510,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Limonada</h3>
                                                 <p>
@@ -1523,7 +1523,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Limonada de coco</h3>
                                                 <p>
@@ -1535,7 +1535,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Jugos naturales agua</h3>
                                                 <p>
@@ -1547,7 +1547,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Jugos naturales leche</h3>
                                                 <p>
@@ -1559,7 +1559,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Malteada de vainilla</h3>
                                                 <p>
@@ -1571,7 +1571,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\7533046712e8ca1c98b07f576086dc4f.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Agua manantial</h3>
                                                 <p>
@@ -1584,7 +1584,7 @@
                                     <p>-----------------------------BEBIDAS CALIENTES----------------------------------</p>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Café americano</h3>
                                                 <p>
@@ -1596,7 +1596,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Espreso</h3>
                                                 <p>
@@ -1608,7 +1608,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Capuccino</h3>
                                                 <p>
@@ -1620,7 +1620,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Macchiato</h3>
                                                 <p>
@@ -1633,7 +1633,7 @@
                                     <p>-----------------------------CERVESAS----------------------------------</p>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Nacional</h3>
                                                 <p>
@@ -1645,7 +1645,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\176582d05a265899763f7d1133eacae2.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Importada</h3>
                                                 <p>
