@@ -67,15 +67,15 @@
                 <p>Gestión del sistema</p>
             </div>
             <div class="element-slidebar-content">
-                <a href="{{ route('dashboard') }}">Dashboard</a>  
+                <a href="{{ route('dashboard') }}">Dashboard</a>
+                <a href="{{ route('configuracion.control') }}">Ingresar a Bodega</a>  
                 <a href="{{ route('producto.movimiento') }}">Gestión de inventario</a>
-                <a href="{{ route('configuracion.control') }}">Ingresar a Bodega</a>
-                @can('vistausuarios.show')
-                <a href="{{ route('users.index') }}">Lista de usuarios registrados</a>
-                @endcan
                 <a href="{{ route('producto.agotados') }}">Ver Productos Agotados o Por Agotarse</a>
                 @can('registrarusuarios.show')
                 <a href="{{ url('/usuarios/crear') }}">Registrar nuevo usuario</a>  
+                @endcan
+                @can('vistausuarios.show')
+                <a href="{{ route('users.index') }}">Lista de usuarios registrados</a>
                 @endcan
                 @can('rolusuarios.show')
                 <a href="{{ url('/usuarios-roles') }}">Gestionar rol de usuarios</a>
