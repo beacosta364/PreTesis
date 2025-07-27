@@ -99,13 +99,6 @@
 .footer-news form a:hover{
 	border: 2px dotted #e75b1e;
 }
-
-.footer-news form button{
-	background: #e75b1e;
-}
-.footer-news form button:hover{
-	border: 2px dotted #e75b1e;
-}
 .footer-box-a h3{
 	color: #e75b1e;
 }

@@ -21,39 +21,47 @@
         </div>
 
 
-        <!-- Formulario de inicio de sesión -->
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
+       <!-- Formulario de inicio de sesión -->
+<form method="POST" action="{{ route('login') }}">
+    @csrf
 
-            <!-- Dirección de correo -->
-            <label for="email">Correo</label>
-            <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus autocomplete="username">
-            @error('email')
-                <div>{{ $message }}</div>
-            @enderror
+    <!-- Dirección de correo -->
+    <label for="email">Correo</label>
+    <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus autocomplete="username">
 
-            <!-- Contraseña -->
-            <label for="password">Contraseña</label>
-            <input id="password" type="password" name="password" required autocomplete="current-password">
-            @error('password')
-                <div>{{ $message }}</div>
-            @enderror
+    @error('email')
+        @if ($message === 'These credentials do not match our records.')
+            <div style="color: red;">Estas credenciales no coinciden con nuestros registros.</div>
+        @else
+            <div style="color: red;">{{ $message }}</div>
+        @endif
+    @enderror
 
-            <!-- Recordar contraseña -->
-            <label for="remember_me">
-                <input id="remember_me" type="checkbox" name="remember">
-                Recordar Contraseña
-            </label>
+    <!-- Contraseña -->
+    <label for="password">Contraseña</label>
+    <input id="password" type="password" name="password" required autocomplete="current-password">
 
-            <!-- Botones -->
-            <div style="margin-top: 20px; text-align: right;">
-                @if (Route::has('password.request'))
-                    <a href="{{ route('password.request') }}" style="color: #ccc; font-size: 12px;">¿Olvidaste tu contraseña?</a>
-                @endif
-            </div>
+    @error('password')
+        <div style="color: red;">{{ $message }}</div>
+    @enderror
 
-            <button type="submit">Ingresar</button>
-        </form>
+    <!-- Recordar contraseña -->
+    <label for="remember_me">
+        <input id="remember_me" type="checkbox" name="remember">
+        Recordar Contraseña
+    </label>
+
+    <!-- Enlace para restablecer contraseña -->
+    <div style="margin-top: 20px; text-align: right;">
+        @if (Route::has('password.request'))
+            <a href="{{ route('password.request') }}" style="color: #ccc; font-size: 12px;">¿Olvidaste tu contraseña?</a>
+        @endif
+    </div>
+
+    <!-- Botón de ingreso -->
+    <button type="submit">Ingresar</button>
+</form>
+
     </div>
 
 </body>

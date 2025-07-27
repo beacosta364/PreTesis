@@ -1488,26 +1488,7 @@ textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:fo
 	color:#ffffff;
 }
 
-.footer-news form button{
-	border:2px dotted #ccc;
-	padding: 0px 19px;
-    font-size: 18px;
-    position: absolute;
-    top: 0;
-    right: 0;
-	border-radius: 4px;
-    min-width: inherit;
-    height: 53px;
-    line-height: 51px;
-	color:#ffffff;
-}
-
 .footer-news form a:hover{
-	background:#f5f5f5;
-	color:#202020;
-}
-
-.footer-news form button:hover{
 	background:#f5f5f5;
 	color:#202020;
 }

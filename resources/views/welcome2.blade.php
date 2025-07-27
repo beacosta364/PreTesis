@@ -39,13 +39,9 @@
                             <nav class="Barra de navegacion-default" id="mainNav">
                                 <div class="navbar-header">
                                     <div class="logo">
-                                        <!-- <a class="navbar-brand js-scroll-trigger logo-header" href="#">
+                                        <a class="navbar-brand js-scroll-trigger logo-header" href="#">
                                             <img src="{{ asset('homeimg\LogoLaPapa.png') }}" alt="LogoLaPapa" width="100" height="50">
-                                        </a> -->
-                                        <a class="navbar-brand js-scroll-trigger logo-header" href="{{ route('login') }}">
-                                            <img src="{{ asset('homeimg/LogoLaPapa.png') }}" alt="LogoLaPapa" width="100" height="50">
                                         </a>
-
                                     </div>
                                 </div>
                                 <div id="navbar" class="navbar-collapse collapse">
@@ -1908,8 +1904,7 @@
                             <h4 class="form-title">FORMULARIO DE RESERVA <h4>
                             <p>POR FAVOR, RELLENE TODOS LOS CAMPOS OBLIGATORIOS*. ¡GRACIAS!</p>
 
-                            <!-- <form id="contact-form" method="post" class="reservations-box" name="contactform" action="mail.php"> -->
-                            <form id="contact-form">
+                            <form id="contact-form" method="post" class="reservations-box" name="contactform" action="mail.php">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-box">
                                         <input type="text" name="form_name" id="form_name" placeholder="Nombre:" required="required" data-error="El Nombre es requerido.">
@@ -1942,7 +1937,7 @@
                                 <!-- end col -->
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-box">
-                                        <input type="text" name="date_picker" id="date_picker" placeholder="Fecha de reserva" required="required" data-error="Date is required." />
+                                        <input type="text" name="date-picker" id="date-picker" placeholder="Fecha de reserva" required="required" data-error="Date is required." />
                                     </div>
                                 </div>
                                 <!-- end col -->
@@ -1993,10 +1988,9 @@
                                 <h2 class="ft-title color-white text-center"> Deja Tus Datos </h2>
                                 <p> Envianos tu Numero de WhatsApp nos pondremos en contacto contigo.</p>
                             </div>
-                            <form id="whatsapp-contact-form">
-                                <input type="text" required placeholder="Numero de WhatsApp" id="whatsapp_number">
-                                
-                                <button type="submit" class="orange-btn"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                            <form>
+                                <input type="email" placeholder="Numero de WhatsApp">
+                                <a href="#" class="orange-btn"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
                             </form>
                         </div>
                         
@@ -2113,89 +2107,5 @@
         <!-- ALL PLUGINS -->
         <script src="{{ asset('js/home/custom.js') }}"></script>
 
-        <script>
-            document.getElementById('contact-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const nombre = document.getElementById('form_name').value;
-                const email = document.getElementById('email').value;
-                const telefono = document.getElementById('phone').value;
-                const personas = document.getElementById('no_of_persons').value;
-                const fecha = document.getElementById('date_picker').value;
-
-                const fechaFormateada = new Date(fecha).toLocaleDateString('es-ES', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                });
-
-                // Crear el mensaje para WhatsApp
-                const mensaje = `¡Hola! Me gustaría hacer una reserva en La Papa Restaurant 🍽️
-                📝 *DATOS DE LA RESERVA:*
-                • *Nombre:* ${nombre}
-                • *Email:* ${email}
-                • *Teléfono:* ${telefono}
-                • *Número de personas:* ${personas}
-                • *Fecha:* ${fechaFormateada}
-
-                ¡Espero su confirmación! Gracias 😊`;
-                
-                //const numeroWhatsapp = '573046114966';
-                const numeroWhatsapp = '573167245788';
-
-                const whatsappURL = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensaje)}`;
-                
-                window.open(whatsappURL, '_blank');
-                
-                this.reset();
-                
-                alert('¡Su reserva ha sido enviada por WhatsApp! Le responderemos a la brevedad.');
-            });
-
-            document.getElementById('whatsapp-contact-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const numeroCliente = document.getElementById('whatsapp_number').value;
-                
-                if (!numeroCliente.trim()) {
-                    alert('Por favor, ingrese su número de WhatsApp.');
-                    return;
-                }
-                
-                const numeroRegex = /^[0-9]{10,15}$/;
-                if (!numeroRegex.test(numeroCliente)) {
-                    alert('Por favor, ingrese un número válido (solo números de 10 dígitos).\nEjemplo: 3001234567');
-                    return;
-                }
-                
-                // Crear el mensaje para WhatsApp del restaurante
-                const mensaje = `¡Hola! Soy un cliente interesado en La Papa Restaurant 🍽️
-                    📱 *MIS DATOS DE CONTACTO:*
-                    • *WhatsApp:* ${numeroCliente}
-
-                    Me gustaría que me contacten para conocer más sobre:
-                    • Menú actualizado
-                    • Promociones especiales  
-                    • Información de reservas
-                    • Eventos especiales
-
-                    ¡Quedo atento a su respuesta! 😊`;
-                
-                // Número de WhatsApp del restaurante
-                // const numeroRestaurante = '573046114966';
-                const numeroRestaurante = '573167245788';
-                // Crear URL de WhatsApp
-                const whatsappURL = `https://wa.me/${numeroRestaurante}?text=${encodeURIComponent(mensaje)}`;
-                
-                // Abrir WhatsApp
-                window.open(whatsappURL, '_blank');
-                
-                // Limpiar formulario
-                this.reset();
-                
-                // Mostrar mensaje de confirmación
-                alert('¡Perfecto! Te hemos redirigido a WhatsApp. Nos pondremos en contacto contigo pronto.');
-            });
-        </script>
     </body>
 </html>
