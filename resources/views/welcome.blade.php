@@ -515,7 +515,7 @@
                                     <p>-----------------------------Sopas----------------------------------</p>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Sopa Tomate.jpeg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Sopa de tomate</h3>
                                                 <p>
@@ -539,7 +539,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Cazuela Corvina.jpeg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Cazuela de corvina</h3>
                                                 <p>
@@ -551,7 +551,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Cazuela Corvina.jpeg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Cazuela de camarón</h3>
                                                 <p>
@@ -563,7 +563,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Frijolada.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Frijolada</h3>
                                                 <p>
@@ -575,7 +575,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Ajuaco.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Ajiaco</h3>
                                                 <p>
@@ -590,7 +590,7 @@
                                     <p>-----------------------------Ensaladas----------------------------------</p>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Turca.jpeg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Turca</h3>
                                                 <p>
@@ -602,7 +602,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Ensalada Napolitana.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Napolitana</h3>
                                                 <p>
@@ -614,7 +614,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Ensalada Sophia Loren.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Sophia loren</h3>
                                                 <p>
@@ -626,7 +626,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Ensalada Griega.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Griega</h3>
                                                 <p>
@@ -638,7 +638,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Italiana.jpeg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Berenjenas italianasa</h3>
                                                 <p>
@@ -651,7 +651,7 @@
                                     <p>-----------------------------Papas----------------------------------</p>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Sour Cream.jpeg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Sour Cream</h3>
                                                 <p>
@@ -663,7 +663,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\papa Cheddar.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Cheddar</h3>
                                                 <p>
@@ -675,7 +675,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Gulash.jpeg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Gulash</h3>
                                                 <p>
@@ -701,7 +701,7 @@
                                         <div class="offer-item">
                                             <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
                                             <div>
-                                                <h3>Papa chile</h3>
+                                                <h3>Papa chili</h3>
                                                 <p>
                                                     Encurtidas con especias mediterraneas, acompañadas con pan arabe.
                                                 </p>
@@ -710,7 +710,7 @@
                                         </div>
                                     </div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Papa Champiñon.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Papa Champiñon</h3>
                                                 <p>
@@ -723,7 +723,7 @@
                                     <p>-----------------------------CARNES + AVES----------------------------------</p>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Costillas BBQ.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Las mejores costillas del mundo</h3>
                                                 <p>
@@ -735,7 +735,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Media Costilla.jpeg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>1/2 costilla</h3>
                                                 <p>
@@ -795,7 +795,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Churrasco.jpeg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Churrasco</h3>
                                                 <p>
