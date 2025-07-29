@@ -831,7 +831,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Baby beef.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Medallones a la pimienta.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Medallones a la pimienta</h3>
                                                 <p>
@@ -856,7 +856,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Pollo Galeto.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>1/2 Pollo Galeto</h3>
                                                 <p>
@@ -868,7 +868,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Pechuga al carbon...jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Pechuga al carbón</h3>
                                                 <p>
@@ -880,7 +880,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Pechuga al carbon con champiñones.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Pechuga al carbón con Champiñones</h3>
                                                 <p>
@@ -892,7 +892,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Plato mixto.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Plato mixto</h3>
                                                 <p>
@@ -917,7 +917,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Pincho res...jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Pincho de carne</h3>
                                                 <p>
@@ -943,7 +943,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Beefy..jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Beefy</h3>
                                                 <p>
@@ -956,7 +956,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Beefy Chili.jpeg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Beefy chili</h3>
                                                 <p>
@@ -964,6 +964,32 @@
                                                 </p>
                                             </div>
                                             <span class="offer-price">$70.3k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <img src="{{ asset('homeimg\Pincho res...jpg') }}" alt="" class="img-responsive">
+                                            <div>
+                                                <h3>Pincho de carne</h3>
+                                                <p>
+                                                    Acompañado con papas fritas
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$38.6k</span>
+                                        </div>
+                                    </div>
+                                    <!-- end col -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                        <div class="offer-item">
+                                            <!-- <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive"> -->
+                                            <div>
+                                                <h3>Pincho de pollo</h3>
+                                                <p>
+                                                    Acompañado con papas fritas
+                                                </p>
+                                            </div>
+                                            <span class="offer-price">$29.5k</span>
                                         </div>
                                     </div>
                                     <!-- end col -->
@@ -995,7 +1021,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Tacos de carne.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Taco de carne</h3>
                                                 <p>
@@ -1035,7 +1061,7 @@
                                     <p>-----------------------------PESCADOS + MARISCOS----------------------------------</p>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Corvina plancha.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Corvina a la plancha</h3>
                                                 <p>
@@ -1048,7 +1074,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Corvina muenier</h3>
                                                 <p>
@@ -1061,7 +1087,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Corvina a la plancha.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Corvina con champiñones frescos</h3>
                                                 <p>
@@ -1074,7 +1100,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Corvina a la pimienta</h3>
                                                 <p>
@@ -1087,7 +1113,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Deditos de corvina</h3>
                                                 <p>
@@ -1100,7 +1126,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Atun.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Atún a la brasa</h3>
                                                 <p>
@@ -1113,7 +1139,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Salmon....jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Salmón a la brasa</h3>
                                                 <p>
@@ -1126,7 +1152,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Cazuela Corvina.jpeg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Cazuela de langostinos</h3>
                                                 <p>
@@ -1139,7 +1165,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Pincho hawallano</h3>
                                                 <p>
@@ -1152,7 +1178,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Trucha almendrada.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Trucha almendrada</h3>
                                                 <p>
@@ -1165,7 +1191,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Langostinos.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Langostinos a la muenier</h3>
                                                 <p>
@@ -1178,7 +1204,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Langostinos mariposa</h3>
                                                 <p>
@@ -1192,7 +1218,7 @@
                                     <p>-----------------------------SPAGHETTI----------------------------------</p>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Pasta primavera.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Primavera</h3>
                                                 <p>
@@ -1205,7 +1231,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Pesto</h3>
                                                 <p>
@@ -1218,7 +1244,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Abril 23</h3>
                                                 <p>
@@ -1231,7 +1257,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Pomodoro</h3>
                                                 <p>
@@ -1244,7 +1270,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Napolitana</h3>
                                                 <p>
@@ -1258,7 +1284,7 @@
                                     <p>-----------------------------HAMBURGUESAS----------------------------------</p>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Hamburguesa.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Hamburguesa sencilla</h3>
                                                 <p>
@@ -1271,7 +1297,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Hamburguesa.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Hamburguesa con queso</h3>
                                                 <p>
@@ -1284,7 +1310,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>RICK´S</h3>
                                                 <p>
@@ -1297,7 +1323,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Hamburguesa de atún</h3>
                                                 <p>
@@ -1311,7 +1337,7 @@
                                     <p>-----------------------------Sandwich----------------------------------</p>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <img src="{{ asset('homeimg\Phillisteak sandwich.jpg') }}" alt="" class="img-responsive">
                                             <div>
                                                 <h3>Philliysteak Sandwich</h3>
                                                 <p>
@@ -1351,7 +1377,7 @@
                                     <!-- end col -->
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                         <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
+                                            <!-- <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive"> -->
                                             <div>
                                                 <h3>Deditos de corvina</h3>
                                                 <p>
@@ -1372,32 +1398,6 @@
                                                 </p>
                                             </div>
                                             <span class="offer-price">$26.1k</span>
-                                        </div>
-                                    </div>
-                                    <!-- end col -->
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                        <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
-                                            <div>
-                                                <h3>Pincho de carne</h3>
-                                                <p>
-                                                    Acompañado con papas fritas
-                                                </p>
-                                            </div>
-                                            <span class="offer-price">$38.6k</span>
-                                        </div>
-                                    </div>
-                                    <!-- end col -->
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                        <div class="offer-item">
-                                            <img src="{{ asset('homeimg\Pollo Galeto,.jpg') }}" alt="" class="img-responsive">
-                                            <div>
-                                                <h3>Pincho de pollo</h3>
-                                                <p>
-                                                    Acompañado con papas fritas
-                                                </p>
-                                            </div>
-                                            <span class="offer-price">$29.5k</span>
                                         </div>
                                     </div>
                                     <!-- end col -->
