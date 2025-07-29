@@ -68,7 +68,7 @@
             </div>
             <div class="element-slidebar-content">
                 <a href="{{ route('dashboard') }}">Dashboard</a>
-                <a href="{{ route('configuracion.control') }}">Ingresar a Bodega</a>  
+                <a href="{{ route('notificaciones.index') }}">Notificaciones</a> 
                 <a href="{{ route('producto.movimiento') }}">Gestión de inventario</a>
                 <a href="{{ route('producto.agotados') }}">Ver Productos Agotados o Por Agotarse</a>
                 @can('registrarusuarios.show')
@@ -125,10 +125,10 @@
                     <p>Ingresos a Bodega</p>
                 </div>
                 <div class="element-slidebar-content">  
+                    <a href="{{ route('configuracion.control') }}">Ingresar a Bodega</a>
                     @can('ingreso.index')  
                     <a href="{{ route('bodega.historial') }}">Registro de ingreso a Bodega</a>
-                    @endcan
-                    <a href="{{ route('notificaciones.index') }}">Notificaciones</a>
+                    @endcan 
                 </div>
             </div>
 
