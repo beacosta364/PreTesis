@@ -52,11 +52,11 @@
     </label>
 
     <!-- Enlace para restablecer contraseña -->
-    <div style="margin-top: 20px; text-align: right;">
+    <!-- <div style="margin-top: 20px; text-align: right;">
         @if (Route::has('password.request'))
             <a href="{{ route('password.request') }}" style="color: #ccc; font-size: 12px;">¿Olvidaste tu contraseña?</a>
         @endif
-    </div>
+    </div> -->
 
     <!-- Botón de ingreso -->
     <button type="submit">Ingresar</button>
