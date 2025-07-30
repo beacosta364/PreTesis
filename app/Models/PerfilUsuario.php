@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class PerfilUsuario extends Model
 {
@@ -20,10 +21,19 @@ class PerfilUsuario extends Model
     }
 
     // Función para eliminar la foto anterior antes de actualizar
+    // public function eliminarFotoAnterior()
+    // {
+    //     if ($this->foto_perfil && Storage::exists('public/img-perfil' . $this->foto_perfil)) {
+    //         Storage::delete('public/img-perfil' . $this->foto_perfil);
+    //     }
+    // }
     public function eliminarFotoAnterior()
     {
-        if ($this->foto_perfil && Storage::exists('public/img-perfil/' . $this->foto_perfil)) {
-            Storage::delete('public/img-perfil/' . $this->foto_perfil);
+        if ($this->foto_perfil && $this->foto_perfil !== 'face1.jpg') {
+            $ruta = public_path('img-perfil/' . $this->foto_perfil);
+            if (File::exists($ruta)) {
+                File::delete($ruta);
+            }
         }
     }
 }

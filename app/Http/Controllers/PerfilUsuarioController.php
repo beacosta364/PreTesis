@@ -36,4 +36,5 @@ class PerfilUsuarioController extends Controller
 
         return back()->with('success', 'Foto de perfil actualizada correctamente.');
     }
+    
 }
