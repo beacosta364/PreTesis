@@ -198,7 +198,7 @@
                                         </div>
                                     </a>
                                     <div class="item-img">
-                                        <img src="{{ asset('homeimg\Costilla BBQ.jpg') }}" alt="sp-menu">
+                                        <img src="{{ asset('homeimg\Costillas BBQ.jpg') }}" alt="sp-menu">
                                     </div>
                                 </div>
                                 <div class="item item-type-zoom">
