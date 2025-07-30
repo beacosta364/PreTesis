@@ -14,7 +14,7 @@
         @method('put')
 
         <div>
-            <x-input-label for="current_password" :value="__('Current Password')" class="text-gray-900 dark:text-gray-200" />
+            <x-input-label for="current_password" :value="__('Contraseña actual')" class="text-gray-900 dark:text-gray-200" />
             <x-text-input 
                 id="current_password" 
                 name="current_password" 
@@ -26,7 +26,7 @@
         </div>
 
         <div>
-            <x-input-label for="password" :value="__('New Password')" class="text-gray-900 dark:text-gray-200" />
+            <x-input-label for="password" :value="__('Nueva Contraseña')" class="text-gray-900 dark:text-gray-200" />
             <x-text-input 
                 id="password" 
                 name="password" 
@@ -38,7 +38,7 @@
         </div>
 
         <div>
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" class="text-gray-900 dark:text-gray-200" />
+            <x-input-label for="password_confirmation" :value="__('Confirmar contraseña')" class="text-gray-900 dark:text-gray-200" />
             <x-text-input 
                 id="password_confirmation" 
                 name="password_confirmation" 
@@ -51,7 +51,7 @@
 
         <div class="flex items-center gap-4">
             <x-primary-button class="bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-400 text-white">
-                {{ __('Save') }}
+                {{ __('Guardar') }}
             </x-primary-button>
 
             @if (session('status') === 'password-updated')
@@ -61,7 +61,7 @@
                     x-transition
                     x-init="setTimeout(() => show = false, 2000)"
                     class="text-sm text-green-600 dark:text-green-400"
-                >{{ __('Saved.') }}</p>
+                >{{ __('Guardado.') }}</p>
             @endif
         </div>
     </form>
