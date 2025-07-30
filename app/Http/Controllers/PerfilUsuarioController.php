@@ -26,7 +26,9 @@ class PerfilUsuarioController extends Controller
 
         // Guardar la nueva imagen
         $nombreArchivo = time() . '.' . $request->foto_perfil->extension();
-        $request->foto_perfil->storeAs('public/img-perfil', $nombreArchivo);
+        // $request->foto_perfil->storeAs('public/img-perfil', $nombreArchivo);
+        $request->foto_perfil->move(public_path('img-perfil'), $nombreArchivo);
+
 
         // Actualizar la base de datos con la nueva imagen
         $perfil->foto_perfil = $nombreArchivo;

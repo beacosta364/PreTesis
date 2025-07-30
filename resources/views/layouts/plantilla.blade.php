@@ -39,25 +39,24 @@
             </div>
         </div>
         <!-- Perfil -->
-         <div class="element-slidebar">
-            <div class="element-slidebar-btn profile">
-                <!-- <span><img src="img/face1.png" alt="avatar"></span> -->
-                <!-- <span><img src="{{asset('img/face1.jpg')}}" alt="avatar"></span> -->
-                <span>
-                    <img src="{{ Auth::user()->perfil && Auth::user()->perfil->foto_perfil ? asset('storage/img-perfil/' . Auth::user()->perfil->foto_perfil) : asset('img/face1.jpg') }}" alt="avatar">
-                </span>
-                <p>{{Auth::user()->name}}</p>
-            </div>
-            <div class="element-slidebar-content">
-                <!-- <a href="{{'profile'}}">Perfil</a> -->
-                 <a href="/profile">Perfil</a>
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
+<div class="element-slidebar">
+    <div class="element-slidebar-btn profile">
+        <span>
+            <img src="{{ Auth::user()->perfil && Auth::user()->perfil->foto_perfil !== 'face1.jpg'
+                ? asset('img-perfil/' . Auth::user()->perfil->foto_perfil)
+                : asset('img/face1.jpg') }}" alt="avatar">
+        </span>
+        <p>{{ Auth::user()->name }}</p>
+    </div>
+    <div class="element-slidebar-content">
+        <a href="/profile">Perfil</a>
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <input type="submit" value="Salir" class="logout-link">
+        </form>
+    </div>
+</div>
 
-                    <input type="submit" value="Salir"class="logout-link">
-                </form>
-            </div>
-        </div>
 
         <!-- Gestion del sistema -->
         
