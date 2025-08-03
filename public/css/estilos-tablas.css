@@ -112,3 +112,33 @@ tbody tr:hover {
     background-color: #fafafa;
 }
 
+
+.tabla-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Asegúrate que la tabla tenga un ancho mínimo para no romper el diseño */
+.tabla-responsive table {
+    width: 100%;
+    min-width: 800px; /* Ajusta según cuántas columnas tengas */
+}
+
+@media screen and (max-width: 768px) {
+    table th, table td {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    tbody td:nth-child(3) img {
+        width: 40px;
+    }
+
+    input[type="image"],
+    td img {
+        width: 30px;
+        height: auto;
+    }
+}
+

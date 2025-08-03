@@ -16,7 +16,9 @@
     <div class="roles-header">
       <h2>Lista de Usuarios y sus Roles</h2>
     </div>
-
+    
+<section class="tabla-productos">
+    <div class="tabla-responsive">
     <table class="roles-table">
       <thead>
         <tr>
@@ -53,6 +55,8 @@
         @endforeach
       </tbody>
     </table>
+  </div>
+</section>
   </div>
 
 </body>

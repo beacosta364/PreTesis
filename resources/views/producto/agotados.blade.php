@@ -20,7 +20,8 @@
         <a class="agotados-pdf-link" href="{{ route('productos.agotados.pdf') }}" target="_blank">Generar PDF</a>
     </div>
 
-    <section>
+    <section class="tabla-productos">
+    <div class="tabla-responsive">
       @if($productosAgotados->isEmpty())
         <p class="agotados-message">No hay productos por agotarse o agotados en este momento.</p>
       @else
@@ -43,6 +44,7 @@
           </tbody>
         </table>
       @endif
+        </div>
     </section>
   </div>
 

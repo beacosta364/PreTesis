@@ -24,7 +24,8 @@
         @endcan
     </ul>
     </nav>
-
+<section class="tabla-productos">
+    <div class="tabla-responsive">
    <table>
        <thead>
            <tr>
@@ -85,7 +86,8 @@
          @endforeach  
        </tbody>
    </table>
-
+   </div>
+</section>
 </section>
 
 <script>

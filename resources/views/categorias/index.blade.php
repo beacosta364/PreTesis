@@ -5,13 +5,15 @@
 
 <section class="container-tabla">
     <h2 class="titulo-tabla"> Categorias</h2>
+<section class="tabla-productos">
+    <div class="tabla-responsive">
     <table >
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Status</th>              
+                <!-- <th>Descripción</th> -->
+                <!-- <th>Status</th>               -->
                 <th>Opciones</th>
             </tr>
         </thead>
@@ -20,34 +22,34 @@
             <tr>                
                 <td>{{$categoria->id}}</td>
                 <td>{{$categoria->nombre}}</td>
-                <td> {{$categoria->descripción}}</td>
-                <td>{{$categoria->status}}</td>
-               
+                <!-- <td> {{$categoria->descripción}}</td> -->
+                <!-- <td>{{$categoria->status}}</td> -->
                 <td >
-                 <a href="{{route('categoria.show',[$categoria->id])}}">
+                <a href="{{route('categoria.show',[$categoria->id])}}">
                     <!-- <img src="img/Vista.png" alt=""> -->
-                    <img src="{{ asset('img/Vista.png') }}" alt="">
-                 </a>
+                    <img src="{{ asset('img/Vista.png') }}" alt="vista" width="50" height="50">
+                </a>
 
-                 @can('categoria.update')
-                 <a href="{{route('categoria.edit',[$categoria->id])}}">
+                @can('categoria.update')
+                <a href="{{route('categoria.edit',[$categoria->id])}}">
                     <!-- <img src="img/Editar.png" alt=""> -->
-                    <img src="{{ asset('img/Editar.png') }}" alt="">
-                 </a>
-                 @endcan
+                    <img src="{{ asset('img/Editar.png') }}" alt="editar" width="50" height="50">
+                </a>
+                @endcan
 
-                 <a href="{{route('categoria.destroy',[$categoria->id])}}">               
-                 </a>
+                <a href="{{route('categoria.destroy',[$categoria->id])}}">               
+                </a>
 
-                 @can('categoria.destroy')
-                 <form action="{{route('categoria.destroy',[$categoria->id])}}" method="POST" onsubmit="return confimarEliminacion()">
-                 
+                @can('categoria.destroy')
+                <form action="{{route('categoria.destroy',[$categoria->id])}}" method="POST" onsubmit="return confimarEliminacion()">
+                
                     {{-- permite gemrar el token para enviar por post --}}
                     @csrf
                     {{-- agregar metodo delete --}}
                     @method('DELETE')
                     <!-- <input type="image"src="img/Eliminar.png"></input> -->
-                    <input type="image" src="{{ asset('img/Eliminar.png') }}">
+                    <!-- <input type="image" src="{{ asset('img/Eliminar.png') }}"> -->
+                    <input type="image" src="{{ asset('img/Eliminar.png') }}" alt="elimianr" width="50" height="50">
 
                  </form>
                  @endcan
@@ -61,7 +63,8 @@
             @endforeach          
         </tbody>
     </table>
-
+   </div>
+</section>
     <script>
         function confirmarEliminacion() {
             return confirm('¿Seguro deseas eliminar?'); // Muestra el mensaje de confirmación

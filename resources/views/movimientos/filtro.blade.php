@@ -69,30 +69,32 @@
   </form>
 
   <h3>Resultados</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Producto</th>
-        <th>Usuario</th>
-        <th>Tipo de Movimiento</th>
-        <th>Cantidad</th>
-        <th>Fecha</th>
-      </tr>
-    </thead>
-    <tbody>
-      @foreach ($movimientos as $movimiento)
-        <tr>
-          <td>{{ $movimiento->nombre_producto }}</td>
-          <td>{{ $movimiento->nombre_usuario }}</td>
-          <td>{{ ucfirst($movimiento->tipo_movimiento) }}</td>
-          <td>{{ $movimiento->cantidad }}</td>
-          <td>{{ $movimiento->created_at->format('d/m/Y H:i') }}</td>
-        </tr>
-      @endforeach
-    </tbody>
-  </table>
-
+<section class="tabla-productos">
+    <div class="tabla-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Usuario</th>
+            <th>Tipo de Movimiento</th>
+            <th>Cantidad</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach ($movimientos as $movimiento)
+            <tr>
+              <td>{{ $movimiento->nombre_producto }}</td>
+              <td>{{ $movimiento->nombre_usuario }}</td>
+              <td>{{ ucfirst($movimiento->tipo_movimiento) }}</td>
+              <td>{{ $movimiento->cantidad }}</td>
+              <td>{{ $movimiento->created_at->format('d/m/Y H:i') }}</td>
+            </tr>
+          @endforeach
+        </tbody>
+      </table>
+  </div>
+</section>
   <!-- Paginación -->
   <div style="margin-top: 1rem;">
     {{ $movimientos->links() }}

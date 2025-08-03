@@ -23,7 +23,8 @@
         </div>
         <a class="usuarios-pdf-link" href="{{ route('usuarios.pdf') }}" target="_blank">Generar PDF de Usuarios</a>
     </form>
-
+<section class="tabla-productos">
+    <div class="tabla-responsive">
     <table class="usuarios-table" >
         <thead>
             <tr>
@@ -52,7 +53,8 @@
             @endforeach
         </tbody>
     </table>
-
+   </div>
+</section>
 </body>
 </html>
 
