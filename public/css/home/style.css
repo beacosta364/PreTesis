@@ -27,7 +27,7 @@
 @font-face {
     font-family: 'nautilus_pompiliusregular';
     src: url('fonts/nautilus-webfont.woff2') format('woff2'),
-         url('fonts/nautilus-webfont.woff') format('woff');
+    url('fonts/nautilus-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -65,7 +65,7 @@ h6 {
 }
 
 h3,h2{
-  letter-spacing: 0;
+    letter-spacing: 0;
     font-weight: normal;
     padding: 0 0 10px 0;
     font-weight: normal;

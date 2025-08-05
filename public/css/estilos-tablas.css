@@ -119,10 +119,10 @@ tbody tr:hover {
     -webkit-overflow-scrolling: touch;
 }
 
-/* Asegúrate que la tabla tenga un ancho mínimo para no romper el diseño */
+
 .tabla-responsive table {
     width: 100%;
-    min-width: 800px; /* Ajusta según cuántas columnas tengas */
+    min-width: 800px;
 }
 
 @media screen and (max-width: 768px) {
