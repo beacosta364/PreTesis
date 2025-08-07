@@ -4,14 +4,6 @@
 
 <section class="container-tabla">
    <h2 class="titulo-tabla"> Listado de productos</h2>
- 
-   <!-- <nav class="nav-botones">
-      <ul class="nav-menu">
-          <li class="nav-item">
-              <a href="{{ route('producto.create') }}" class="nav-link btn-agregar-producto">Agregar Producto</a>
-          </li>
-      </ul>
-   </nav> -->
    <nav class="nav-botones-productos">
         <ul class="nav-menu-productos">
             <li class="nav-item-productos">
@@ -24,6 +16,29 @@
             @endcan
         </ul>
     </nav>
+
+    <!-- <form method="GET" action="{{ route('producto.index') }}" class="form-busqueda">
+        <input 
+            type="text" 
+            name="busqueda" 
+            placeholder="Buscar por nombre o ID..." 
+            value="{{ request('busqueda') }}"
+        >
+        <button type="submit">Buscar</button>
+    </form> -->
+    <form method="GET" action="{{ route('producto.index') }}" class="barra-busqueda-form">
+    <div class="barra-busqueda-row">
+        <input 
+            type="text" 
+            name="busqueda" 
+            class="barra-busqueda-input" 
+            placeholder="Buscar por nombre o ID..." 
+            value="{{ request('busqueda') }}"
+        >
+        <button type="submit" class="barra-busqueda-boton">Buscar</button>
+    </div>
+</form>
+
 <section class="tabla-productos">
     <div class="tabla-responsive">
    <table>

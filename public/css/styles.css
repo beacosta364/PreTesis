@@ -380,6 +380,54 @@ body{
     background-color: #d1781f;
 }
 
+/*Estilos barra de busqueda listado de productos en el index*/
+    .barra-busqueda-form {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .barra-busqueda-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .barra-busqueda-input {
+        flex: 1;
+        min-width: 250px;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    .barra-busqueda-input:focus {
+        border-color: #e75b1e;
+    }
+
+    .barra-busqueda-boton {
+        padding: 10px 20px;
+        background: linear-gradient(90deg, #e75b1e, rgb(228, 146, 54));
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .barra-busqueda-boton:hover {
+        background: linear-gradient(90deg, rgb(228, 146, 54), #e75b1e);
+    }
+
 /* slow motion */
 html {
     scroll-behavior: smooth;
