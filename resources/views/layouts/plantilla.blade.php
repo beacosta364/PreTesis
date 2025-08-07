@@ -69,7 +69,7 @@
                 <a href="{{ route('dashboard') }}">Dashboard</a>
                 <a href="{{ route('notificaciones.index') }}">Notificaciones</a> 
                 <a href="{{ route('producto.movimiento') }}">Gestión de inventario</a>
-                <a href="{{ route('producto.agotados') }}">Ver Productos Agotados o Por Agotarse</a>
+                <a href="{{ route('producto.agotados') }}">Ver productos agotados o por agotarse</a>
                 @can('registrarusuarios.show')
                 <a href="{{ url('/usuarios/crear') }}">Registrar nuevo usuario</a>  
                 @endcan
@@ -109,7 +109,7 @@
                 </div>
                 <div class="element-slidebar-content">
                     @can('categoria.index')
-                    <a href="{{ route('categoria.index') }}">Todos</a>
+                    <a href="{{ route('categoria.index') }}">Todas</a>
                     @endcan
                     @can('categoria.create')
                     <a href="{{ route('categoria.create') }}">Agregar</a>

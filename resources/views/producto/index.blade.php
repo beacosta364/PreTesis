@@ -14,6 +14,9 @@
                 <a href="{{ route('producto.create') }}" class="agregar-producto">Agregar Producto</a>
             </li>
             @endcan
+            <li class="nav-item-productos">
+                <a href="{{ route('producto.agotados') }}" class="pdf-productos">Productos agotados o por agotarse</a>
+            </li>
         </ul>
     </nav>
 
