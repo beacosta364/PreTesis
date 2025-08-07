@@ -21,7 +21,7 @@ class UserController extends Controller
                 ->orWhere('email', 'LIKE', "%$search%");
         }
 
-        $users = $query->paginate(500); // Paginación para mejorar rendimiento
+        $users = $query->paginate(500); 
 
         return view('users.index', compact('users'));
     }

@@ -2,26 +2,23 @@
 
 @section('contenido')
 @can('rolusuarios.show')
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roles Usuarios</title>
-  <link rel="stylesheet" href="{{ url('/css/rolesUsuarios.css') }}">
-</head>
-<body class="roles-body">
-
+<link rel="stylesheet" href="{{ url('/css/rolesUsuarios.css') }}">
   <div class="roles-container">
     <div class="roles-header">
       <h2>Lista de Usuarios y sus Roles</h2>
     </div>
-    <form>
-        <div class="usuarios-form-row">
-            <button type="button" class="roles-button" onclick="window.location.href='{{ url('/usuarios/crear') }}'">Registrar nuevo usuario</button>
-            <button type="button" class="roles-button" onclick="window.location.href='{{ route('users.index') }}'">Lista de usuarios registrados</button>
-        </div>
-    </form>
+
+<form method="GET" action="{{ url('/usuarios-roles') }}" class="barra-busqueda-form">
+  <div class="barra-busqueda-row">
+    <input type="text" name="busqueda" placeholder="Buscar por nombre" value="{{ $busqueda ?? '' }}" class="barra-busqueda-input">
+    <button type="submit" class="barra-busqueda-boton">Buscar</button>
+  </div>
+  <div class="usuarios-form-row">
+    <button type="button" class="roles-button" onclick="window.location.href='{{ url('/usuarios/crear') }}'">Registrar nuevo usuario</button>
+    <button type="button" class="roles-button" onclick="window.location.href='{{ route('users.index') }}'">Lista de usuarios registrados</button>
+  </div>
+</form>
+
     
 <section class="tabla-productos">
     <div class="tabla-responsive">
@@ -65,7 +62,7 @@
 </section>
   </div>
 
-</body>
+
 </html>
 
 

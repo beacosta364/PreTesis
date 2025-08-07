@@ -9,20 +9,29 @@ use Illuminate\Support\Facades\DB;
 
 class UsuarioRolController extends Controller
 {
-    public function index()
+
+public function index(Request $request)
 {
-    // Obtener usuarios con sus roles actuales
-    $usuarios = DB::table('users')
+    $busqueda = $request->input('busqueda');
+
+    // Obtener usuarios con filtro si se proporciona
+    $query = DB::table('users')
         ->join('model_has_roles', 'users.id', '=', 'model_has_roles.model_id')
         ->join('roles', 'model_has_roles.role_id', '=', 'roles.id')
-        ->select('users.id', 'users.name', 'roles.id AS role_id', 'roles.name AS role_name')
-        ->get();
+        ->select('users.id', 'users.name', 'roles.id AS role_id', 'roles.name AS role_name');
+
+    if (!empty($busqueda)) {
+        $query->where('users.name', 'LIKE', '%' . $busqueda . '%');
+    }
+
+    $usuarios = $query->get();
 
     // Obtener todos los roles disponibles
     $roles = DB::table('roles')->select('id', 'name')->get();
 
-    return view('usuarios.roles', compact('usuarios', 'roles'));
+    return view('usuarios.roles', compact('usuarios', 'roles', 'busqueda'));
 }
+
 
     public function actualizarRol(Request $request)
     {
