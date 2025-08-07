@@ -4,7 +4,18 @@
 
 
 <section class="container-tabla">
+    <section>
     <h2 class="titulo-tabla"> Categorias</h2>
+    @can('categoria.create')
+    <nav class="nav-botones-productos">
+        <ul class="nav-menu-productos">
+            <li class="nav-item-productos">
+                <a href="{{ route('categoria.create') }}" class="agregar-producto">Agregar Categoria</a>
+            </li>
+        </ul>
+    </nav>
+    @endcan
+    </section>
 <section class="tabla-productos">
     <div class="tabla-responsive">
     <table >
@@ -71,7 +82,7 @@
         }
     </script>
  
-   </section>
+</section>
    
 @endsection
 

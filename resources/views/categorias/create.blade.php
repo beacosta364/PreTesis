@@ -1,7 +1,6 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
-<!-- mostrar formulario para crear nueva categoria -->
 @can('categoria.create')
 <div class= "container-formulario">
 <div class="card formulario">
@@ -12,7 +11,6 @@
         <!-- Campo Nombre -->
         <div class="form-group">
             <label for="nombre">Nombre de la Categoría</label>
-            <!-- <input type="text" id="nombre" name="nombre" required> -->
             <input type="text" id="nombre" name="nombre" value="{{ old('nombre') }}" required>
             @if ($errors->has('nombre'))
                 <div class="alert alert-danger">
@@ -33,9 +31,9 @@
                 <option value="0">Inactivo</option>
             </select>
         </div>
-        <!-- Botón Guardar -->
         <div class="form-group">
             <button type="submit">Guardar Categoría</button>
+            <button type="button" onclick="window.location.href='{{ route('categoria.index') }}'">Lista de categorias</button>
         </div>
     </form>
 </div>

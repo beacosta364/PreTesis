@@ -57,6 +57,8 @@
             <!-- Botón Guardar -->
             <div class="form-group">
                 <button type="submit">Guardar Producto</button>
+                <button type="button" onclick="window.location.href='{{ route('producto.index') }}'">Listado de productos</button>
+
             </div>
         </form>
     </div>
