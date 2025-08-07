@@ -15,9 +15,10 @@
 <body>
 
   <div class="card">
+    @can('notificaciones.create')
     <h2>Crear Nueva Notificación</h2>
 
-    @can('notificaciones.create')
+    
     <form class="theform" action="{{ route('notificaciones.store') }}" method="POST">
       @csrf
       <label for="titulo">Título:</label>
