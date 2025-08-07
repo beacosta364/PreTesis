@@ -27,6 +27,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Registrar Usuario</button>
+        <button type="button" class="btn btn-primary" onclick="window.location.href='{{ route('users.index') }}'">Lista de usuarios registrados</button>
     </form>
 </div>
 @endcan

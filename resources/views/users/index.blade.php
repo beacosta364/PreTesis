@@ -16,13 +16,40 @@
         <h2>Lista de Usuarios Registrados</h2>
     </nav>
 
-    <form method="GET" action="{{ route('users.index') }}" class="usuarios-form">
+    <!-- <form method="GET" action="{{ route('users.index') }}" class="usuarios-form">
         <div class="usuarios-form-row">
             <input type="text" name="search" placeholder="Buscar por Nombre o Email" value="{{ request('search') }}">
             <button type="submit">Buscar</button>
         </div>
         <a class="usuarios-pdf-link" href="{{ route('usuarios.pdf') }}" target="_blank">Generar PDF de Usuarios</a>
+        <a class="usuarios-pdf-link" href="{{ url('/usuarios/crear') }}">Registrar nuevo usuario</a>
+        <a class="usuarios-pdf-link" href="{{ url('/usuarios-roles') }}">Gestionar rol de usuarios</a>
+    </form> -->
+    <form method="GET" action="{{ route('users.index') }}" class="usuarios-form">
+        <div class="usuarios-form-row">
+            <input type="text" name="search" placeholder="Buscar por Nombre o Email" value="{{ request('search') }}">
+            <button type="submit">Buscar</button>
+        </div>
+        
+        <div class="usuarios-btn-group">
+            <button type="button" class="usuarios-btn" onclick="window.open('{{ route('usuarios.pdf') }}', '_blank')">Generar PDF de Usuarios</button>
+            <button type="button" class="usuarios-btn" onclick="window.location.href='{{ url('/usuarios/crear') }}'">Registrar nuevo usuario</button>
+            <button type="button" class="usuarios-btn" onclick="window.location.href='{{ url('/usuarios-roles') }}'">Gestionar rol de usuarios</button>
+        </div>
     </form>
+
+    <!-- <form method="GET" action="{{ route('users.index') }}" class="usuarios-form">
+        <div class="usuarios-form-row">
+            <input type="text" name="search" placeholder="Buscar por Nombre o Email" value="{{ request('search') }}">
+            <button type="submit">Buscar</button>
+        </div>
+        <div class="usuarios-form-row">
+            <button type="buttonn" class="usuarios-btn" onclick="window.open('{{ route('usuarios.pdf') }}', '_blank')">Generar PDF de Usuarios</button>
+            <button type="buttonn" class="usuarios-btn" onclick="window.location.href='{{ url('/usuarios/crear') }}'">Registrar nuevo usuario</button>
+            <button type="buttonn" class="usuarios-btn" onclick="window.location.href='{{ url('/usuarios-roles') }}'">Gestionar rol de usuarios</button>
+        </div>
+    </form> -->
+
 <section class="tabla-productos">
     <div class="tabla-responsive">
     <table class="usuarios-table" >

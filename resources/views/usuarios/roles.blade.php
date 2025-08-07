@@ -16,6 +16,12 @@
     <div class="roles-header">
       <h2>Lista de Usuarios y sus Roles</h2>
     </div>
+    <form>
+        <div class="usuarios-form-row">
+            <button type="button" class="roles-button" onclick="window.location.href='{{ url('/usuarios/crear') }}'">Registrar nuevo usuario</button>
+            <button type="button" class="roles-button" onclick="window.location.href='{{ route('users.index') }}'">Lista de usuarios registrados</button>
+        </div>
+    </form>
     
 <section class="tabla-productos">
     <div class="tabla-responsive">

@@ -116,6 +116,31 @@
     background-color: #c9302c;
 }
 
+
+
+.usuarios-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px; 
+    margin-top: 10px;
+    justify-content: flex-start; 
+}
+
+.usuarios-btn-group .usuarios-btn {
+    padding: 10px 16px;
+    background: linear-gradient(90deg, #e75b1e, rgb(228, 146, 54));
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.usuarios-btn-group .usuarios-btn:hover {
+    background: linear-gradient(90deg, rgb(228, 146, 54), #e75b1e);
+}
+
 @media (max-width: 768px) {
     .usuarios-form-row {
         flex-direction: column;
@@ -128,5 +153,13 @@
 
     .usuarios-pdf-link {
         margin-top: 20px;
+    }
+    .usuarios-btn-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .usuarios-btn-group .usuarios-btn {
+        width: 100%;
     }
 }

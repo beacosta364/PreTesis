@@ -1946,14 +1946,14 @@
                                     </div>
                                 </div>
                                 <!-- end col -->
-                                <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-box">
                                         <input type="text" name="time-picker" id="time-picker" placeholder="Hora de reserva" required="required" data-error="Time is required." />
                                     </div>
-                                </div> -->
+                                </div>
                                 <!-- end col -->
                                 <!-- end col -->
-                                <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-box">
                                         <select name="occasion" id="occasion" class="selectpicker">
                                             <option selected disabled>Decoracion</option>
@@ -1962,7 +1962,7 @@
                                             <option>Sin Decoracion</option>
                                         </select>
                                     </div>
-                                </div> -->
+                                </div>
                                 <!-- end col -->
 
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
