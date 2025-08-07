@@ -8,27 +8,39 @@ use Illuminate\Http\Request;
 
 class ProductoController extends Controller
 {
-    /**
-     * Muestra una lista de los productos paginados.
-     */
-    // public function index()
+    // public function index(Request $request)
     // {
-    //      $productos = Producto::orderBy('id', 'ASC')->paginate(500);
-    //     return view('producto.index', compact('productos'));
+    //     $busqueda = $request->input('busqueda');
+
+    //     $productos = Producto::when($busqueda, function ($query, $busqueda) {
+    //         $query->where('nombre', 'like', '%' . $busqueda . '%')
+    //             ->orWhere('id', $busqueda);
+    //     })
+    //     ->orderBy('id', 'ASC')
+    //     ->paginate(500);
+
+    //     return view('producto.index', compact('productos', 'busqueda'));
     // }
     public function index(Request $request)
-    {
-        $busqueda = $request->input('busqueda');
+        {
+            $busqueda = $request->input('busqueda');
+            $categoriaId = $request->input('categoria');
 
-        $productos = Producto::when($busqueda, function ($query, $busqueda) {
-            $query->where('nombre', 'like', '%' . $busqueda . '%')
-                ->orWhere('id', $busqueda);
-        })
-        ->orderBy('id', 'ASC')
-        ->paginate(500);
+            $productos = Producto::when($busqueda, function ($query, $busqueda) {
+                    $query->where('nombre', 'like', '%' . $busqueda . '%')
+                        ->orWhere('id', $busqueda);
+                })
+                ->when($categoriaId, function ($query, $categoriaId) {
+                    $query->where('categoria_id', $categoriaId);
+                })
+                ->orderBy('id', 'ASC')
+                ->paginate(500);
 
-        return view('producto.index', compact('productos', 'busqueda'));
-    }
+            // También cargamos todas las categorías para llenar el select
+            $categorias = Categoria::orderBy('nombre')->get();
+
+            return view('producto.index', compact('productos', 'busqueda', 'categorias', 'categoriaId'));
+        }
 
 
     /**
