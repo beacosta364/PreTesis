@@ -13,6 +13,9 @@
             <li class="nav-item-productos">
                 <a href="{{ route('producto.create') }}" class="agregar-producto">Agregar Producto</a>
             </li>
+            <li class="nav-item-productos">
+                <a href="{{ route('productos.form.actualizar.cantidades') }}" class="pdf-productos">Actualizar cantidades de productos</a>
+            </li>
             @endcan
             <li class="nav-item-productos">
                 <a href="{{ route('producto.agotados') }}" class="pdf-productos">Productos agotados o por agotarse</a>
@@ -20,18 +23,7 @@
         </ul>
     </nav>
 
-    <!-- <form method="GET" action="{{ route('producto.index') }}" class="barra-busqueda-form">
-        <div class="barra-busqueda-row">
-            <input 
-                type="text" 
-                name="busqueda" 
-                class="barra-busqueda-input" 
-                placeholder="Buscar por nombre o ID..." 
-                value="{{ request('busqueda') }}"
-            >
-            <button type="submit" class="barra-busqueda-boton">Buscar</button>
-        </div>
-    </form> -->
+
     <form method="GET" action="{{ route('producto.index') }}" class="barra-busqueda-form">
         <div class="barra-busqueda-row">
             <input 

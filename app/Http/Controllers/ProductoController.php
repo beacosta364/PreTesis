@@ -8,19 +8,6 @@ use Illuminate\Http\Request;
 
 class ProductoController extends Controller
 {
-    // public function index(Request $request)
-    // {
-    //     $busqueda = $request->input('busqueda');
-
-    //     $productos = Producto::when($busqueda, function ($query, $busqueda) {
-    //         $query->where('nombre', 'like', '%' . $busqueda . '%')
-    //             ->orWhere('id', $busqueda);
-    //     })
-    //     ->orderBy('id', 'ASC')
-    //     ->paginate(500);
-
-    //     return view('producto.index', compact('productos', 'busqueda'));
-    // }
     public function index(Request $request)
         {
             $busqueda = $request->input('busqueda');
@@ -227,5 +214,27 @@ class ProductoController extends Controller
 
         return view('dashboard', compact('totalProductos'));
     }
+
+    public function actualizarCantidadesMasiva(Request $request)
+    {
+        $datos = $request->input('cantidades'); 
+
+        foreach ($datos as $productoId => $nuevaCantidad) {
+            $producto = Producto::find($productoId);
+            if ($producto && is_numeric($nuevaCantidad) && $nuevaCantidad >= 0) {
+                $producto->cantidad = (int)$nuevaCantidad;
+                $producto->save();
+            }
+        }
+
+        return redirect()->route('producto.index')->with('success', 'Cantidades actualizadas correctamente.');
+    }
+
+    public function vistaActualizarCantidades()
+    {
+        $productos = Producto::orderBy('nombre')->with('categoria')->get();
+        return view('producto.actualizarCantidades', compact('productos'));
+    }
+
 
 }

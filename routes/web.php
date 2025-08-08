@@ -79,6 +79,15 @@ Route::middleware('auth')->group(function () {
     //ruta para mostrar listado de productos
     Route::get('/productos-listado', [ProductoController::class, 'listado'])->name('producto.listado');
 
+    Route::post('/productos/actualizar-cantidades', [ProductoController::class, 'actualizarCantidadesMasiva'])
+    ->name('productos.actualizar.cantidades')
+    ->middleware('can:productos.update'); 
+
+    Route::get('/productos/actualizar-cantidades', [ProductoController::class, 'vistaActualizarCantidades'])
+    ->name('productos.form.actualizar.cantidades')
+    ->middleware('can:productos.update');
+
+
     //Ruta para registrar usuarios
     Route::get('/usuarios', [UserController::class, 'index'])->name('users.index');
     Route::get('/usuarios/crear', [UserController::class, 'create'])->name('users.create');
