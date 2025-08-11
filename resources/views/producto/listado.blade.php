@@ -2,15 +2,6 @@
 
 @section('contenido')
 @can('reporteinventarios.show')
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Listado de Productos</title>
-  <link rel="stylesheet" href="{{ url('/css/listadoProductos.css') }}">
-</head>
-<body>
 
   <div class="productos-header">
     <h2>Listado de Productos</h2>
@@ -42,9 +33,6 @@
       </table>
     </div>
   </section>
-
-</body>
-</html>
 
 @endcan
 @endsection

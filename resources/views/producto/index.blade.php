@@ -7,7 +7,11 @@
     <nav class="nav-botones-productos">
         <ul class="nav-menu-productos">
             <li class="nav-item-productos">
-                <a href="{{ route('productos.pdf') }}" target="_blank" class="pdf-productos">Generar PDF</a>
+                <a href="{{ route('productos.pdf', ['categoria' => request('categoria')]) }}" 
+                target="_blank" 
+                class="pdf-productos">
+                Generar PDF
+                </a>
             </li>
             @can('productos.create')
             <li class="nav-item-productos">

@@ -15,9 +15,6 @@
         <h1>Reporte de Productos Existentes</h1>
     </div>
 </div>
-    <!-- <div class="header">
-        <h1>Reporte de Productos</h1>
-    </div> -->
 
     <section class="container-tabla pdf">
         <table>

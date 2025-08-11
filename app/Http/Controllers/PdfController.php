@@ -13,14 +13,31 @@ use Illuminate\Http\Request;
 class PdfController extends Controller
 {
     //Genera un PDF con los productos existentes
-    public function pdfProductos(){
-        $productos = Producto::select('id','nombre','descripcion','cantidad', 'min_stock')
-                        ->orderBy('id','ASC')
-                        ->get();
-        $pdf = Pdf::loadView('pdf.productos',['productos'=>$productos]);
-        $pdf->setPaper('carta','A4'); // Tamaño carta, orientación vertical
-        return $pdf->stream();
+    // public function pdfProductos(){
+    //     $productos = Producto::select('id','nombre','descripcion','cantidad', 'min_stock')
+    //                     ->orderBy('id','ASC')
+    //                     ->get();
+    //     $pdf = Pdf::loadView('pdf.productos',['productos'=>$productos]);
+    //     $pdf->setPaper('carta','A4'); // Tamaño carta, orientación vertical
+    //     return $pdf->stream();
+    // }
+    public function pdfProductos(Request $request)
+    {
+        $query = Producto::select('id', 'nombre', 'descripcion', 'cantidad', 'min_stock')
+                        ->orderBy('id', 'ASC');
+
+        if ($request->filled('categoria')) {
+            $query->where('categoria_id', $request->categoria);
+        }
+
+        $productos = $query->get();
+
+        $pdf = Pdf::loadView('pdf.productos', ['productos' => $productos]);
+        $pdf->setPaper('letter', 'portrait'); 
+        return $pdf->stream('productos.pdf');
     }
+
+
     //Genera un PDF con los usuarios registrados
     public function pdfUsuarios()
     {
@@ -41,7 +58,7 @@ class PdfController extends Controller
         $productosAgotados = Producto::where('cantidad', 0)
             ->orWhere(function ($query) {
                 $query->whereColumn('cantidad', '<=', 'min_stock')
-                    ->whereNotNull('min_stock'); // Evitar comparar con NULL
+                    ->whereNotNull('min_stock');
             })
             ->orderBy('cantidad', 'asc')
             ->get();
