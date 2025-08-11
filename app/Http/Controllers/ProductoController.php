@@ -230,11 +230,25 @@ class ProductoController extends Controller
         return redirect()->route('producto.index')->with('success', 'Cantidades actualizadas correctamente.');
     }
 
-    public function vistaActualizarCantidades()
+    // public function vistaActualizarCantidades()
+    // {
+    //     $productos = Producto::orderBy('nombre')->with('categoria')->get();
+    //     return view('producto.actualizarCantidades', compact('productos'));
+    // }
+    public function vistaActualizarCantidades(Request $request)
     {
-        $productos = Producto::orderBy('nombre')->with('categoria')->get();
-        return view('producto.actualizarCantidades', compact('productos'));
-    }
+        $categoriasSeleccionadas = $request->input('categorias', []); // array de IDs
 
+        $productos = Producto::with('categoria')
+            ->when(!empty($categoriasSeleccionadas), function ($query) use ($categoriasSeleccionadas) {
+                $query->whereIn('categoria_id', $categoriasSeleccionadas);
+            })
+            ->orderBy('nombre')
+            ->get();
+
+        $categorias = Categoria::orderBy('nombre')->get();
+
+        return view('producto.actualizarCantidades', compact('productos', 'categorias', 'categoriasSeleccionadas'));
+    }
 
 }
