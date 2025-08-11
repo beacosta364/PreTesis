@@ -1,7 +1,7 @@
 /* Estilos generales para la sección */
 section {
     padding: 20px;
-    background-color: #f0f4f8; /* Fondo azul muy claro */
+    background-color: #f0f4f8; 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -11,13 +11,13 @@ section {
   section header h2 {
     font-size: 1.25rem;
     font-weight: 500;
-    color: #1e3a8a; /* Azul oscuro */
+    color: #1e3a8a; 
     margin-bottom: 8px;
   }
   
   section header p {
     font-size: 0.875rem;
-    color: #64748b; /* Azul grisáceo */
+    color: #64748b; 
     margin-top: 4px;
   }
   
@@ -32,58 +32,58 @@ section {
   /* Etiquetas y entradas */
   .x-input-label {
     font-weight: 500;
-    color: #1e3a8a; /* Azul oscuro */
+    color: #1e3a8a; 
     margin-bottom: 4px;
   }
   
   .x-text-input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #cbd5e1; /* Azul gris claro */
+    border: 1px solid #cbd5e1; 
     border-radius: 5px;
     margin-top: 8px;
   }
   
   .x-text-input:focus {
-    border-color: #1e40af; /* Azul medio */
+    border-color: #1e40af; 
     outline: none;
   }
   
   /* Mensajes de error */
   .x-input-error {
-    color: #ef4444; /* Rojo suave */
+    color: #ef4444; 
     font-size: 0.875rem;
     margin-top: 4px;
   }
   
   /* Botón principal con gradiente */
   .x-primary-button {
-    background: linear-gradient(135deg, #2563eb, #1d4ed8); /* Gradiente azul */
+    background: linear-gradient(135deg, #2563eb, #1d4ed8); 
     color: #ffffff;
     padding: 12px 24px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; /* Ancho completo en dispositivos pequeños */
+    width: 100%; 
     font-weight: 500;
-    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4); /* Sombra sutil */
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4); 
   }
   
   .x-primary-button:hover {
-    background: linear-gradient(135deg, #1d4ed8, #2563eb); /* Inversión del gradiente */
-    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.6); /* Sombra más intensa en hover */
+    background: linear-gradient(135deg, #1d4ed8, #2563eb); 
+    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.6); 
   }
   
   .x-primary-button:active {
-    background: linear-gradient(135deg, #1e40af, #2563eb); /* Azul más oscuro en clic */
-    box-shadow: 0 3px 6px rgba(37, 99, 235, 0.3); /* Sombra más tenue en clic */
+    background: linear-gradient(135deg, #1e40af, #2563eb); 
+    box-shadow: 0 3px 6px rgba(37, 99, 235, 0.3); 
   }
   
   /* Botón secundario */
   .x-secondary-button {
-    background-color: #e0e7ff; /* Azul claro */
-    color: #1e3a8a; /* Azul oscuro para contraste */
+    background-color: #e0e7ff; 
+    color: #1e3a8a; 
     padding: 10px 20px;
     border: none;
     border-radius: 8px;
@@ -93,19 +93,19 @@ section {
   }
   
   .x-secondary-button:hover {
-    background-color: #c7d2fe; /* Azul más claro en hover */
-    box-shadow: 0 4px 8px rgba(199, 210, 254, 0.4); /* Sombra suave en hover */
+    background-color: #c7d2fe; 
+    box-shadow: 0 4px 8px rgba(199, 210, 254, 0.4); 
   }
   
   .x-secondary-button:active {
-    background-color: #a5b4fc; /* Azul oscuro en clic */
+    background-color: #a5b4fc;
     color: #1e40af;
-    box-shadow: 0 3px 6px rgba(199, 210, 254, 0.3); /* Sombra más tenue en clic */
+    box-shadow: 0 3px 6px rgba(199, 210, 254, 0.3); 
   }
   
   /* Botón de peligro */
   .x-danger-button {
-    background: linear-gradient(135deg, #ef4444, #dc2626); /* Gradiente rojo */
+    background: linear-gradient(135deg, #ef4444, #dc2626); 
     color: #ffffff;
     padding: 12px 24px;
     border: none;
@@ -113,23 +113,23 @@ section {
     cursor: pointer;
     transition: background 0.3s ease, box-shadow 0.3s ease;
     font-weight: 500;
-    box-shadow: 0 4px 8px rgba(239, 68, 68, 0.4); /* Sombra roja */
+    box-shadow: 0 4px 8px rgba(239, 68, 68, 0.4); 
   }
   
   .x-danger-button:hover {
-    background: linear-gradient(135deg, #dc2626, #ef4444); /* Inversión del gradiente */
-    box-shadow: 0 6px 12px rgba(239, 68, 68, 0.6); /* Sombra más intensa en hover */
+    background: linear-gradient(135deg, #dc2626, #ef4444); 
+    box-shadow: 0 6px 12px rgba(239, 68, 68, 0.6); 
   }
   
   .x-danger-button:active {
-    background: linear-gradient(135deg, #b91c1c, #dc2626); /* Rojo más oscuro en clic */
-    box-shadow: 0 3px 6px rgba(239, 68, 68, 0.3); /* Sombra más tenue en clic */
+    background: linear-gradient(135deg, #b91c1c, #dc2626); 
+    box-shadow: 0 3px 6px rgba(239, 68, 68, 0.3); 
   }
   
   /* Texto de confirmación */
   section .text-sm {
     font-size: 0.875rem;
-    color: #64748b; /* Azul grisáceo */
+    color: #64748b; 
   }
   
   /* Estilos Responsive */
@@ -150,7 +150,6 @@ section {
   }
   
   @media (min-width: 768px) {
-    /* Aumentar el tamaño de los encabezados y párrafos en pantallas más grandes */
     section header h2 {
       font-size: 1.5rem;
     }
@@ -169,6 +168,6 @@ section {
     /* Botones más grandes */
     .x-primary-button, .x-secondary-button, .x-danger-button {
       padding: 12px 24px;
-      max-width: 200px; /* Limitar ancho del botón */
+      max-width: 200px; 
     }
   }

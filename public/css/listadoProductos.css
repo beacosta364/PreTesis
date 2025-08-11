@@ -17,7 +17,7 @@ body {
 
   .productos-actions {
     display: flex;
-    justify-content: center; /* centrado */
+    justify-content: center; 
     margin-bottom: 20px;
   }
 

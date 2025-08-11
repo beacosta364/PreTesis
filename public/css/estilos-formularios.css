@@ -43,8 +43,8 @@
 #cantidad,
 #precio {
     width: 100%;
-    font-size: 1.2em;  /* Aumenta el tamaño de la fuente */
-    padding: 12px;     /* Aumenta el padding para que el campo sea más grande */
+    font-size: 1.2em;  
+    padding: 12px;     
     box-sizing: border-box;
 }
 
@@ -52,7 +52,7 @@
 .form-group button {
     width: 100%;
     padding: 10px;
-    background-color:rgb(228, 146, 54); /* Color azul */
+    background-color:rgb(228, 146, 54); 
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -68,7 +68,7 @@
 .btn-volver {
     display: inline-block;
     padding: 12px 20px;
-    background-color: var(--color-thead); /* Usa el mismo azul de la tabla */
+    background-color: var(--color-thead); 
     color: var(--color-texto-thead);
     text-align: center;
     border-radius: 5px;
@@ -76,7 +76,7 @@
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease-in-out;
-    margin-top: 20px; /* Separación del contenido */
+    margin-top: 20px; 
 }
 
 .btn-volver:hover {
@@ -88,10 +88,6 @@
     text-align: center;
     margin-top: 20px;
 }
-
-
-
-
 
 /* Responsividad */
 @media (max-width: 600px) {

@@ -9,9 +9,7 @@ use App\Models\Movimiento;
 use App\Models\Categoria;
 use App\Models\Notificacion;
 
-use Carbon\Carbon; //para trabajar con fechas, usado en este caso para mostrar los movimientos
-                   //del ultimo mes de productos
-
+use Carbon\Carbon; 
 class DashboardController extends Controller
 {
     public function index(Request $request)
@@ -27,14 +25,14 @@ class DashboardController extends Controller
 
     $categoriaSeleccionada = $request->get('categoria');
 
-    // Query base para productos con cantidad agotada o por agotarse
+
     $query = Producto::with('categoria')
                 ->where(function ($q) {
                     $q->where('cantidad', 0)
-                      ->orWhereColumn('cantidad', '<=', 'min_stock');
+                    ->orWhereColumn('cantidad', '<=', 'min_stock');
                 });
 
-    // Si se seleccionó una categoría específica, filtrar
+
     if ($categoriaSeleccionada && $categoriaSeleccionada !== 'todas') {
         $query->where('categoria_id', $categoriaSeleccionada);
     }

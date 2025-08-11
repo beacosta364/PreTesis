@@ -19,18 +19,16 @@ class PerfilUsuarioController extends Controller
         $perfil = $usuario->perfil;
 
         if ($perfil) {
-            $perfil->eliminarFotoAnterior(); // Elimina la imagen anterior si existe
+            $perfil->eliminarFotoAnterior(); 
         } else {
             $perfil = new PerfilUsuario(['usuario_id' => $usuario->id]);
         }
 
-        // Guardar la nueva imagen
         $nombreArchivo = time() . '.' . $request->foto_perfil->extension();
-        // $request->foto_perfil->storeAs('public/img-perfil', $nombreArchivo);
+
         $request->foto_perfil->move(public_path('img-perfil'), $nombreArchivo);
 
 
-        // Actualizar la base de datos con la nueva imagen
         $perfil->foto_perfil = $nombreArchivo;
         $perfil->save();
 

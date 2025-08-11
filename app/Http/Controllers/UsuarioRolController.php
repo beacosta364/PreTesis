@@ -14,7 +14,7 @@ public function index(Request $request)
 {
     $busqueda = $request->input('busqueda');
 
-    // Obtener usuarios con filtro si se proporciona
+
     $query = DB::table('users')
         ->join('model_has_roles', 'users.id', '=', 'model_has_roles.model_id')
         ->join('roles', 'model_has_roles.role_id', '=', 'roles.id')
@@ -26,7 +26,7 @@ public function index(Request $request)
 
     $usuarios = $query->get();
 
-    // Obtener todos los roles disponibles
+
     $roles = DB::table('roles')->select('id', 'name')->get();
 
     return view('usuarios.roles', compact('usuarios', 'roles', 'busqueda'));
@@ -38,7 +38,6 @@ public function index(Request $request)
         $user_id = $request->input('user_id');
         $role_id = $request->input('role_id');
 
-        // Actualizar el rol en la tabla model_has_roles
         DB::table('model_has_roles')
             ->where('model_id', $user_id)
             ->update(['role_id' => $role_id]);

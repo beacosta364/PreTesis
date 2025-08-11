@@ -1,90 +1,90 @@
 /* Estilos generales para la sección */
 .space-y-6 {
-    margin-bottom: 1.5rem; /* Espacio entre los elementos */
+    margin-bottom: 1.5rem; 
 }
 
 /* Estilo del encabezado */
 header h2 {
-    font-size: 1.25rem; /* Tamaño de la fuente del título */
-    font-weight: 500; /* Grosor de la fuente */
-    color: #1F2937; /* Color del texto (gris oscuro) */
+    font-size: 1.25rem; 
+    font-weight: 500;
+    color: #1F2937; 
 }
 
 header p {
-    margin-top: 0.25rem; /* Espacio superior del párrafo */
-    font-size: 0.875rem; /* Tamaño de la fuente del párrafo */
-    color: #4B5563; /* Color del texto (gris medio) */
+    margin-top: 0.25rem; 
+    font-size: 0.875rem; 
+    color: #4B5563; 
 }
 
 /* Estilo del botón de eliminación */
 .x-danger-button {
-    background-color: #DC2626; /* Color de fondo del botón */
-    color: #FFFFFF; /* Color del texto */
-    padding: 0.5rem 1rem; /* Espaciado interno */
-    border-radius: 0.375rem; /* Bordes redondeados */
-    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease; /* Transición suave al cambiar el color */
+    background-color: #DC2626;
+    color: #FFFFFF; 
+    padding: 0.5rem 1rem; 
+    border-radius: 0.375rem; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 
 .x-danger-button:hover {
-    background-color: #B91C1C; /* Color de fondo en hover */
+    background-color: #B91C1C; 
 }
 
 /* Estilo del modal */
 .x-modal {
-    background-color: #FFFFFF; /* Color de fondo del modal */
-    border-radius: 0.5rem; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-    padding: 1.5rem; /* Espaciado interno */
+    background-color: #FFFFFF; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 1.5rem; 
 }
 
 /* Estilo del título del modal */
 .x-modal h2 {
-    font-size: 1.25rem; /* Tamaño de la fuente del título del modal */
-    font-weight: 500; /* Grosor de la fuente */
-    color: #1F2937; /* Color del texto del título del modal */
+    font-size: 1.25rem;
+    font-weight: 500; 
+    color: #1F2937; 
 }
 
 /* Estilo del párrafo del modal */
 .x-modal p {
-    margin-top: 0.5rem; /* Espacio superior del párrafo */
-    font-size: 0.875rem; /* Tamaño de la fuente del párrafo */
-    color: #4B5563; /* Color del texto (gris medio) */
+    margin-top: 0.5rem; 
+    font-size: 0.875rem; 
+    color: #4B5563; 
 }
 
 /* Estilos para los inputs */
 .x-text-input {
-    border: 1px solid #D1D5DB; /* Borde gris claro */
-    border-radius: 0.375rem; /* Bordes redondeados */
-    padding: 0.5rem; /* Espaciado interno */
-    width: 100%; /* Ancho completo */
-    max-width: 400px; /* Ancho máximo */
+    border: 1px solid #D1D5DB; 
+    border-radius: 0.375rem; 
+    padding: 0.5rem; 
+    width: 100%; 
+    max-width: 400px; 
 }
 
 /* Estilo de los botones */
 .x-primary-button {
-    background-color: #3B82F6; /* Color de fondo del botón */
-    color: #FFFFFF; /* Color del texto */
-    padding: 0.5rem 1rem; /* Espaciado interno */
-    border-radius: 0.375rem; /* Bordes redondeados */
-    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease; /* Transición suave al cambiar el color */
+    background-color: #3B82F6; 
+    color: #FFFFFF;
+    padding: 0.5rem 1rem; 
+    border-radius: 0.375rem;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
 }
 
 .x-primary-button:hover {
-    background-color: #2563EB; /* Color de fondo en hover */
+    background-color: #2563EB; 
 }
 
 /* Estilo del mensaje de guardado */
 .text-sm {
-    margin-left: 1rem; /* Espacio a la izquierda del mensaje */
+    margin-left: 1rem; 
 }
 
-/* Estilos para secciones específicas */
+
 .password-update-section {
-    margin: 2rem 0; /* Espaciado vertical */
+    margin: 2rem 0; 
 }
 
 .profile-information-section {
-    margin: 2rem 0; /* Espaciado vertical */
+    margin: 2rem 0; 
 }

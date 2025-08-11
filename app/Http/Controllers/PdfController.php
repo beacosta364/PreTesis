@@ -12,15 +12,6 @@ use Illuminate\Http\Request;
 
 class PdfController extends Controller
 {
-    //Genera un PDF con los productos existentes
-    // public function pdfProductos(){
-    //     $productos = Producto::select('id','nombre','descripcion','cantidad', 'min_stock')
-    //                     ->orderBy('id','ASC')
-    //                     ->get();
-    //     $pdf = Pdf::loadView('pdf.productos',['productos'=>$productos]);
-    //     $pdf->setPaper('carta','A4'); // Tamaño carta, orientación vertical
-    //     return $pdf->stream();
-    // }
     public function pdfProductos(Request $request)
     {
         $query = Producto::select('id', 'nombre', 'descripcion', 'cantidad', 'min_stock')
@@ -38,7 +29,6 @@ class PdfController extends Controller
     }
 
 
-    //Genera un PDF con los usuarios registrados
     public function pdfUsuarios()
     {
         $usuarios = User::select('id', 'name', 'email', 'created_at')
@@ -51,10 +41,9 @@ class PdfController extends Controller
     }
 
 
-    //Genera un PDF con los productos agotados o por agotarse.
     public function productosAgotadosPdf()
     {
-        // Obtener productos agotados (cantidad == 0) o por agotarse (cantidad < min_stock)
+
         $productosAgotados = Producto::where('cantidad', 0)
             ->orWhere(function ($query) {
                 $query->whereColumn('cantidad', '<=', 'min_stock')
@@ -65,7 +54,7 @@ class PdfController extends Controller
 
         $pdf = PDF::loadView('pdf.productosAgotados', compact('productosAgotados'));
         $pdf->setPaper('letter', 'portrait');
-        // return $pdf->download('productos_agotados.pdf'); //para descargar el pdf
+
         return $pdf->stream('productos_agotados.pdf');
     }
 
@@ -73,11 +62,6 @@ class PdfController extends Controller
 
     public function generarMovimientosPDF(Request $request)
     {
-        // Aplicar filtros según los parámetros enviados en la solicitud
-
-        //habilitar esta linea para mostrar pdf con toda la info de la base de datos
-        // $movimientos = Movimiento::query();
-
         $movimientos = Movimiento::where('created_at', '>=', now()->subDays(30));
 
         
@@ -103,8 +87,7 @@ class PdfController extends Controller
         }
     
         $movimientos = $movimientos->get();
-    
-        // Generar el PDF con los movimientos filtrados
+
         $pdf = Pdf::loadView('pdf.movimientos', compact('movimientos'));
         $pdf->setPaper('letter', 'portrait');
         
@@ -128,7 +111,6 @@ class PdfController extends Controller
 
         $productosAgotados = $query->get();
 
-        // Obtener el nombre de la categoría (si hay una)
         $categoriaNombre = 'Todas las categorías';
         if ($categoriaId && $categoriaId !== 'todas') {
             $categoria = Categoria::find($categoriaId);

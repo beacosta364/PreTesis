@@ -41,15 +41,15 @@ body{
 }
 .header {
     display: flex;
-    align-items: center; /* Alinea verticalmente en el centro */
-    justify-content: space-between; /* Distribuye el espacio entre los extremos */
+    align-items: center; 
+    justify-content: space-between; 
     margin-bottom: 20px;
     margin-top: 30px;
     border: 1px solid #ccc;
     gap: 20px;
 }
 .logo {
-    width: 80px; /* Ajusta el tamaño de la imagen */
+    width: 80px; 
     height: auto;
     justify-content: space-between;
 }
@@ -61,8 +61,8 @@ body{
 
 .header-left h1 {
 
-    margin: 0; /* Elimina margen superior e inferior */
-    margin-right: 250px; /* Espacio entre el título y el logo */
+    margin: 0; 
+    margin-right: 250px; 
     margin-left: 20px;
     padding-bottom: 20px;
    
@@ -76,8 +76,8 @@ body{
 }
 
 .header img {
-    width: 60px; /* Ajusta el tamaño del logo según sea necesario */
-    margin-right: 20px; /* Espacio entre el logo y el nombre */
+    width: 60px; 
+    margin-right: 20px; 
     padding-right: 10px;
 }
 
@@ -128,15 +128,15 @@ body{
 }
 .header {
     display: flex;
-    align-items: center; /* Alinea verticalmente en el centro */
-    justify-content: space-between; /* Distribuye el espacio entre los extremos */
+    align-items: center; 
+    justify-content: space-between; 
     margin-bottom: 20px;
     margin-top: 30px;
     border: 1px solid #ccc;
     gap: 20px;
 }
 .logo {
-    width: 80px; /* Ajusta el tamaño de la imagen */
+    width: 80px; 
     height: auto;
     justify-content: space-between;
 }
@@ -148,8 +148,8 @@ body{
 
 .header-left h1 {
 
-    margin: 0; /* Elimina margen superior e inferior */
-    margin-right: 250px; /* Espacio entre el título y el logo */
+    margin: 0; 
+    margin-right: 250px; 
     margin-left: 20px;
     padding-bottom: 20px;
    
@@ -163,8 +163,8 @@ body{
 }
 
 .header img {
-    width: 60px; /* Ajusta el tamaño del logo según sea necesario */
-    margin-right: 20px; /* Espacio entre el logo y el nombre */
+    width: 60px; 
+    margin-right: 20px; 
     padding-right: 10px;
 }
 

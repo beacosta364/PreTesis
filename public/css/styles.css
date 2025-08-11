@@ -284,7 +284,7 @@ body{
 .nav-item-productos a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #f57c00; /* Azul primario */
+    background-color: #f57c00; 
     color: #fff;
     text-decoration: none;   
     border-radius: 6px;
@@ -293,7 +293,7 @@ body{
 }
 
 .nav-item-productos a:hover {
-    background-color: #e75b1e; /* Azul más oscuro */
+    background-color: #e75b1e; 
 }
 
 @media (max-width: 600px) {

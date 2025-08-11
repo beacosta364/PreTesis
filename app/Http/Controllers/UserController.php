@@ -11,8 +11,6 @@ class UserController extends Controller
 {
     public function index(Request $request)
     {
-        // $users = User::all(); // Obtenemos todos los usuarios
-        // return view('users.index', compact('users')); // Pasamos los usuarios a la vista
         $query = User::query();
 
         if ($request->has('search')) {
@@ -28,34 +26,30 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('users.create'); // Retorna la vista del formulario de registro
+        return view('users.create'); 
     }
 
     public function store(Request $request)
     {
-        // Validar los datos del formulario
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        // Crear el usuario
         User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password), // Encriptar la contraseña
+            'password' => Hash::make($request->password),
         ])->assignRole('user');
 
         return redirect()->route('users.index')->with('success', 'Usuario registrado exitosamente.');
     }
 
-    //eliminar usuario por id
     public function destroy($id)
     {
         $user = User::findOrFail($id);
 
-        // Evita que un usuario se elimine a sí mismo si estás autenticado
         if (auth()->user()->id == $user->id) {
             return redirect()->route('users.index')->with('error', 'No puedes eliminar tu propio usuario.');
         }
