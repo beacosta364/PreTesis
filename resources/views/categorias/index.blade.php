@@ -58,15 +58,13 @@
                     @csrf
                     {{-- agregar metodo delete --}}
                     @method('DELETE')
-                    <!-- <input type="image"src="img/Eliminar.png"></input> -->
-                    <!-- <input type="image" src="{{ asset('img/Eliminar.png') }}"> -->
                     <input type="image" src="{{ asset('img/Eliminar.png') }}" alt="elimianr" width="50" height="50">
 
                  </form>
                  @endcan
                  <script>
                     function confimarEliminacion() {
-                        return confirm('¿Seguro deseas eliminar?'); // Muestra el mensaje de confirmación
+                        return confirm('¿Seguro deseas eliminar?');
                     }
                 </script>
                 </td>                                
@@ -78,7 +76,7 @@
 </section>
     <script>
         function confirmarEliminacion() {
-            return confirm('¿Seguro deseas eliminar?'); // Muestra el mensaje de confirmación
+            return confirm('¿Seguro deseas eliminar?'); 
         }
     </script>
  

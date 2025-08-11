@@ -84,26 +84,11 @@
     </form>
 
     <!-- Botón para generar el PDF -->
-     <!--target="_blank" para abrir el pdf en una pestaña nueva -->
     <form method="GET" action="{{ route('pdf.productos.agotados.categoria') }}" target="_blank"> 
     <input type="hidden" name="categoria" value="{{ $categoriaSeleccionada ?? 'todas' }}">
     <button type="submit">Generar PDF</button>
     </form>
 
-
-
-    <!-- <div class="productos-resultado">
-        @forelse($productosFiltrados as $producto)
-            <div class="producto-card">
-                <strong>{{ $producto->nombre }}</strong> - 
-                {{ $producto->categoria->nombre ?? 'Sin categoría' }} |
-                Cantidad: {{ $producto->cantidad }} |
-                Stock mínimo: {{ $producto->min_stock ?? 'No definido' }}
-            </div>
-        @empty
-            <p>No hay productos agotados o por agotarse en esta categoría.</p>
-        @endforelse
-    </div> -->
     <div class="productos-resultado">
         @if($productosFiltrados->count())
             <table class="tabla-productoss">

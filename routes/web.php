@@ -50,7 +50,6 @@ Route::middleware('auth')->group(function () {
     
     //Ruta para mostrar el registro de movimientos realizados a los productos
     Route::get('/movimientos', [MovimientoController::class, 'index'])->name('movimientos.index');
-    // Route::get('/movimientos', [MovimientoController::class, 'index'])->name('movimientos.index');
     Route::post('/procesar-movimiento', [MovimientoController::class, 'procesarMovimiento'])->name('producto.procesarMovimiento');
 
 

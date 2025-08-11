@@ -18,10 +18,6 @@
             <div class="form-group">
                 <label for="descripcion">Descripción</label>
                 <textarea id="descripcion" name="descripcion" rows="4"></textarea>
-                <!-- <textarea id="descripcion" name="descripcion" rows="4" required>{{ old('descripcion') }}</textarea> 
-                @error('descripcion')
-                    <span class="text-danger">{{ $message }}</span>
-                @enderror-->
             </div>
 
             <!-- Campo Cantidad -->

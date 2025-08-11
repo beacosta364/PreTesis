@@ -100,7 +100,6 @@
     {{ $movimientos->links() }}
   </div>
 
-  <!-- JavaScript para búsqueda dinámica -->
   <script>
     function filtrarOpciones(inputId, selectId) {
       document.getElementById(inputId).addEventListener('input', function () {

@@ -17,7 +17,6 @@
     </div>
 
     <section class="container-tabla">
-        <!-- <h2 class="titulo-tabla">Lista de Usuarios</h2> -->
         <table>
             <thead>
                 <tr>

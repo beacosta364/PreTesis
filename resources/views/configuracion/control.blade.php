@@ -13,7 +13,7 @@
 
 @if ($configuracion)
     <script>
-        const ipAddress = "{{ $configuracion->ip }}"; // Asigna la IP desde la base de datos
+        const ipAddress = "{{ $configuracion->ip }}"; 
         console.log('IP desde la base de datos:', ipAddress);
     </script>
 @else
@@ -26,7 +26,6 @@
 
 <script>
     document.getElementById("ingresarBodegaBtn").addEventListener("click", function() {
-        // Primero, registrar intento en Laravel
         fetch("{{ route('bodega.registrar') }}", {
             method: "POST",
             headers: {
@@ -41,7 +40,6 @@
         })
         .catch(error => console.error("Error al registrar intento:", error));
 
-        // Segundo, hacer la solicitud al ESP
         fetch(`http://${ipAddress}/activar1`)
             .then(response => response.text())
             .then(data => {
