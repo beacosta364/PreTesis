@@ -3,6 +3,13 @@
 @section('contenido')
 <div class="container">
     <h2>Movimiento de Productos</h2>
+    <nav class="nav-botones-productos">
+        <ul class="nav-menu-productos">
+            <li class="nav-item-productos">
+                <a href="{{ url('/productos/movimiento-masivo') }}" class="agregar-producto" >movimiento masivo</a> 
+            </li>
+        </ul>
+    </nav>     
 
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>

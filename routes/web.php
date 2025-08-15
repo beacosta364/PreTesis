@@ -52,6 +52,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/movimientos', [MovimientoController::class, 'index'])->name('movimientos.index');
     Route::post('/procesar-movimiento', [MovimientoController::class, 'procesarMovimiento'])->name('producto.procesarMovimiento');
 
+    // Movimiento masivo
+    Route::get('/productos/movimiento-masivo', [ProductoController::class, 'movimientoMasivo'])->name('producto.movimientoMasivo');
+    Route::post('/productos/movimiento-masivo', [ProductoController::class, 'procesarMovimientoMasivo'])->name('producto.procesarMovimientoMasivo');
 
     Route::get('/movimientos/filtrar', [MovimientoController::class, 'filtrar'])->name('movimientos.filtrar');
 

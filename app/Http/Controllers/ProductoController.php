@@ -225,4 +225,70 @@ class ProductoController extends Controller
         return view('producto.actualizarCantidades', compact('productos', 'categorias', 'categoriasSeleccionadas'));
     }
 
+    // public function movimientoMasivo()
+    // {
+    //     $productos = Producto::orderBy('nombre')->get();
+    //     return view('producto.movimientoMasivo', compact('productos'));
+    // }  
+
+    public function movimientoMasivo(Request $request)
+    {
+        $categoriaId = $request->input('categoria');
+
+        $productos = Producto::when($categoriaId, function ($query, $categoriaId) {
+                $query->where('categoria_id', $categoriaId);
+            })
+            ->orderBy('nombre')
+            ->get();
+
+        $categorias = Categoria::orderBy('nombre')->get();
+
+        return view('producto.movimientoMasivo', compact('productos', 'categorias', 'categoriaId'));
+    }
+
+
+    public function procesarMovimientoMasivo(Request $request)
+    {
+        $request->validate([
+            'tipo_movimiento' => 'required|in:ingresar,extraer',
+            'cantidades' => 'required|array',
+        ]);
+
+        $usuario = auth()->user();
+        if (!$usuario) {
+            return redirect()->back()->with('error', 'Debes iniciar sesión para realizar movimientos.');
+        }
+
+        foreach ($request->cantidades as $productoId => $cantidad) {
+            if (is_numeric($cantidad) && $cantidad > 0) {
+                $producto = Producto::find($productoId);
+
+                if ($producto) {
+                    if ($request->tipo_movimiento === 'extraer') {
+                        if ($producto->cantidad < $cantidad) {
+                            continue; 
+                        }
+                        $producto->cantidad -= $cantidad;
+                    } else {
+                        $producto->cantidad += $cantidad;
+                    }
+
+                    $producto->save();
+
+                    // Registrar en la tabla de movimientos
+                    \App\Models\Movimiento::create([
+                        'tipo_movimiento' => $request->tipo_movimiento,
+                        'cantidad' => $cantidad,
+                        'producto_id' => $producto->id,
+                        'nombre_producto' => $producto->nombre,
+                        'usuario_id' => $usuario->id,
+                        'nombre_usuario' => $usuario->name,
+                    ]);
+                }
+            }
+        }
+
+        return redirect()->route('producto.movimientoMasivo')->with('success', 'Movimientos registrados con éxito.');
+    }
+
 }

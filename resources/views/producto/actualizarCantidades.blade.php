@@ -20,23 +20,23 @@
 
     
     {{-- Formulario de filtro con Select2 --}}
-<form method="GET" action="{{ route('productos.form.actualizar.cantidades') }}" style="margin-top: 20px; margin-bottom: 20px;">
-    <label for="categorias"><strong>Filtrar por categorías:</strong></label>
-    <select id="categorias" name="categorias[]" multiple>
-        @foreach($categorias as $categoria)
-            <option value="{{ $categoria->id }}" {{ in_array($categoria->id, $categoriasSeleccionadas ?? []) ? 'selected' : '' }}>
-                {{ $categoria->nombre }}
-            </option>
-        @endforeach
-    </select>
+    <form method="GET" action="{{ route('productos.form.actualizar.cantidades') }}" style="margin-top: 20px; margin-bottom: 20px;">
+        <label for="categorias"><strong>Filtrar por categorías:</strong></label>
+        <select id="categorias" name="categorias[]" multiple>
+            @foreach($categorias as $categoria)
+                <option value="{{ $categoria->id }}" {{ in_array($categoria->id, $categoriasSeleccionadas ?? []) ? 'selected' : '' }}>
+                    {{ $categoria->nombre }}
+                </option>
+            @endforeach
+        </select>
 
-    <div style="display: inline-flex; gap: 8px; vertical-align: middle;">
-        <button type="submit" class="barra-busqueda-boton">Filtrar</button>
-        <a href="{{ route('productos.form.actualizar.cantidades') }}" class="barra-busqueda-boton" style="text-decoration: none;">
-            Limpiar Filtro
-        </a>
-    </div>
-</form>
+        <div style="display: inline-flex; gap: 8px; vertical-align: middle;">
+            <button type="submit" class="barra-busqueda-boton">Filtrar</button>
+            <a href="{{ route('productos.form.actualizar.cantidades') }}" class="barra-busqueda-boton" style="text-decoration: none;">
+                Limpiar Filtro
+            </a>
+        </div>
+    </form>
 
 
     {{-- Formulario para actualizar cantidades --}}
