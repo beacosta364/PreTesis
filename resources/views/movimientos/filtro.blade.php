@@ -64,6 +64,7 @@
       </div>
       <div class="filtro">
         <button type="submit">Aplicar Filtros</button>
+        <a href="{{ route('movimientos.filtrar') }}" class="btn-limpiar-filtro">Limpiar Filtros</a>
       </div>
     </div>
   </form>

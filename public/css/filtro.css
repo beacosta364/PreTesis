@@ -103,3 +103,21 @@ body {
       font-size: 0.9rem;
     }
   }
+
+
+  .btn-limpiar-filtro {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #e75b1e; 
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  }
+
+  .btn-limpiar-filtro:hover {
+    background-color: #c94c17; 
+  }
