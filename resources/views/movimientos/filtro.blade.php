@@ -15,7 +15,7 @@
   <h2>Registro de Movimientos Realizados</h2>
 
   <div class="pdf-link">
-    <a href="{{ route('movimientos.pdf', request()->all()) }}" target="_blank">Generar PDF</a>
+    <a href="{{ route('movimientos.pdf', request()->all()) }}" target="_blank">Generar PDF movimientos detallado</a>
   </div>
 
   <form method="GET" action="{{ route('movimientos.filtrar') }}">

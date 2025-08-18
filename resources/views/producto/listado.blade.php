@@ -2,14 +2,15 @@
 
 @section('contenido')
 @can('reporteinventarios.show')
-
+<link rel="stylesheet" href="{{url('/css/estilos-movimiento-masivo.css')}}">
   <div class="productos-header">
-    <h2>Listado de Productos</h2>
+    <h2 class="titulo-mv">Listado de Productos</h2>
   </div>
 
-  <div class="productos-actions">
-    <a class="productos-pdf-link" href="{{ route('productos.pdf') }}" target="_blank">Generar PDF</a>
+  <div class="contenedor-boton">
+    <a class="btn-pdfproductos" href="{{ route('productos.pdf') }}" target="_blank">Generar PDF</a>
   </div>
+
 
   <section class="productos-section">
     <div class="productos-table-container">

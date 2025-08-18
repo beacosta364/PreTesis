@@ -59,41 +59,38 @@ class PdfController extends Controller
     }
 
 
+    
+public function generarMovimientosPDF(Request $request){
+        $query = Movimiento::query();
 
-    public function generarMovimientosPDF(Request $request)
-    {
-        $movimientos = Movimiento::where('created_at', '>=', now()->subDays(30));
+        if ($request->filled('fecha_inicio') && $request->filled('fecha_fin')) {
+            $fechaInicio = $request->input('fecha_inicio');
+            $fechaFin    = $request->input('fecha_fin');
+            $query->whereBetween('created_at', [$fechaInicio, $fechaFin]);
+        } else {
+            $fechaInicio = now()->subDays(30);
+            $query->where('created_at', '>=', $fechaInicio);
+        }
 
-        
-    
-        if ($request->filled('fecha_inicio')) {
-            $movimientos->whereDate('created_at', '>=', $request->fecha_inicio);
-        }
-    
-        if ($request->filled('fecha_fin')) {
-            $movimientos->whereDate('created_at', '<=', $request->fecha_fin);
-        }
-    
         if ($request->filled('producto_id')) {
-            $movimientos->where('nombre_producto', $request->producto_id);
+            $query->where('nombre_producto', $request->producto_id);
         }
-    
+
         if ($request->filled('usuario_id')) {
-            $movimientos->where('nombre_usuario', $request->usuario_id);
+            $query->where('nombre_usuario', $request->usuario_id);
         }
-    
+
         if ($request->filled('tipo_movimiento')) {
-            $movimientos->where('tipo_movimiento', $request->tipo_movimiento);
+            $query->where('tipo_movimiento', $request->tipo_movimiento);
         }
-    
-        $movimientos = $movimientos->get();
+
+        $movimientos = $query->orderBy('created_at', 'desc')->get();
 
         $pdf = Pdf::loadView('pdf.movimientos', compact('movimientos'));
         $pdf->setPaper('letter', 'portrait');
         
         return $pdf->stream('movimientos.pdf');
-    }
-    
+}
 
     public function productosAgotadosPorCategoriaPdf(Request $request)
     {

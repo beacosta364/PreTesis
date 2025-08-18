@@ -379,7 +379,26 @@ body{
 .btn-volver:hover {
     background-color: #d1781f;
 }
+.contenedor-boton {
+    text-align: center;
+    margin-top: 20px;
+}
 
+.btn-pdfproductos {
+    display: inline-block;
+    background-color: #e38928;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease;
+}
+
+.btn-pdfproductos:hover {
+    background-color: #ea6100;
+}
 /*Estilos barra de busqueda listado de productos en el index*/
     .barra-busqueda-form {
         margin: 20px 0;
