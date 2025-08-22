@@ -36,39 +36,76 @@ class ProductoController extends Controller
     }
 
 
+    // public function store(Request $request) {
+    //     $request->validate([
+    //         'nombre' => 'required|unique:productos,nombre',
+    //         'descripcion' => 'nullable',
+    //         'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+    //         'cantidad' => 'required|integer|min:0',
+    //         'min_stock' => 'nullable|integer|min:0',
+    //         'categoria_id' => 'nullable|exists:categorias,id'
+    //     ]);
+    //     $nombreImagen = null;
+    //     if ($request->hasFile('imagen')) {
+    //         $imagen = $request->file('imagen');
+    //         $nombreImagen = time() . '.' . $imagen->getClientOriginalExtension();
+    //         $imagen->move(public_path('img'), $nombreImagen);
+    //     }
+    //     Producto::create([
+    //         'nombre' => $request->nombre,
+    //         'descripcion' => $request->descripcion,
+    //         'imagen' => $nombreImagen,
+    //         'cantidad' => $request->cantidad,
+    //         'min_stock' => $request->min_stock,
+    //         'categoria_id' => $request->categoria_id,
+    //         'usuario_id' => auth()->id() 
+    //     ]);
+    //     return redirect()->route('producto.index')->with('success', 'Producto creado con éxito.');
+    // }
+
+
     public function store(Request $request)
-    {
+{
+    $request->validate([
+        'nombre' => 'required|unique:productos,nombre',
+        'descripcion' => 'nullable',
+        'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        'cantidad' => 'required|integer|min:0',
+        'min_stock' => 'nullable|integer|min:0',
+        'categoria_id' => 'nullable|exists:categorias,id'
+    ]);
 
-        $request->validate([
-            'nombre' => 'required|unique:productos,nombre',
-            'descripcion' => 'nullable',
-            'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'cantidad' => 'required|integer|min:0',
-            'min_stock' => 'nullable|integer|min:0',
-            'categoria_id' => 'nullable|exists:categorias,id'
-        ]);
-
-
-        $nombreImagen = null;
-        if ($request->hasFile('imagen')) {
-            $imagen = $request->file('imagen');
-            $nombreImagen = time() . '.' . $imagen->getClientOriginalExtension();
-            $imagen->move(public_path('img'), $nombreImagen);
-        }
-
-
-        Producto::create([
-            'nombre' => $request->nombre,
-            'descripcion' => $request->descripcion,
-            'imagen' => $nombreImagen,
-            'cantidad' => $request->cantidad,
-            'min_stock' => $request->min_stock,
-            'categoria_id' => $request->categoria_id,
-            'usuario_id' => auth()->id() 
-        ]);
-
-        return redirect()->route('producto.index')->with('success', 'Producto creado con éxito.');
+    $nombreImagen = null;
+    if ($request->hasFile('imagen')) {
+        $imagen = $request->file('imagen');
+        $nombreImagen = time() . '.' . $imagen->getClientOriginalExtension();
+        $imagen->move(public_path('img'), $nombreImagen);
     }
+
+    // Crear el producto
+    $producto = Producto::create([
+        'nombre' => $request->nombre,
+        'descripcion' => $request->descripcion,
+        'imagen' => $nombreImagen,
+        'cantidad' => $request->cantidad,
+        'min_stock' => $request->min_stock,
+        'categoria_id' => $request->categoria_id,
+        'usuario_id' => auth()->id() 
+    ]);
+
+    // Registrar el movimiento inicial como "ingreso"
+    \App\Models\Movimiento::create([
+        'tipo_movimiento' => 'ingresar',
+        'cantidad' => $request->cantidad,
+        'producto_id' => $producto->id,
+        'nombre_producto' => $producto->nombre,
+        'usuario_id' => auth()->id(),
+        'nombre_usuario' => auth()->user()->name,
+    ]);
+
+    return redirect()->route('producto.index')->with('success', 'Producto creado con éxito y movimiento inicial registrado.');
+}
+
 
     public function show($id)
     {
@@ -225,11 +262,6 @@ class ProductoController extends Controller
         return view('producto.actualizarCantidades', compact('productos', 'categorias', 'categoriasSeleccionadas'));
     }
 
-    // public function movimientoMasivo()
-    // {
-    //     $productos = Producto::orderBy('nombre')->get();
-    //     return view('producto.movimientoMasivo', compact('productos'));
-    // }  
 
     public function movimientoMasivo(Request $request)
     {
