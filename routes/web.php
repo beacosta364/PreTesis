@@ -58,6 +58,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/movimientos/filtrar', [MovimientoController::class, 'filtrar'])->name('movimientos.filtrar');
 
+    Route::get('/movimientos/pdf-resumen', [PdfController::class, 'generarMovimientosConsolidadosPDF'])
+    ->name('movimientos.pdf_resumen');
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     Route::get('/configuracion/control', [ConfiguracionController::class, 'control'])->name('configuracion.control');////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

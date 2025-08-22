@@ -144,4 +144,76 @@ public function generarMovimientosPDF(Request $request){
     }
 
 
+    // public function generarMovimientosConsolidadosPDF(Request $request)
+    // {
+    //     $query = Movimiento::query();
+
+
+    //     if ($request->filled('fecha_inicio') && $request->filled('fecha_fin')) {
+    //         $fechaInicio = $request->input('fecha_inicio');
+    //         $fechaFin    = $request->input('fecha_fin');
+    //         $query->whereBetween('created_at', [$fechaInicio, $fechaFin]);
+    //     } else {
+    //         $fechaInicio = now()->subDays(30);
+    //         $query->where('created_at', '>=', $fechaInicio);
+    //     }
+
+    //     if ($request->filled('producto_id')) {
+    //         $query->where('nombre_producto', $request->producto_id);
+    //     }
+
+    //     // Consolidar por producto
+    //     $movimientos = $query->select(
+    //             'nombre_producto',
+    //             \DB::raw("SUM(CASE WHEN tipo_movimiento = 'ingresar' THEN cantidad ELSE 0 END) as total_ingresado"),
+    //             \DB::raw("SUM(CASE WHEN tipo_movimiento = 'extraer' THEN cantidad ELSE 0 END) as total_extraido"),
+    //             \DB::raw("SUM(CASE WHEN tipo_movimiento = 'ingresar' THEN cantidad ELSE 0 END) - 
+    //                     SUM(CASE WHEN tipo_movimiento = 'extraer' THEN cantidad ELSE 0 END) as saldo_neto")
+    //         )
+    //         ->groupBy('nombre_producto')
+    //         ->orderBy('nombre_producto', 'asc')
+    //         ->get();
+
+    //     $pdf = \PDF::loadView('pdf.movimientos_resumen', compact('movimientos', 'fechaInicio', 'fechaFin'));
+    //     $pdf->setPaper('letter', 'portrait');
+        
+    //     return $pdf->stream('movimientos_resumen.pdf');
+    // }
+
+    public function generarMovimientosConsolidadosPDF(Request $request)
+    {
+        $query = Movimiento::query();
+
+        if ($request->filled('fecha_inicio') && $request->filled('fecha_fin')) {
+            $fechaInicio = $request->input('fecha_inicio');
+            $fechaFin    = $request->input('fecha_fin');
+            $query->whereBetween('created_at', [$fechaInicio, $fechaFin]);
+        } else {
+            $fechaInicio = now()->subDays(30)->startOfDay();
+            $fechaFin    = now()->endOfDay();
+            $query->whereBetween('created_at', [$fechaInicio, $fechaFin]);
+        }
+
+        if ($request->filled('producto_id')) {
+            $query->where('nombre_producto', $request->producto_id);
+        }
+
+        // Consolidar por producto
+        $movimientos = $query->select(
+                'nombre_producto',
+                \DB::raw("SUM(CASE WHEN tipo_movimiento = 'ingresar' THEN cantidad ELSE 0 END) as total_ingresado"),
+                \DB::raw("SUM(CASE WHEN tipo_movimiento = 'extraer' THEN cantidad ELSE 0 END) as total_extraido"),
+                \DB::raw("SUM(CASE WHEN tipo_movimiento = 'ingresar' THEN cantidad ELSE 0 END) - 
+                        SUM(CASE WHEN tipo_movimiento = 'extraer' THEN cantidad ELSE 0 END) as total_existencia")
+            )
+            ->groupBy('nombre_producto')
+            ->orderBy('nombre_producto', 'asc')
+            ->get();
+
+        $pdf = \PDF::loadView('pdf.movimientos_resumen', compact('movimientos', 'fechaInicio', 'fechaFin'));
+        $pdf->setPaper('letter', 'portrait');
+        
+        return $pdf->stream('movimientos_resumen.pdf');
+    }
+
 }

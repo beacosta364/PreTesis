@@ -16,7 +16,13 @@
 
   <div class="pdf-link">
     <a href="{{ route('movimientos.pdf', request()->all()) }}" target="_blank">Generar PDF movimientos detallado</a>
+
+    <a href="{{ route('movimientos.pdf_resumen', request()->all()) }}" target="_blank">
+      Generar PDF consolidado
+    </a>
   </div>
+
+
 
   <form method="GET" action="{{ route('movimientos.filtrar') }}">
     <div class="filtros-container">
