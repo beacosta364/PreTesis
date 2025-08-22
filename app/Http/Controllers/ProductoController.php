@@ -35,37 +35,7 @@ class ProductoController extends Controller
         return view('producto.create', compact('categorias'));
     }
 
-
-    // public function store(Request $request) {
-    //     $request->validate([
-    //         'nombre' => 'required|unique:productos,nombre',
-    //         'descripcion' => 'nullable',
-    //         'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-    //         'cantidad' => 'required|integer|min:0',
-    //         'min_stock' => 'nullable|integer|min:0',
-    //         'categoria_id' => 'nullable|exists:categorias,id'
-    //     ]);
-    //     $nombreImagen = null;
-    //     if ($request->hasFile('imagen')) {
-    //         $imagen = $request->file('imagen');
-    //         $nombreImagen = time() . '.' . $imagen->getClientOriginalExtension();
-    //         $imagen->move(public_path('img'), $nombreImagen);
-    //     }
-    //     Producto::create([
-    //         'nombre' => $request->nombre,
-    //         'descripcion' => $request->descripcion,
-    //         'imagen' => $nombreImagen,
-    //         'cantidad' => $request->cantidad,
-    //         'min_stock' => $request->min_stock,
-    //         'categoria_id' => $request->categoria_id,
-    //         'usuario_id' => auth()->id() 
-    //     ]);
-    //     return redirect()->route('producto.index')->with('success', 'Producto creado con éxito.');
-    // }
-
-
-    public function store(Request $request)
-{
+    public function store(Request $request){
     $request->validate([
         'nombre' => 'required|unique:productos,nombre',
         'descripcion' => 'nullable',
@@ -81,7 +51,6 @@ class ProductoController extends Controller
         $nombreImagen = time() . '.' . $imagen->getClientOriginalExtension();
         $imagen->move(public_path('img'), $nombreImagen);
     }
-
     // Crear el producto
     $producto = Producto::create([
         'nombre' => $request->nombre,
@@ -92,7 +61,6 @@ class ProductoController extends Controller
         'categoria_id' => $request->categoria_id,
         'usuario_id' => auth()->id() 
     ]);
-
     // Registrar el movimiento inicial como "ingreso"
     \App\Models\Movimiento::create([
         'tipo_movimiento' => 'ingresar',
@@ -102,7 +70,6 @@ class ProductoController extends Controller
         'usuario_id' => auth()->id(),
         'nombre_usuario' => auth()->user()->name,
     ]);
-
     return redirect()->route('producto.index')->with('success', 'Producto creado con éxito y movimiento inicial registrado.');
 }
 
@@ -121,40 +88,85 @@ class ProductoController extends Controller
         return view('producto.edit', compact('producto', 'categorias'));
     }
 
-    public function update(Request $request, $id)
-    {
-        $request->validate([
-            'nombre' => 'required|unique:productos,nombre,' . $id,
-            'descripcion' => 'nullable',
-            'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'cantidad' => 'required|integer|min:0',
-            'min_stock' => 'nullable|integer|min:0',
-            'categoria_id' => 'nullable|exists:categorias,id'
-        ]);
+    // public function update(Request $request, $id){
+    //     $request->validate([
+    //         'nombre' => 'required|unique:productos,nombre,' . $id,
+    //         'descripcion' => 'nullable',
+    //         'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+    //         'cantidad' => 'required|integer|min:0',
+    //         'min_stock' => 'nullable|integer|min:0',
+    //         'categoria_id' => 'nullable|exists:categorias,id'
+    //     ]);
+    //     $producto = Producto::findOrFail($id);
+    //     if ($request->hasFile('imagen')) {
+    //         if ($producto->imagen && file_exists(public_path('img/' . $producto->imagen))) {
+    //             unlink(public_path('img/' . $producto->imagen));
+    //         }
+    //         $imagen = $request->file('imagen');
+    //         $producto->imagen = time() . '.' . $imagen->getClientOriginalExtension();
+    //         $imagen->move(public_path('img'), $producto->imagen);
+    //     }
+    //     $producto->update([
+    //         'nombre' => $request->nombre,
+    //         'descripcion' => $request->descripcion,
+    //         'cantidad' => $request->cantidad,
+    //         'min_stock' => $request->min_stock,
+    //         'categoria_id' => $request->categoria_id
+    //     ]);
+    //     return redirect()->route('producto.index')->with('success', 'Producto actualizado con éxito.');
+    // }
+public function update(Request $request, $id){
+    $request->validate([
+        'nombre' => 'required|unique:productos,nombre,' . $id,
+        'descripcion' => 'nullable',
+        'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        'cantidad' => 'required|integer|min:0',
+        'min_stock' => 'nullable|integer|min:0',
+        'categoria_id' => 'nullable|exists:categorias,id'
+    ]);
 
-        $producto = Producto::findOrFail($id);
+    $producto = Producto::findOrFail($id);
 
-        if ($request->hasFile('imagen')) {
+    // Guardar la cantidad anterior para calcular la diferencia
+    $cantidadAnterior = $producto->cantidad;
 
-            if ($producto->imagen && file_exists(public_path('img/' . $producto->imagen))) {
-                unlink(public_path('img/' . $producto->imagen));
-            }
-            $imagen = $request->file('imagen');
-            $producto->imagen = time() . '.' . $imagen->getClientOriginalExtension();
-            $imagen->move(public_path('img'), $producto->imagen);
+    // Manejo de imagen
+    if ($request->hasFile('imagen')) {
+        if ($producto->imagen && file_exists(public_path('img/' . $producto->imagen))) {
+            unlink(public_path('img/' . $producto->imagen));
         }
-
-
-        $producto->update([
-            'nombre' => $request->nombre,
-            'descripcion' => $request->descripcion,
-            'cantidad' => $request->cantidad,
-            'min_stock' => $request->min_stock,
-            'categoria_id' => $request->categoria_id
-        ]);
-
-        return redirect()->route('producto.index')->with('success', 'Producto actualizado con éxito.');
+        $imagen = $request->file('imagen');
+        $producto->imagen = time() . '.' . $imagen->getClientOriginalExtension();
+        $imagen->move(public_path('img'), $producto->imagen);
     }
+
+    // Actualizar datos del producto
+    $producto->update([
+        'nombre' => $request->nombre,
+        'descripcion' => $request->descripcion,
+        'cantidad' => $request->cantidad,
+        'min_stock' => $request->min_stock,
+        'categoria_id' => $request->categoria_id
+    ]);
+
+    // Calcular diferencia en cantidad
+    $diferencia = $request->cantidad - $cantidadAnterior;
+
+    if ($diferencia != 0) {
+        $tipoMovimiento = $diferencia > 0 ? 'ingresar' : 'extraer';
+
+        \App\Models\Movimiento::create([
+            'tipo_movimiento' => $tipoMovimiento,
+            'cantidad' => abs($diferencia), // siempre positivo
+            'producto_id' => $producto->id,
+            'nombre_producto' => $producto->nombre,
+            'usuario_id' => auth()->id(),
+            'nombre_usuario' => auth()->user()->name,
+        ]);
+    }
+
+    return redirect()->route('producto.index')->with('success', 'Producto actualizado con éxito.');
+}
 
     public function destroy($id)
     {
