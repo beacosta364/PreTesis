@@ -88,33 +88,6 @@ class ProductoController extends Controller
         return view('producto.edit', compact('producto', 'categorias'));
     }
 
-    // public function update(Request $request, $id){
-    //     $request->validate([
-    //         'nombre' => 'required|unique:productos,nombre,' . $id,
-    //         'descripcion' => 'nullable',
-    //         'imagen' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-    //         'cantidad' => 'required|integer|min:0',
-    //         'min_stock' => 'nullable|integer|min:0',
-    //         'categoria_id' => 'nullable|exists:categorias,id'
-    //     ]);
-    //     $producto = Producto::findOrFail($id);
-    //     if ($request->hasFile('imagen')) {
-    //         if ($producto->imagen && file_exists(public_path('img/' . $producto->imagen))) {
-    //             unlink(public_path('img/' . $producto->imagen));
-    //         }
-    //         $imagen = $request->file('imagen');
-    //         $producto->imagen = time() . '.' . $imagen->getClientOriginalExtension();
-    //         $imagen->move(public_path('img'), $producto->imagen);
-    //     }
-    //     $producto->update([
-    //         'nombre' => $request->nombre,
-    //         'descripcion' => $request->descripcion,
-    //         'cantidad' => $request->cantidad,
-    //         'min_stock' => $request->min_stock,
-    //         'categoria_id' => $request->categoria_id
-    //     ]);
-    //     return redirect()->route('producto.index')->with('success', 'Producto actualizado con éxito.');
-    // }
 public function update(Request $request, $id){
     $request->validate([
         'nombre' => 'required|unique:productos,nombre,' . $id,
@@ -246,17 +219,39 @@ public function update(Request $request, $id){
     public function actualizarCantidadesMasiva(Request $request)
     {
         $datos = $request->input('cantidades'); 
+        $usuario = auth()->user();
 
         foreach ($datos as $productoId => $nuevaCantidad) {
             $producto = Producto::find($productoId);
+
             if ($producto && is_numeric($nuevaCantidad) && $nuevaCantidad >= 0) {
-                $producto->cantidad = (int)$nuevaCantidad;
-                $producto->save();
+                $cantidadAnterior = $producto->cantidad;
+                $diferencia = $nuevaCantidad - $cantidadAnterior;
+
+                // Solo registrar si hay cambios
+                if ($diferencia != 0) {
+                    $producto->cantidad = (int) $nuevaCantidad;
+                    $producto->save();
+
+                    // Definir tipo de movimiento
+                    $tipoMovimiento = $diferencia > 0 ? 'ingresar' : 'extraer';
+
+                    // Registrar en tabla movimientos
+                    \App\Models\Movimiento::create([
+                        'tipo_movimiento' => $tipoMovimiento,
+                        'cantidad' => abs($diferencia), // diferencia siempre positiva
+                        'producto_id' => $producto->id,
+                        'nombre_producto' => $producto->nombre,
+                        'usuario_id' => $usuario->id,
+                        'nombre_usuario' => $usuario->name,
+                    ]);
+                }
             }
         }
 
-        return redirect()->route('producto.index')->with('success', 'Cantidades actualizadas correctamente.');
+        return redirect()->route('producto.index')->with('success', 'Cantidades actualizadas y movimientos registrados correctamente.');
     }
+
 
     public function vistaActualizarCantidades(Request $request)
     {
