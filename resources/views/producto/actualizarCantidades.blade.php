@@ -47,17 +47,14 @@
             <table>
                 <thead>
                     <tr>
-                        <!-- <th>ID</th> -->
                         <th>Nombre</th>
                         <th>Nueva Cantidad</th>
                         <th>Categoría</th>
-                        
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($productos as $producto)
+                    @forelse ($productos as $producto)
                         <tr>
-                            <!-- <td>{{ $producto->id }}</td> -->
                             <td>{{ $producto->nombre }}</td>
                             <td>
                                 <input 
@@ -70,15 +67,26 @@
                                 >
                             </td>
                             <td>{{ $producto->categoria ? $producto->categoria->nombre : 'Sin categoría' }}</td>
-                            
                         </tr>
-                    @endforeach
+                    @empty
+                        <tr>
+                            <td colspan="3" style="text-align:center; font-weight:bold; color:orange;">
+                                No se encuentran productos registrados.
+                            </td>
+                        </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>
 
         <div style="margin-top: 20px;">
-            <button type="submit" class="barra-busqueda-boton">Guardar cambios</button>
+            <button 
+                type="submit" 
+                class="barra-busqueda-boton"
+                {{ $productos->isEmpty() ? 'disabled' : '' }}
+            >
+                Guardar cambios
+            </button>
         </div>
     </form>
 </section>
