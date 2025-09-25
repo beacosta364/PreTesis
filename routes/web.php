@@ -14,6 +14,7 @@ use App\Http\Controllers\PdfController;
 use App\Http\Controllers\UsuarioRolController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BodegaController;
+use App\Http\Controllers\ElectroimanController;
 
 
 
@@ -122,6 +123,16 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/historial-bodega/pdf', [PdfController::class, 'exportarHistorialBodega'])->name('bodega.historial.pdf');
 
+
+    //rutas control de acceso con retorno de respuesta
+    Route::get('/', [ElectroimanController::class, 'index']);
+    Route::post('/guardar-ip', [ElectroimanController::class, 'guardarIp'])->name('guardar.ip');
+    Route::get('/abrir/{id}', [ElectroimanController::class, 'abrir'])->name('abrir');
+
+    Route::get('/editar/{id}', [ElectroimanController::class, 'editar'])->name('editar');
+    Route::post('/actualizar/{id}', [ElectroimanController::class, 'actualizar'])->name('actualizar');
+
+    Route::delete('/eliminar/{id}', [ElectroimanController::class, 'eliminar'])->name('eliminar');
 
 
 });
