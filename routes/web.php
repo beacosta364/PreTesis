@@ -135,6 +135,8 @@ Route::middleware('auth')->group(function () {
 
     Route::delete('/eliminar/{id}', [ElectroimanController::class, 'eliminar'])->name('eliminar');
 
+    Route::get('/historial/pdf', [PdfController::class, 'exportarHistorialAccesoPDF'])->name('historial.pdf');
+
 });
 
 require __DIR__.'/auth.php';

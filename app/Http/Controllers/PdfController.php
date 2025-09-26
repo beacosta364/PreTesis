@@ -143,43 +143,6 @@ public function generarMovimientosPDF(Request $request){
         return $pdf->stream('historial_bodega.pdf');
     }
 
-
-    // public function generarMovimientosConsolidadosPDF(Request $request)
-    // {
-    //     $query = Movimiento::query();
-
-
-    //     if ($request->filled('fecha_inicio') && $request->filled('fecha_fin')) {
-    //         $fechaInicio = $request->input('fecha_inicio');
-    //         $fechaFin    = $request->input('fecha_fin');
-    //         $query->whereBetween('created_at', [$fechaInicio, $fechaFin]);
-    //     } else {
-    //         $fechaInicio = now()->subDays(30);
-    //         $query->where('created_at', '>=', $fechaInicio);
-    //     }
-
-    //     if ($request->filled('producto_id')) {
-    //         $query->where('nombre_producto', $request->producto_id);
-    //     }
-
-    //     // Consolidar por producto
-    //     $movimientos = $query->select(
-    //             'nombre_producto',
-    //             \DB::raw("SUM(CASE WHEN tipo_movimiento = 'ingresar' THEN cantidad ELSE 0 END) as total_ingresado"),
-    //             \DB::raw("SUM(CASE WHEN tipo_movimiento = 'extraer' THEN cantidad ELSE 0 END) as total_extraido"),
-    //             \DB::raw("SUM(CASE WHEN tipo_movimiento = 'ingresar' THEN cantidad ELSE 0 END) - 
-    //                     SUM(CASE WHEN tipo_movimiento = 'extraer' THEN cantidad ELSE 0 END) as saldo_neto")
-    //         )
-    //         ->groupBy('nombre_producto')
-    //         ->orderBy('nombre_producto', 'asc')
-    //         ->get();
-
-    //     $pdf = \PDF::loadView('pdf.movimientos_resumen', compact('movimientos', 'fechaInicio', 'fechaFin'));
-    //     $pdf->setPaper('letter', 'portrait');
-        
-    //     return $pdf->stream('movimientos_resumen.pdf');
-    // }
-
     public function generarMovimientosConsolidadosPDF(Request $request)
     {
         $query = Movimiento::query();
@@ -215,5 +178,48 @@ public function generarMovimientosPDF(Request $request){
         
         return $pdf->stream('movimientos_resumen.pdf');
     }
+
+    public function exportarHistorialAccesoPDF(Request $request)
+        {
+            $query = \DB::table('acciones')
+                ->join('controladores', 'acciones.controlador_id', '=', 'controladores.id')
+                ->select('acciones.*', 'controladores.nombre', 'controladores.ip')
+                ->orderBy('fecha_hora', 'desc');
+
+            // Filtros dinámicos
+            if ($request->filled('controlador')) {
+                $query->where('controladores.nombre', 'like', '%' . $request->controlador . '%');
+            }
+
+            if ($request->filled('ip')) {
+                $query->where('controladores.ip', 'like', '%' . $request->ip . '%');
+            }
+
+            if ($request->filled('user_id')) {
+                $query->where('acciones.user_id', $request->user_id);
+            }
+
+            if ($request->filled('nombre_usuario')) {
+                $query->where('acciones.nombre_usuario', 'like', '%' . $request->nombre_usuario . '%');
+            }
+
+            if ($request->filled('estado')) {
+                $query->where('acciones.estado', $request->estado);
+            }
+
+            if ($request->filled('fecha_desde') && $request->filled('fecha_hasta')) {
+                $query->whereBetween('acciones.fecha_hora', [$request->fecha_desde, $request->fecha_hasta]);
+            } else {
+                // Por defecto, solo registros del último mes
+                $query->where('acciones.fecha_hora', '>=', now()->subMonth());
+            }
+
+            $acciones = $query->get();
+
+            $pdf = \PDF::loadView('pdf.historial_acceso', compact('acciones'));
+            $pdf->setPaper('letter', 'landscape'); 
+
+            return $pdf->stream('historial_acceso.pdf');
+        }
 
 }
