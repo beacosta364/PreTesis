@@ -72,7 +72,7 @@
 
 /* Campos individuales */
 .filtro-campo {
-    flex: 1 1 calc(20% - 15px); /* 5 columnas por fila */
+    flex: 1 1 calc(20% - 15px); 
     display: flex;
     flex-direction: column;
 }
