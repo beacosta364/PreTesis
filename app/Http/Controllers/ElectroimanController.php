@@ -109,7 +109,7 @@ class ElectroimanController extends Controller
             'updated_at' => now()
         ]);
 
-        return redirect('/')->with('success', 'Controlador actualizado correctamente');
+        return redirect('/bodega2')->with('success', 'Controlador actualizado correctamente');
     }
 
     public function eliminar($id)

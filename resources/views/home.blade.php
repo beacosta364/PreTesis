@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body class="p-4">
-    <h1 class="mb-4">Control de acceso a bodega </h1>
+    <h1 class="h1controlador">Control de acceso a bodega </h1>
 
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
@@ -32,21 +32,21 @@
                     <label>IP del Controlador</label>
                     <input type="text" name="ip" class="form-control" required>
                 </div>
-                <button class="btn btn-primary">Guardar</button>
+                <button class="boton-cancelar">Guardar</button>
             </form>
         </div>
     </div>
     @endcan
 
     <!-- Lista de controladores -->
-    <h2>Controladores De Ingreso a Bodega Registrados</h2>
+    <h2 class="h2controlador">Controladores de ingreso a bodega registrados</h2>
     <ul class="list-group mb-4">
         @foreach($controladores as $c)
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 <div>
                     {{ $c->nombre ?? 'Sin nombre' }} ({{ $c->ip }})
                 </div>
-                <div class="d-flex gap-2">
+                <!-- <div class="d-flex gap-2">
                     @can('controlador.open')
                     <a href="{{ route('abrir', $c->id) }}" class="btn btn-success btn-sm">Abrir</a>
                     @endcan
@@ -62,14 +62,32 @@
                         <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                     </form>
                     @endcan
+                </div> -->
+                <div class="d-flex gap-2">
+                    @can('controlador.open')
+                    <a href="{{ route('abrir', $c->id) }}" class="btn-custom btn-success-custom">Abrir</a>
+                    @endcan
+
+                    @can('controlador.edit')
+                    <a href="{{ route('editar', $c->id) }}" class="btn-custom btn-warning-custom">Editar</a>
+                    @endcan
+
+                    @can('controlador.delete')
+                    <form method="POST" action="{{ route('eliminar', $c->id) }}" onsubmit="return confirm('¿Seguro que deseas eliminar este controlador?');" class="m-0">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn-custom btn-danger-custom">Eliminar</button>
+                    </form>
+                    @endcan
                 </div>
+
             </li>
         @endforeach
     </ul>
 
     <!-- Historial de acciones -->
     @can('acciones.show')
-<h2>Historial de acceso</h2>
+<h2 class="h2controlador">Historial de acceso</h2>
 <table class="table table-bordered">
     <thead>
         <tr>
