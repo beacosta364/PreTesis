@@ -103,6 +103,8 @@
         <a href="{{ route('bodega.home') }}" class="btn btn-secondary">Limpiar</a>
     </div>
 </form> -->
+
+
 <form method="GET" action="{{ route('bodega.home') }}" class="filtros-formulario">
     <div class="filtro-campo">
         <label>Usuario</label>
@@ -131,6 +133,7 @@
     <div class="filtro-botones">
         <button type="submit" class="btn-filtro btn-filtrar">Filtrar</button>
         <a href="{{ route('bodega.home') }}" class="btn-filtro btn-limpiar">Limpiar</a>
+        <a href="{{ route('historial.pdf', request()->all()) }}"class="btn-filtro btn-filtrar" target="_blank">Exportar a PDF</a>
     </div>
 </form>
 
