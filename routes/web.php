@@ -125,7 +125,8 @@ Route::middleware('auth')->group(function () {
 
 
     //rutas control de acceso con retorno de respuesta
-    Route::get('/', [ElectroimanController::class, 'index']);
+    // Route::get('/', [ElectroimanController::class, 'index']);
+    Route::get('/bodega2', [ElectroimanController::class, 'index'])->name('bodega.home');
     Route::post('/guardar-ip', [ElectroimanController::class, 'guardarIp'])->name('guardar.ip');
     Route::get('/abrir/{id}', [ElectroimanController::class, 'abrir'])->name('abrir');
 

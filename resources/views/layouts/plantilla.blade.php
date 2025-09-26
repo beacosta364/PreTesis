@@ -125,6 +125,9 @@
                 </div>
                 <div class="element-slidebar-content">  
                     <a href="{{ route('configuracion.control') }}">Ingresar a Bodega</a>
+                    <!-- <a href="{{ url('/') }}">Ingresar a Bodega 2</a>  -->
+                    <a href="{{ route('bodega.home') }}">Ingresar a Bodega 2</a>
+
                     @can('ingreso.index')  
                     <a href="{{ route('bodega.historial') }}">Registro de ingreso a Bodega</a>
                     @endcan 
