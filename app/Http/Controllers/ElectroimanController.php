@@ -17,7 +17,8 @@ class ElectroimanController extends Controller
                         ->join('controladores', 'acciones.controlador_id', '=', 'controladores.id')
                         ->select('acciones.*', 'controladores.nombre', 'controladores.ip')
                         ->orderBy('fecha_hora', 'desc')
-                        ->get();
+                        // ->get();
+                        ->paginate(10);
 
         return view('home', compact('controladores', 'acciones'));
     }

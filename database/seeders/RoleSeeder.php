@@ -56,5 +56,21 @@ class RoleSeeder extends Seeder
 
         //Crear permisos eliminar cuenta
         Permission::firstOrCreate(['name' => 'eliminarcuenta.show'])->syncRoles([$roleAdmin]);
+
+        // Permisos relacionados a controladores  de accceso a bodega 
+        // Ver controladores (acceso al listado)
+        Permission::firstOrCreate(['name' => 'controlador.show'])->syncRoles([$roleAdmin, $roleUser]);
+        // Crear / guardar IP
+        Permission::firstOrCreate(['name' => 'controlador.create'])->syncRoles([$roleAdmin]);
+        // Editar
+        Permission::firstOrCreate(['name' => 'controlador.edit'])->syncRoles([$roleAdmin]);
+        // Eliminar
+        Permission::firstOrCreate(['name' => 'controlador.delete'])->syncRoles([$roleAdmin]);
+        // Abrir electroimán
+        Permission::firstOrCreate(['name' => 'controlador.open'])->syncRoles([$roleAdmin, $roleUser]);
+        // Ver historial de accesos
+        Permission::firstOrCreate(['name' => 'acciones.show'])->syncRoles([$roleAdmin]);
+        // Eliminar registros de historial
+        Permission::firstOrCreate(['name' => 'acciones.delete'])->syncRoles([$roleAdmin]);
     }
 }

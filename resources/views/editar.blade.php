@@ -1,6 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
+@can('acciones.show')
     <h1>Editar Controlador</h1>
 
     @if ($errors->any())
@@ -38,4 +39,5 @@
         <button class="btn btn-primary">Actualizar</button>
         <a href="{{ url('/') }}" class="btn btn-secondary">Cancelar</a>
     </form>
+@endcan
 @endsection
