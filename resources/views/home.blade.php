@@ -46,23 +46,6 @@
                 <div>
                     {{ $c->nombre ?? 'Sin nombre' }} ({{ $c->ip }})
                 </div>
-                <!-- <div class="d-flex gap-2">
-                    @can('controlador.open')
-                    <a href="{{ route('abrir', $c->id) }}" class="btn btn-success btn-sm">Abrir</a>
-                    @endcan
-
-                    @can('controlador.edit')
-                    <a href="{{ route('editar', $c->id) }}" class="btn btn-warning btn-sm">Editar</a>
-                    @endcan
-                    
-                    @can('controlador.delete')
-                    <form method="POST" action="{{ route('eliminar', $c->id) }}" onsubmit="return confirm('¿Seguro que deseas eliminar este controlador?');">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-                    </form>
-                    @endcan
-                </div> -->
                 <div class="d-flex gap-2">
                     @can('controlador.open')
                     <a href="{{ route('abrir', $c->id) }}" class="btn-custom btn-success-custom">Abrir</a>
@@ -85,9 +68,73 @@
         @endforeach
     </ul>
 
+
     <!-- Historial de acciones -->
     @can('acciones.show')
 <h2 class="h2controlador">Historial de acceso</h2>
+<!-- Formulario de filtros -->
+<!-- <form method="GET" action="{{ route('bodega.home') }}" class="row g-3 mb-3">
+    <div class="col-md-3">
+        <label>Usuario</label>
+        <input type="text" name="usuario" value="{{ request('usuario') }}" class="form-control">
+    </div>
+    <div class="col-md-2">
+        <label>Estado</label>
+        <select name="estado" class="form-select">
+            <option value="">Todos</option>
+            <option value="exitoso" {{ request('estado')=='exitoso' ? 'selected' : '' }}>Exitoso</option>
+            <option value="fallido" {{ request('estado')=='fallido' ? 'selected' : '' }}>Fallido</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <label>Controlador</label>
+        <input type="text" name="controlador" value="{{ request('controlador') }}" class="form-control">
+    </div>
+    <div class="col-md-2">
+        <label>Desde</label>
+        <input type="date" name="desde" value="{{ request('desde') }}" class="form-control">
+    </div>
+    <div class="col-md-2">
+        <label>Hasta</label>
+        <input type="date" name="hasta" value="{{ request('hasta') }}" class="form-control">
+    </div>
+    <div class="col-md-12">
+        <button type="submit" class="btn btn-primary">Filtrar</button>
+        <a href="{{ route('bodega.home') }}" class="btn btn-secondary">Limpiar</a>
+    </div>
+</form> -->
+<form method="GET" action="{{ route('bodega.home') }}" class="filtros-formulario">
+    <div class="filtro-campo">
+        <label>Usuario</label>
+        <input type="text" name="usuario" value="{{ request('usuario') }}" class="filtro-input">
+    </div>
+    <div class="filtro-campo">
+        <label>Estado</label>
+        <select name="estado" class="filtro-select">
+            <option value="">Todos</option>
+            <option value="exitoso" {{ request('estado')=='exitoso' ? 'selected' : '' }}>Exitoso</option>
+            <option value="fallido" {{ request('estado')=='fallido' ? 'selected' : '' }}>Fallido</option>
+        </select>
+    </div>
+    <div class="filtro-campo">
+        <label>Controlador</label>
+        <input type="text" name="controlador" value="{{ request('controlador') }}" class="filtro-input">
+    </div>
+    <div class="filtro-campo">
+        <label>Desde</label>
+        <input type="date" name="desde" value="{{ request('desde') }}" class="filtro-input">
+    </div>
+    <div class="filtro-campo">
+        <label>Hasta</label>
+        <input type="date" name="hasta" value="{{ request('hasta') }}" class="filtro-input">
+    </div>
+    <div class="filtro-botones">
+        <button type="submit" class="btn-filtro btn-filtrar">Filtrar</button>
+        <a href="{{ route('bodega.home') }}" class="btn-filtro btn-limpiar">Limpiar</a>
+    </div>
+</form>
+
+
 <table class="table table-bordered">
     <thead>
         <tr>

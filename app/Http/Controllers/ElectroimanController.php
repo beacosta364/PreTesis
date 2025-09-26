@@ -10,18 +10,52 @@ use App\Models\User;
 
 class ElectroimanController extends Controller
 {
-    public function index()
-    {
-        $controladores = DB::table('controladores')->get();
-        $acciones = DB::table('acciones')
-                        ->join('controladores', 'acciones.controlador_id', '=', 'controladores.id')
-                        ->select('acciones.*', 'controladores.nombre', 'controladores.ip')
-                        ->orderBy('fecha_hora', 'desc')
-                        // ->get();
-                        ->paginate(10);
+    // public function index()
+    // {
+    //     $controladores = DB::table('controladores')->get();
+    //     $acciones = DB::table('acciones')
+    //                     ->join('controladores', 'acciones.controlador_id', '=', 'controladores.id')
+    //                     ->select('acciones.*', 'controladores.nombre', 'controladores.ip')
+    //                     ->orderBy('fecha_hora', 'desc')
+    //                     ->paginate(10);
 
-        return view('home', compact('controladores', 'acciones'));
+    //     return view('home', compact('controladores', 'acciones'));
+    // }
+    public function index(Request $request)
+{
+    $controladores = DB::table('controladores')->get();
+
+    $query = DB::table('acciones')
+                ->join('controladores', 'acciones.controlador_id', '=', 'controladores.id')
+                ->select('acciones.*', 'controladores.nombre', 'controladores.ip')
+                ->orderBy('fecha_hora', 'desc');
+
+    // Filtros dinámicos
+    if ($request->filled('usuario')) {
+        $query->where('acciones.nombre_usuario', 'like', '%'.$request->usuario.'%');
     }
+
+    if ($request->filled('estado')) {
+        $query->where('acciones.estado', $request->estado);
+    }
+
+    if ($request->filled('controlador')) {
+        $query->where('controladores.nombre', 'like', '%'.$request->controlador.'%');
+    }
+
+    if ($request->filled('desde')) {
+        $query->whereDate('acciones.fecha_hora', '>=', $request->desde);
+    }
+
+    if ($request->filled('hasta')) {
+        $query->whereDate('acciones.fecha_hora', '<=', $request->hasta);
+    }
+
+    $acciones = $query->paginate(10)->appends($request->all());
+
+    return view('home', compact('controladores', 'acciones'));
+}
+
 
     public function guardarIp(Request $request)
     {
