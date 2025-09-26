@@ -1,0 +1,58 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.boton-cancelar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ea6100;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;  
+    outline: none;
+}
+
+.boton-cancelar:hover {
+    background-color: #e67e00;
+}
+
+.h1controlador {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+}
+
+.h2controlador {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+}
+
+
+
+.btn-custom {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none; /* Para que los <a> no tengan subrayado */
+}
+
+.btn-success-custom { background-color: #5ade58; }
+.btn-warning-custom { background-color: #e67e00; }
+.btn-danger-custom  { background-color: #dc3545; }
+
+/* Efectos hover */
+.btn-success-custom:hover { background-color: #2fc550; transform: scale(1.05); }
+.btn-warning-custom:hover { background-color: #e0a800; transform: scale(1.05); }
+.btn-danger-custom:hover  { background-color: #c82333; transform: scale(1.05); }
