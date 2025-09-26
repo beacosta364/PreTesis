@@ -135,7 +135,6 @@ Route::middleware('auth')->group(function () {
 
     Route::delete('/eliminar/{id}', [ElectroimanController::class, 'eliminar'])->name('eliminar');
 
-
 });
 
 require __DIR__.'/auth.php';
